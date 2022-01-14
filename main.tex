@@ -1,0 +1,91 @@
+\input{./latex/preamble.tex}
+
+\newcommand*{\mytitle}{Analysing the Characteristics of Neural Networks for the Recognition of Sugar Beets} % Titel
+\newcommand*{\myinstitute}{Applied University of Hamm-Lippstadt} % Institut
+
+
+\newcommand*{\myauthor}{Luca Brodo} % Autoren
+\newcommand*{\myreporttype}{Bachelor thesis} % Bericht-Typ
+\newcommand*{\mygraduation}{Bachelor of Engineering} % Vollständige Anschrift
+
+
+
+\newcommand*{\firstexaminer}{Prof. Dr. Stefan Henkler} % Ort
+\newcommand*{\secondexaminer}{Dipl-Eng Kristian Rother} % Ort
+\newcommand*{\mydate}{\today} % Datum
+
+
+% ============= Dokumentbeginn =============
+
+\begin{document}
+
+% Seiten ohne Kopf- und Fußzeile sowie Seitenzahl
+\pagestyle{empty}
+
+\include{latex/01_titel}	% Einbinden der Titelseite
+\newpage 					% Um Seite nach der Titelseite einzubinden -> bei eigener Titelseite und nicht der Latex-Version erforderlich
+\thispagestyle{empty}
+\quad 
+\vfil
+\hfil \textit{ } \hfil
+\vfil 
+%\pagenumbering{arabic}
+ 
+
+\cleardoubleoddpage
+
+
+
+\chapter*{Affidavit}
+I Brodo Luca herewith declare that I have composed the present paper and work by myself and without use of any other than the cited sources and aids. Sentences or parts of sentences quoted literally are marked as such; other references with regard to the statement and scope are indicated by full details of the publications concerned. The paper and work in the same or similar form has not been submitted to any examination body and has not been published. This paper was not yet, even in part, used in another examination or as a course performance.\\
+Lippstadt, \today\\[.6cm]
+Brodo Luca\\
+\hfil
+\rule[0.5em]{20em}{0.5pt}
+
+\input{src/02_Abstract}
+\renewcommand*\listfigurename{List of Figures}
+\renewcommand*\contentsname{Table of Content}
+\renewcommand*\listtablename{List of Tables}
+
+\newcommand\gw{8}
+\newcommand\gws{8}
+%\setcounter{tocdepth}{3}
+%\setcounter{secnumdepth}{3}
+
+
+\tableofcontents			%Inhaltsverzeichnis
+\listoffigures		%Verzeichnis aller Bilder
+%\listoftables				%Verzeichnis aller Tabellen
+
+
+
+
+%\chapter*{Abkürzungsverzeichnis}
+%	\begin{acronym}[4GDH]	% Zur Formatierung hier die längste Abkürzung des Verzeichnisses eintragen
+%		\acro{4GDH}{4th Generation District Heating} 	
+%	\end{acronym}
+\renewcommand{\figurename}{Fig.}
+\pagestyle{fancy}
+\include{src/03_Introduction}
+\include{src/04_Characteristics_of_the_model}
+\include{src/05_Benchmarking}
+\include{src/06_Analysis_Characteristics}
+%\include{src/07_Corre_abstractionLevels}
+\include{src/08_Conclusion}
+
+%Literaturverzeichnis
+\newpage
+\lhead{}
+\rhead{\leftmark}
+
+
+\renewcommand*\bibname{References }
+
+\bibliography{bib}
+\bibliographystyle{alpha}
+\addcontentsline{toc}{chapter}{References}
+\appendix
+\include{src/anhang}
+
+\end{document}

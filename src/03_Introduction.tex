@@ -1,0 +1,49 @@
+\chapter{Introduction}
+\section{Motivation}
+The seemingly unstoppable growth of global population compounded by climate change is putting an enormous pressure on the agricultural sector. As estimated by the World Resources Institutes (WRI), the number of people on our planet will reach an astounding 10 billion by 2050  \cite{ayaz_internet--things_2019} and, as a result, the agricultural production must double to keep up with the demand \cite{singh_machine_2016}. However, the agricultural sector is facing immense challenges due to plant diseases, pests and weed infestation and in these times, like never before, the switch to a more sustainable model seems inevitable. The main target of sustainable farming is to increase yield while reducing reliance on herbicides and pesticides; therefore trying to target treatments only to plants that specifically require it by monitoring key indicators of each individual crop, a technique usually referred to as precision farming. This technique is notoriously time and energy consuming if done manually and therefore usually discarded in favor of more traditional methodologies. \cite{lottes_effective_2016}\\
+In the last years there has been, however, an increased focus on integrating cutting-edge technology with precision farming precision farming to improve quality and quantity of agricultural production, while at the same time lowering the inputs significantly \cite{islam_review_2021}.  This system is also known as ''smart farming''.  This system is based on the adoption of autonomous robots, which could be both wheeled robots and Unmanned Aerial Vehicles (UAVs), and it has been enabled by the astonishing advancements in the field of the Internet of Things (IoT). \\
+IoT is the key technology behind smart farming and allows to add value to the data collected by automated processes by ensuring data flow between different devices  \cite{islam_review_2021}.  More importantly, IoT allows more cost-efficient and timely production and management practices, as showed by  Glaroudis et al. in\cite{glaroudis_survey_2020}, and at the same time the reduction of the inherent climate impact by enabling real-time reactions to infestations,  such as weed, pest or diseases, and by enabling a more adequate use of resources such as water, pesticides or agro-chemicals.\cite{islam_review_2021}
+In other words, IoT makes precision farming not only more efficient in terms of both money and resources, but even more sustainable than other traditional farming methods. \\
+One of cultivations which will benefit immensely by the adoption of smart farming is the sugar beet. The \textit{Beta vulgaris L},depicted in Fig n.\ref{fig:sugar_beet}, commonly referred as sugar beet, is ranked as the second most cultivated  sugar crop all over the world next to sugarcane\cite{bhadra_weed_2020}. As showed by May in \cite{may_economic_2003}, being a slow-growing crop early in the season \cite{bhadra_weed_2020}, this plant seems to be a very poor competitor against weed, backed up also by Schweizer's researches, which reports that sugar beet root yields can be reduced by 26–100\% by uncontrolled weed growth.  \cite{schweizer_weed_1989}\\
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width = 5cm]{img/276_Beta_vulgaris_L.jpg}
+	\caption[Representation of a sugar beet plant]{Representation of a sugar beet plant \cite{masclef_sugar_1891} }{\centering}
+	\label{fig:sugar_beet}
+\end{figure}
+An approach based on smart farming could reduce the effect of weeds infestations on sugar beet plantations and  increment the yield and the sustainability of said plantation.\\
+As a matter of fact, even though tractors and hand labour are still vastly used for weed management, since the 50s, herbicides have been the most used method of weed management in sugar beets farms (\cite{cioni_weed_2010}) and, apart from the well known environmental damage, which the use herbicides leads to, another implication is the effect that they have on the sugar beet crops. Most of the selective herbicides have influence on sugar beet growth, with early symptoms showing on the leaves, and this can reduce the yield. \cite{petersen_review_2004}\\
+To optimize and remove the effects of pesticides, the new frontier for weed management is to automatize the more traditional mechanical techniques (\cite{raja_real-time_2020}, \cite{frasconi_design_2014},\cite{machleb_sensor-based_2021}).\\
+Mechanical techniques and even techniques which use selective spraying of herbicides, however, require that the weed is localized before they can be applied. The localization of weed is a fairly researched topic and there are two main school of thoughts: Plant-based Classification and Weed Mapping. 
+\textit{Hasan et al.} in \cite{hasan_survey_2021} provide the definition for plant-based classification: \textit{''localise every plant in an image and classify that image either as a crop or as a weed''}. This approach requires 3 main steps, which are detection, localisation and classification, and it is very suitable for real-time weed management techniques. \cite{hasan_survey_2021} 
+Such approach works in combination with mechanical management techniques, as demonstrated by \textit{Raja et. al.} in \cite{raja_real-time_2020}, where an automatic robot would detect and classify the weeds, which will be lately removed with a knife.\\
+\textit{Hasan et al.} in \cite{hasan_survey_2021} also provide the definition for weed mapping. According to the authors, such approach can be defined as the process of mapping the density of weeds in the field.
+Weed mapping is useful for site-specific weed management and it’s mainly used to reduce the amount of herbicides utilized. \cite{hasan_survey_2021} \\
+What both of those approaches have in common, however, is the need of Deep Learning techniques to map or recognize weeds. As a matter of fact, a lot of proposed solutions employ Convolutional Neural Networks in the recognition task(\cite{gao_deep_2020},\cite{suh_transfer_2018},\cite{ramirez_deep_2020}).\\
+Neural Networks, however, impose challenges to developer, from choosing which architecture to use to define effective training cycles to achieve pre-defined levels of accuracy. In addition, in real time applications, classification, or inference, time is of the highest importance since it effects the ability to respect deadlines.Furthermore, the values for these metrics obtained while testing do not fully reflect the reality when the Neural Network will be actually employed. Fig. n. \ref{tab:models_ex_comp} shows an example of different architectures trained to recognize weed in a sugar beet plantations and, from this comparison alone, emerges evidently that the differences in performance amongst the networks.\\ 
+\begin{figure}[th]
+\centering
+\begin{tabular}{|c| ccc|}
+  \hline
+ Network &Accuracy& Training time   &Classification time   \\
+ \hline
+ &\multicolumn{3}{c|}{20 Epoch}\\
+ \hline
+AlexNet &97.9\%& 9.0min   &0.0038s    \\
+VGG-19 &98.4\%& 37.4min   &0.0130s  \\
+GoogLeNet &97.0\%& 23.8min  &0.0033s \\
+ResNet-50 &96.2\%& 40.3min  &0.0072s\\
+ResNet-101 &97.5\%& 106.6min   &0.0118s \\
+Inception-v3 &90.8\%& 88.7min &0.0088s \\
+\hline
+\end{tabular}
+\caption[Example of comparison between different Neural Networks]{Example of comparison between different Neural Networks \cite{suh_transfer_2018}}
+ \label{tab:models_ex_comp}
+\end{figure}
+
+Being able to predict the performances of Neural Networks before their deployment will allow engineers to precisely model the application to tailor them for the Neural Network they chose. We can make those predictions by empirically studying certain metrics and find correlations among them in order to able to be precise, scalable and predictable in time. \\
+The purpose of this paper is to create a toolbox for the employment of Neural Networks in agriculture to optimize applications. \\
+In order to achieve this goal, we will first analyse the main characteristics of Neural Networks in chapter number \ref{char_nn}. 
+This will allow us to pose the foundation for our study, since it is not only focused on those metrics, but also because identifying the right metrics is essential to optimize various applications. \\
+Subsequently, in chapter number \ref{ana_models}, we will study how we can precisely benchmark neural networks to obtain the measurements we need to find the correlations. Benchmarking is a notoriously insidious task, however at the end of our study, we will be able to create a tool to measure performances and analyse Neural Networks in a precise and reproducible way.\\
+Finally, with the help of our tool, in chapter \ref{ana_char} we will profile Neural Networks with fairly different architectures to identify correlations between their metrics so that we will be able to optimize future applications. 

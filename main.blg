@@ -1,0 +1,70 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: latex/01_titel.aux
+A level-1 auxiliary file: src/03_Introduction.aux
+A level-1 auxiliary file: src/04_Characteristics_of_the_model.aux
+A level-1 auxiliary file: src/05_Benchmarking.aux
+A level-1 auxiliary file: src/06_Analysis_Characteristics.aux
+A level-1 auxiliary file: src/08_Conclusion.aux
+The style file: alpha.bst
+A level-1 auxiliary file: src/anhang.aux
+Database file #1: bib.bib
+Warning--entry type for "LinuxManualWeb" isn't style-file defined
+--line 266 of file bib.bib
+Warning--entry type for "Correct_inference_measure" isn't style-file defined
+--line 527 of file bib.bib
+Warning--entry type for "intel_bench_suite" isn't style-file defined
+--line 583 of file bib.bib
+Warning--to sort, need editor, organization, or key in 10.1145/2959100
+Warning--empty booktitle in turbo_boost
+Warning--empty journal in frasconi_design_2014
+Warning--empty journal in hussein
+Warning--empty booktitle in overfitting
+Warning--empty publisher in reed_neural_1999
+Warning--empty journal in schweizer_weed_1989
+Warning--empty booktitle in metrics
+Warning--empty booktitle in Stewart2001MeasuringET
+Warning--empty booktitle in how_to_bench
+You've used 86 entries,
+            2543 wiz_defined-function locations,
+            1005 strings with 22831 characters,
+and the built_in function-call counts, 40186 in all, are:
+= -- 3665
+> -- 2889
+< -- 32
++ -- 1078
+- -- 1059
+* -- 3171
+:= -- 6829
+add.period$ -- 245
+call.type$ -- 86
+change.case$ -- 765
+chr.to.int$ -- 84
+cite$ -- 97
+duplicate$ -- 1277
+empty$ -- 2411
+format.name$ -- 1133
+if$ -- 7938
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 65
+newline$ -- 415
+num.names$ -- 259
+pop$ -- 844
+preamble$ -- 1
+purify$ -- 856
+quote$ -- 0
+skip$ -- 1200
+stack$ -- 0
+substring$ -- 1411
+swap$ -- 217
+text.length$ -- 32
+text.prefix$ -- 15
+top$ -- 0
+type$ -- 662
+warning$ -- 10
+while$ -- 298
+width$ -- 89
+write$ -- 1050
+(There were 13 warnings)
