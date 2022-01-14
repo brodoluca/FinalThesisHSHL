@@ -453,7 +453,8 @@ However, if more precision or more control is needed, training time can also be 
 
 
 \subsection{Measuring Accuracy}
-As mentioned in section n. \ref{sec:accuracy}, accuracy is usually one of the most looked-after metric in a neural network. In order to measure the accuracy of a model we can use equations n. \ref{eq:cla_acc} and n. \ref{eq:bin_acc}. For example, \textit{fastai} calculates the accuracy during validation by calculating the mean between two tensors, as shown in Fig n. \ref{fig:fast_acc}. \cite{fastaidocs}
+As mentioned in section n. \ref{sec:accuracy}, accuracy is usually one of the most looked-after metric in a neural network. 
+During the analysis of training time, we are going to use the accuracy provided for us by \textit{fastai} at each epoch. \textit{fastai} calculates the accuracy during validation by calculating the mean between two tensors, as shown in Fig n. \ref{fig:fast_acc}. \cite{fastaidocs}
 \begin{figure}[h]
 \begin{lstlisting}[language=python]
 def accuracy(inp, targ, axis=-1):
@@ -464,6 +465,8 @@ def accuracy(inp, targ, axis=-1):
 \caption{Fastai calculation for accuracy \cite{fastaidocs}}
 \label{fig:fast_acc}
 \end{figure}
+
+During the analysis of inference time, the tool will calculate accuracy as the percentage of corrected predictions over the whole set, as shown in equation n. \ref{eq:cla_acc}. Since we are not going to treat any binary classification problem, we are going to avoid equation n. \ref{eq:bin_acc}. 
 
 
 
@@ -480,7 +483,6 @@ def accuracy(inp, targ, axis=-1):
 %\url{https://www.thinkautonomous.ai/blog/?p=deep-learning-optimization}\\
 %$ ./my_task &
 %$ echo $! > /sys/fs/cgroup/cpuset/${USER}/tasks
-
 
 
 

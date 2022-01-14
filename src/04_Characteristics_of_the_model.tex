@@ -263,4 +263,28 @@ In these situation, as a rule of thumb, we can use the following statements to d
 
 
 \section{Architecture}
+In the following section, we are going to briefly analyse the architectures of the models we are going to study to find characteristics and correlations. For the purpose of this paper, we are going to focus only on some of the most common architectures, namely Alexnet, Resnet and VGG. 
 \subsection{Alexnet}
+Alexnet is a Convolutional Neural Network (CNN) architecture designed by  Alex Krizhevsky in collaboration with Ilya Sutskever and Geoffrey Hinton. \cite{NIPS2012_c399862d}\\
+The architecture is depicted in Fig. n. \ref{fig:alexnet_architecture}. The net is composed of eight layers:
+The first 5 are convolutional layer an convolutional and the remaining three are fully- connected. The output of the last fully-connected layer is fed to a 1000-way Softmax which produces a distribution over the 1000 class labels. \cite{NIPS2012_c399862d}\\
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale = 0.4]{img/alexnet_architecture.png}
+    \caption[Overview of the architecture of Alexnet]{Overview of the architecture of Alexnet \cite{NIPS2012_c399862d}}
+    \label{fig:alexnet_architecture}
+\end{figure}
+
+
+As described by \textit{Krizhevsky et al.} in \cite{NIPS2012_c399862d}, the layers are defined as it follows:
+
+\begin{itemize}
+\item The first convolutional layer receive as input a 224 × 224 × 3  image and filters it with 96 kernels of size 11 × 11 × 3 with a stride of 4 pixels\footnote{The stride is the distance between the receptive field centers of neighboring neurons in a kernel map}
+\item The second convolutional layer takes as input the response-normalized and pooled output of the first layer and filters it with 256 kernels of size 5 × 5 × 48.
+\item The third layer has 384 kernels of size 3 × 3 × 256 it is connected to the normalized and pooled output of the second
+\item The fourth convolutional layer has 384 kernels of size 3 × 3 × 192 and it is connected to the third without pooling or normalization layers
+\item The fifth convolutional layer has 256 kernels of size 3 × 3 × 192 and as input it receives the output of the forth. 
+\item The fully-connected layers are composed of 4096 neurons each
+\end{itemize}
+\subsection{Residual Networks}
+\subsection{VGG}
