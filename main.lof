@@ -7,43 +7,46 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Differences between how DNNs and humans recognize objects}}{19}{figure.caption.7}% 
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Illustrating the difference between aleatoric and epistemic uncertainty}}{20}{figure.caption.8}% 
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Example for binary classification\relax }}{21}{figure.caption.9}% 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Validation and training loss curve}}{24}{figure.caption.10}% 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Real Example of the Validation and training loss curve}}{25}{figure.caption.11}% 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Real Example of the Validation and training loss curve}}{25}{figure.caption.12}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of use for the function \textit {clock()}\relax }}{28}{figure.caption.10}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Synopsis of the command \textit {time}\relax }}{28}{figure.caption.11}% 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Program used to test the command \textit {time}\relax }}{29}{figure.caption.12}% 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Disable turbo boost in both AMD and Intel devices\relax }}{31}{figure.caption.13}% 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Disable Hyper-Threading\relax }}{31}{figure.caption.14}% 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Set the scaling governor policy to be \textit {performance} for every cpu\relax }}{31}{figure.caption.15}% 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Wrong benchmark for inference time}}{33}{figure.caption.16}% 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Correct way to measure inference\relax }}{34}{figure.caption.17}% 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Run benchmark on android with Tensorflow Lite}}{34}{figure.caption.18}% 
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Command to access the inference in Tensorflow Lite}}{35}{figure.caption.19}% 
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Architecture of the convolutional neural network used as an example to calculate inference time}}{36}{figure.caption.20}% 
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Metrics from fast.ai fit\_one\_cycle() function}}{37}{figure.caption.21}% 
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Benchmark for training time\relax }}{38}{figure.caption.22}% 
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Fastai calculation for accuracy \cite {fastaidocs}\relax }}{38}{figure.caption.23}% 
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Behaviour of the benchmarking suite on a conceptual level\relax }}{39}{figure.caption.24}% 
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Example of training time results}}{39}{figure.caption.25}% 
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Example of graphs produced by the tool when analysing training time\relax }}{40}{figure.caption.26}% 
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Example of graphs produced by the tool when analysing inference time\relax }}{41}{figure.caption.27}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of use for the function \textit {clock()}\relax }}{30}{figure.caption.13}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Synopsis of the command \textit {time}\relax }}{30}{figure.caption.14}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Program used to test the command \textit {time}\relax }}{31}{figure.caption.15}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Disable turbo boost in both AMD and Intel devices\relax }}{33}{figure.caption.16}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Disable Hyper-Threading\relax }}{33}{figure.caption.17}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Set the scaling governor policy to be \textit {performance} for every cpu\relax }}{33}{figure.caption.18}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Wrong benchmark for inference time}}{35}{figure.caption.19}% 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Correct way to measure inference\relax }}{36}{figure.caption.20}% 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Run benchmark on android with Tensorflow Lite}}{36}{figure.caption.21}% 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Command to access the inference in Tensorflow Lite}}{37}{figure.caption.22}% 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Architecture of the convolutional neural network used as an example to calculate inference time}}{38}{figure.caption.23}% 
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Metrics from fast.ai fit\_one\_cycle() function}}{39}{figure.caption.24}% 
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Benchmark for training time\relax }}{40}{figure.caption.25}% 
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Fastai calculation for accuracy \cite {fastaidocs}\relax }}{40}{figure.caption.26}% 
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Behaviour of the benchmarking suite on a conceptual level\relax }}{41}{figure.caption.27}% 
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Example of training time results}}{41}{figure.caption.28}% 
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Example of graphs produced by the tool when analysing training time\relax }}{42}{figure.caption.29}% 
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Example of graphs produced by the tool when analysing inference time\relax }}{43}{figure.caption.30}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Specifics of the machine which run the experiments\relax }}{43}{figure.caption.28}% 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Categories of the \IeC {\textquoteleft }plant\_seedlings\_v2\IeC {\textquoteright } dataset \cite {giselsson2017public} \relax }}{44}{figure.caption.29}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison between epoch/accuracy for each model}}{45}{figure.caption.30}% 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison between training time/accuracy for each model}}{46}{figure.caption.31}% 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Accuracy of Alexnet and Resnet152 against training time in seconds\relax }}{46}{figure.caption.32}% 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Accuracy of Resnet101 and VGG9 against training time in seconds\relax }}{47}{figure.caption.33}% 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Breaking point of Resnet101 and VGG19\relax }}{47}{figure.caption.34}% 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Comparison between training time and accuracy for each model for 10 epochs}}{48}{figure.caption.35}% 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparison between training time and accuracy for each model for 100 epochs}}{48}{figure.caption.36}% 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Average time for each epoch\relax }}{49}{figure.caption.37}% 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Training loss and validity loss of all models calculated over 100 epochs\relax }}{49}{figure.caption.38}% 
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Inference time measured for each model}}{50}{figure.caption.39}% 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{51}{figure.caption.40}% 
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Size of the images over inference time}}{51}{figure.caption.41}% 
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{52}{figure.caption.42}% 
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{53}{figure.caption.43}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Specifics of the machine which run the experiments\relax }}{45}{figure.caption.31}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Categories of the \IeC {\textquoteleft }plant\_seedlings\_v2\IeC {\textquoteright } dataset \cite {giselsson2017public} \relax }}{46}{figure.caption.32}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison between epoch/accuracy for each model}}{47}{figure.caption.33}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison between training time/accuracy for each model}}{48}{figure.caption.34}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Accuracy of Alexnet and Resnet152 against training time in seconds\relax }}{48}{figure.caption.35}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Accuracy of Resnet101 and VGG9 against training time in seconds\relax }}{49}{figure.caption.36}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Breaking point of Resnet101 and VGG19\relax }}{49}{figure.caption.37}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Comparison between training time and accuracy for each model for 10 epochs}}{50}{figure.caption.38}% 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparison between training time and accuracy for each model for 100 epochs}}{50}{figure.caption.39}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Average time for each epoch\relax }}{51}{figure.caption.40}% 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Training loss and validity loss of all models calculated over 100 epochs\relax }}{51}{figure.caption.41}% 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Inference time measured for each model}}{52}{figure.caption.42}% 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{53}{figure.caption.43}% 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Size of the images over inference time}}{53}{figure.caption.44}% 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{54}{figure.caption.45}% 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{55}{figure.caption.46}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the fastest files\relax }}{66}{figure.caption.45}% 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Histogram of the slowest files\relax }}{67}{figure.caption.46}% 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the fastest files\relax }}{68}{figure.caption.48}% 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Histogram of the slowest files\relax }}{69}{figure.caption.49}% 

@@ -185,41 +185,82 @@ F1 = (2)\dfrac{Precision * Recall}{Precision + Recall}
 \label{eq:f1_score}    
 \end{equation}
 When evaluating the F score, however,the focus is given exclusively to true positives, false positives and false negatives, neglecting the true negative group, which is usually the majority class. In addition, using the F score, one is unable to distinguish low-recall from low-precision systems. \cite{derczynski-2016-complementarity}\\
-\section{Training Loss and Loss Function}
+\section{Loss}
 When training a Neural Network, finding the perfect weights for the neurons is impossible, therefore the problem is usually modelled as an optimization problem. As an optimization problem, it is solved using an algorithm which aims to optimize the weights to make good predictions. Usually, Neural Networks are trained using the Stochastic Gradient Descent (SGD) and the weights are updated through back-propagation. In the context of an optimization algorithm, the function which evaluates a candidate solution is defined as the objective function and such function in Neural Networks evaluates how good a prediction is, hence the SGD is used to minimize this function, i.e. finding the solution with the lowest score. 
 When we are minimizing the objective function, we are referring to it as the cost function, loss function, or error function.\cite{Goodfellow-et-al-2016}\\
+The loss function has the fundamental job of faithfully distill all the aspects of the model, both good and bad, down into a single, scalar value, which allows candidate solutions to be compared. \cite{reed_neural_1999}\\
+The choice of the loss function is highly influenced by the output layer of the Neural Network. The output layer defines the type of the solution we defined for the problem, i.e. if it is a regression problem of a classification problem. In other words, the way we  represent the output determines the loss function. \cite{Goodfellow-et-al-2016}\\
+The following are some of the best practices for each type of problem. 
+
+\begin{description}
+  \item[Regression problem] \hfill\\ 
+  For these type of problems, usually the output layer is one node with a linear activation unit, therefore the loss function to use is the Mean Squared Error(MSE). 
+  \item[Binary Classification problem] \hfill\\ 
+  The output layer is one node with a sigmoid activation unit and the loss function used is Cross-Entropy, or Logarithmic loss. 
+  \item[Multi-class Classification problem] \hfill\\ 
+  The output layer is composed of one node for each class using the soft-max activation function nd the loss function used is Cross-Entropy, or Logarithmic loss. 
+\end{description}
 
 
-\cite{10.5555/525960}\cite{reed_neural_1999}
+%\cite{10.5555/525960}
 
 
 
 %\url{https://machinelearningmastery.com/loss-and-loss-functions-for-training-deep-learning-neural-networks/}
 
-\section{Valid loss}
 \section{Over-fitting and Under-fitting }\label{sec:of_uf}
+As we already discovered in section n. \ref{sec:training_time}, the training routine is necessary for the model in order to make predictions on a new set of data. Therefore, the goal of the learning process is not to minimize the accuracy on the training set, but rather to maximize its predictive accuracy on the new data points. \citep{dietterich1995overfitting}\\
+If the model works too hard to find the best fit for the training data there is the risk that it is going to fit the noise present on the data-set, hence it will learn the inevitable peculiarities and bias present in the training set, rather than finding a general predictive rule. In other words, the performance of the model will decrease when tested against an unknown data-set.\cite{jabbar2015methods} This phenomena is called \textit{over-fitting}. \citep{dietterich1995overfitting}\\
+Over-fitting is influenced by the training data fed to the model, as small data-sets are more prone to it, even though also large data-sets can be affected. \cite{10.1016/j.inffus.2008.11.003}\\
+Under-fitting, on the other hand, can be considered as the opposite process. This occurs when the model is too simple for the training data and it is incapable of learning the variability of the data. \cite{10.1016/j.inffus.2008.11.003}\\
+
+One strategy to avoid over-fitting is to use a so-called ''early-stopping'' approach. This approach consists simply of stopping the training before over-fitting can occur and it is one of the mostly used strategies to avoid this phenomena, as it is simple to understand and proven to be the superior one in many cases (\citep{FINNOFF1993771}, \cite{early_stopping}). \\
+The key part of this approach is to divide the training set into two parts, namely the validation set and the training set, and to use those to find a criteria to stop the training process. \\
+Fig. n. \ref{fig:over_fitting_curve} shows the idealized evolution over time of the error on the training set and on a validation set not used for training, i.e. training and validation loss.\cite{early_stopping}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale = 0.3]{img/over_fitting.png}
+    \caption[Validation and training loss curve]{Validation and training loss curve. The x axis is time, the y axis is the loss \cite{early_stopping}}
+    \label{fig:over_fitting_curve}
+\end{figure}
+
+
+Following the trend in Fig. n. \ref{fig:over_fitting_curve}, we can observe that the validation error decreases until a certain point together with the training loss before increasing indefinitely. We can use the validation error to approximate the generalization error and, therefore, stop the training in the moment where the validation loss is increasing again. 
+We can summarize the ''early-stopping'' approach in the following steps:
+\begin{enumerate}
+\item Split the training data into a training set and a validation set, for i.g. in a 4-to-1 proportion
+\item Train over the training and evaluate the validation loss every arbitrary number of epoch
+\item Stop training as so on as the error on the validation set is         higher than it was last time
+\item Use the weights the network had in that previous step as the result of the training run
+
+\end{enumerate}
+Furthermore, depending on the data, there might be also situations in which the validation loss is not constantly bigger than the training loss, as shown in Fig. n. \ref{fig:over_fitting_curve}. As a matter of fact, this graph shows an idealized behaviour of the two curves. A real example for this curve can be seen in Fig. n. \ref{fig:over_fitting_curve_real}.
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale = 0.4]{img/over_fitting_real.png}
+    \caption[Real Example of the Validation and training loss curve]{Real Example of the Validation and training loss curve. The x axis is time, the y axis is the loss \cite{early_stopping}}
+    \label{fig:over_fitting_curve_real}
+\end{figure}
+
+In such situations, it would be particularly difficult to choose an optimal stopping criteria, as the validation function as multiple local minima (16 in the pictures case). It is left to the reader to investigate strategies to optimize early-stopping in these situations. \\
+Furthermore, there are also scenarios in which, depending on the data presented, the validation loss is at first less than the training loss, as shown in Fig. n. \ref{fig:over_fitting_curve_2}. 
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale = 0.4]{img/over_fitting_2.png}
+    \caption[Real Example of the Validation and training loss curve]{Real Example of Validation and training loss curve. The x axis is time, the y axis is the loss}
+    \label{fig:over_fitting_curve_2}
+\end{figure}
+
+In these situation, as a rule of thumb, we can use the following statements to determine the status of the training and decide when to stop. 
 \begin{itemize}
-\item validation loss >> training loss: overfitting
-\item validation loss >training loss: some overfitting
-\item validation loss < training loss: some underfitting
-\item validation loss << training loss: underfitting
+\item validation loss $>>$ training loss: over-fitting
+\item validation loss $>$ training loss: some over-fitting
+\item validation loss $<$ training loss: some under-fitting
+\item validation loss $<<$ training loss: under-fitting
 
 \end{itemize}
 
 
-
-
-
-\cite{Nowlan1992SimplifyingNN}
-\cite{overfitting}
-\subsection{Regularization}
-\url{https://programming-review.com/machine-learning/overfitting}
-\section{Parameters}
-
-
-\subsection{Epoch}
-\subsection{Iterations}
-\subsection{Batch Size}
-\section{Random Splitting}
-
 \section{Architecture}
+\subsection{Alexnet}

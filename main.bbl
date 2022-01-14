@@ -59,11 +59,6 @@ Simone Bianco, Remi Cadene, Luigi Celona, and Paolo Napoletano.
   architectures.
 \newblock {\em IEEE Access}, 6:64270--64277, 2018.
 
-\bibitem[Bis95]{10.5555/525960}
-Christopher~M. Bishop.
-\newblock {\em Neural Networks for Pattern Recognition}.
-\newblock Oxford University Press, Inc., USA, 1995.
-
 \bibitem[BLW17]{Beyer2017ReliableBR}
 Dirk Beyer, Stefan L{\"o}we, and Philipp Wendler.
 \newblock Reliable benchmarking: requirements and solutions.
@@ -112,11 +107,27 @@ Leon Derczynski.
   Resources and Evaluation ({LREC}'16)}, pages 261--266, Portoro{\v{z}},
   Slovenia, May 2016. European Language Resources Association (ELRA).
 
+\bibitem[Die95]{dietterich1995overfitting}
+Tom Dietterich.
+\newblock Overfitting and undercomputing in machine learning.
+\newblock {\em ACM computing surveys (CSUR)}, 27(3):326--327, 1995.
+
+\bibitem[DSSM09]{10.1016/j.inffus.2008.11.003}
+Eulanda~M. Dos~Santos, Robert Sabourin, and Patrick Maupin.
+\newblock Overfitting cautious selection of classifier ensembles with genetic
+  algorithms.
+\newblock {\em Inf. Fusion}, 10(2):150–162, apr 2009.
+
 \bibitem[fas21]{fastaidocs}
 fast.ai.
 \newblock {Fastai documentation}.
 \newblock \url{https://docs.fast.ai/}, Nov 29, 2021.
 \newblock [Online; accessed 27-12-2021].
+
+\bibitem[FHZ93]{FINNOFF1993771}
+William Finnoff, Ferdinand Hergert, and Hans~Georg Zimmermann.
+\newblock Improving model selection by nonconvergent methods.
+\newblock {\em Neural Networks}, 6(6):771--783, 1993.
 
 \bibitem[FMF{\etalchar{+}}14]{frasconi_design_2014}
 C.~Frasconi, L.~Martelloni, M.~Fontanelli, M.~Raffaelli, L.~Emmi, Michel
@@ -254,6 +265,13 @@ Andrey Ignatov, Radu Timofte, Andrei Kulik, Seungsoo Yang, Ke~Wang, Felix Baum,
   Max Wu, Lirong Xu, and Luc~Van Gool.
 \newblock Ai benchmark: All about deep learning on smartphones in 2019, 2019.
 
+\bibitem[JK15]{jabbar2015methods}
+H~Jabbar and Rafiqul~Zaman Khan.
+\newblock Methods to avoid over-fitting and under-fitting in supervised machine
+  learning (comparative study).
+\newblock {\em Computer Science, Communication and Instrumentation Devices},
+  pages 163--172, 2015.
+
 \bibitem[KD09]{KIUREGHIAN2009105}
 Armen~Der Kiureghian and Ove Ditlevsen.
 \newblock Aleatory or epistemic? does it matter?
@@ -282,12 +300,6 @@ Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock In F.~Pereira, C.~J.~C. Burges, L.~Bottou, and K.~Q. Weinberger,
   editors, {\em Advances in Neural Information Processing Systems}, volume~25.
   Curran Associates, Inc., 2012.
-
-\bibitem[LGT97]{overfitting}
-Steve Lawrence, C.~Giles, and Ah~Tsoi.
-\newblock Lessons in neural network training: Overfitting may be harder than
-  expected.
-\newblock pages 540--545, 01 1997.
 
 \bibitem[LHS{\etalchar{+}}16a]{lottes_effective_2016}
 P.~Lottes, M.~Hoeferlin, S.~Sander, M.~Muter, P.~Schulze, and Lammers~C.
@@ -338,11 +350,6 @@ John Murphy.
   learning.
 \newblock {\em Microway Inc}, 2016.
 
-\bibitem[NH92]{Nowlan1992SimplifyingNN}
-Steven~J. Nowlan and Geoffrey~E. Hinton.
-\newblock Simplifying neural networks by soft weight-sharing.
-\newblock {\em Neural Computation}, 4:473--493, 1992.
-
 \bibitem[NYC15]{nguyen2015deep}
 Anh Nguyen, Jason Yosinski, and Jeff Clune.
 \newblock Deep neural networks are easily fooled: High confidence predictions
@@ -375,6 +382,11 @@ J.~Petersen.
 Thomas Paine, Hailin Jin, Jianchao Yang, Zhe Lin, and Thomas Huang.
 \newblock Gpu asynchronous stochastic gradient descent to speed up neural
   network training, 2013.
+
+\bibitem[Pre00]{early_stopping}
+Lutz Prechelt.
+\newblock Early stopping - but when?
+\newblock 03 2000.
 
 \bibitem[PVZJ12]{parkhi12a}
 Omkar~M. Parkhi, Andrea Vedaldi, Andrew Zisserman, and C.~V. Jawahar.
