@@ -466,7 +466,6 @@ def accuracy(inp, targ, axis=-1):
 \label{fig:fast_acc}
 \end{figure}
 
-During the analysis of inference time, the tool will calculate accuracy as the percentage of corrected predictions over the whole set, as shown in equation n. \ref{eq:cla_acc}. Since we are not going to treat any binary classification problem, we are going to avoid equation n. \ref{eq:bin_acc}. 
 
 
 
@@ -490,12 +489,8 @@ During the analysis of inference time, the tool will calculate accuracy as the p
 
 
 \section{Benchmarking Tool for Neural Networks }\label{sec:my_bench}
-Following the characteristics delineated in section n. \ref{key_char} and the techniques we analysed in sections n. \ref{BTaM} and n. \ref{benchmarking_nn}, we can now build a tool which allows us to study the behaviour of Neural Networks. Conceptually, the behaviour we desire for the suite is shown in Fig n. \ref{fig:activity_diagram_suite}. \\
-The tool we plan to build will allow us to find correlations between the metrics of various neural network and then apply them to optimize application built on abstraction levels in the context of smart farming, therefore the results we obtain should be relevant to this purpose. Abstraction levels imply different requirements, different inputs, different outputs and different conditions in general, hence the tool should be able to reflect that. In other words, it should be flexible enough so that we are able to configure it in multiple ways, but able to produce results that are specific for our scope, i.e. finding the correlation between different metrics. Furthermore, we need the results to be verifiable, i.e. trustworthy. Being the foundation for further steps, we need to be able to trust the results and they need to be precise and accurate enough so that they can be reasoned about and we are able to build further steps on top of them.\\
-Finally, we are expecting the tool to be run on multiple devices, hence usability is also a factor to pay attention to. If the tool is too difficult to set up or run, it will lead to an undesirable waste of time and resources. \\
-
-To improve both flexibility and usability, the benchmark tool reads from an external file all the necessary information to run. For example, before fetching the models, it will read from said file which architectures to run or if the model to use is one created by the user. Similarly, the path of the dataset is also indicated in this file and can be changed at any time. To further increase usability, a logging system needs to be implemented so that the user is able to understand potential errors and how to solve them. 
-
+Following the characteristics delineated in section n. \ref{key_char} and the techniques we analysed in sections n. \ref{BTaM} and n. \ref{benchmarking_nn}, we can build a tool which allows us to study the behaviour of Neural Networks. \\
+Conceptually, the behaviour of the suite is shown in Fig n. \ref{fig:activity_diagram_suite}. \\
 \begin{figure}[th]
 \centering
    \begin{tikzpicture}
@@ -510,30 +505,50 @@ minimum height=0.5cm, rounded corners=5pt, draw}}
 
 
         \node[start] (start) {};
-        \node[activity, below of = start] (action1) {Read the configuration file};
-        \node[activity, below of = action1] (action2) {Fetch the dataset};
-        \node[activity, below of = action2] (action3) {Fetch the models};
-        \node[activity, below of = action3] (action4) {Train the models};
+        %\node[activity, below of = start] (action1) {Read the configuration file};
+        \node[activity, below of = start] (action1) {Fetch the dataset};
+        \node[activity, below of = action1] (action2) {Fetch the models};
+        \node[activity, below of = action2] (action3) {est training};
+        \node[activity, below of = action3] (action4) {Test inference};
         \node[activity, below of = action4] (action5) {Save Results};
-        \node[activity, below of = action5] (action6) {Test inference};
-        \node[activity, below of = action6] (action7) {Save Results};
-        \node[end,below of = action7](end){};
+        \node[end,below of = action5](end){};
 
-        \draw[->](start) -- (action1); 
+        \draw[->](start) -- (action1);
         \draw[->](action1) -- (action2);
         \draw[->](action2) -- (action3);
         \draw[->](action3) -- (action4);
         \draw[->](action4) -- (action5);
-        \draw[->](action5) -- (action6);
-        \draw[->](action6) -- (action7);
-        \draw[->](action7) -- (end);
+        \draw[->](action5) -- (end);
 
    \end{tikzpicture}
    \caption{Behaviour of the benchmarking suite on a conceptual level}
    \label{fig:activity_diagram_suite}
 \end{figure}
-The tool has been written using Python and revolves around the \textit{fastai} library. This library is built on top of Pytorch, a very common library for machine learning in Python, offering powerful function and high flexibility without a significant drop in performances. \cite{fastai}\\
+
+
+The tool will allow us to study the behaviour of neural networks in order to find correlations amongst the metrics we analysed in chapter n. \ref{char_nn}, therefore the main requirement it needs to respect is flexibility. Applications in the field of sugar beet recognition may be subjected to various requirements and different conditions, hence the tool must be able to reflect that. In other words, it should be flexible enough so that we are able to configure it in multiple ways to reflect the various condition, but at the same time it is also able to produce results that are specific for our scope, i.e. finding the correlation between different metrics. Furthermore, we need the results to be verifiable and trustworthy. Being the foundation for further steps, we need to be able to trust the results and they need to be precise and accurate enough so that they can be reasoned about. \\
+Finally, we are expecting the tool to be run on multiple devices, hence usability is also a factor to pay attention to. If the tool is too difficult to set up or run, it will lead to an undesirable waste of time and resources. \\
+Flexibility is also a key factor for the choice of the data-set. For example,  studies in the field of weed recognition use various techniques to collect the images for their data-sets. For examples, authors of \cite{lu_survey_2020} use the BOSCH’s Bonirob system, which is a field robot, to collect various data about the plants, while authors of \cite{rs10111690} use Unmanned Aerial Vehicles (UAVs). Moreover, the way images are labelled is data-set dependent. 
+Therefore, in order to insure flexibility, the user must have full control over the data-set and how it is represented in the tool. \\
+As already discussed in section n. \ref{sec:arch},  the choice of the architecture is limited amongst Resnet, Alexnet and VGG. The models which can be analysed will be the ones listed below. 
+\begin{itemize}
+\item Resnet18
+\item Resnet34
+\item Resnet50
+\item Resnet101
+\item Resnet152
+\item Alexnet
+\item VGG16
+\item VGG19
+\end{itemize}
+Both the indication regarding the dataset and the choice of the models will be indicated in an external configuration file by the user. The tool will read this file before starting the test to collect the necessary information to run. This configuration file helps to improve both flexibility and usability, in addition to automatically create a documentation of the run for reproducibility. \\
+To further increase usability, a logging system will be implemented so that information about the run and potential errors are visible to the user and can be corrected. \\
+
+The actual implementation of the tool is done using Python and revolves around the \textit{fastai} library. This library is built on top of Pytorch, a very common library for machine learning, and offers powerful functions and high flexibility without a significant drop in performances. \cite{fastai}\\
 \textit{fastai} suits perfectly the goals of the benchmarking tool as it is \textit{''approachable and rapidly productive, while also being deeply hackable and configurable''}. \cite{fastai}\\
+Thanks to \textit{fastai}, we also have the possibility to use publicly available implementation of the models listed above, hence removing possible differences in results coming from divergent implementations. 
+
+In the following sections, we are going to describe how the the training process and the inference time are analysed. 
 
 \subsection{Analysing the training process}
 
@@ -550,9 +565,9 @@ The tool has been written using Python and revolves around the \textit{fastai} l
 5&00:16&51.96211338043213\\
 6&00:15&54.22868728637695\\
 7&00:16&54.769957065582275\\
-8&00:16&55.64952492713928\\
-9&00:16&55.040597915649414\\
-10&00:16&57.408660650253296\\
+%8&00:16&55.64952492713928\\
+%9&00:16&55.040597915649414\\
+%10&00:16&57.408660650253296\\
 %11&00:16&56.49526119232178\\
 %12&00:16&58.1190824508667\\
 %13&00:16&59.43843126296997\\
@@ -577,7 +592,7 @@ One of the key elements of super-convergence is training with the one-cycle poli
 Finally \textit{fine\_ tune()} can be seen as a particular combination of \textit{fit\_ one\_ cycle()} and \textit{(un)freeze} which works well in a lot of cases. \textit{fine\_ tune()} is geared mainly towards transfer learning, i.e. towards training pre-trained models with a new dataset, since it employs the \textit{freeze()} function. Such function is used to freeze the first layers so that the weights do not get updated during further training.\cite{fastaidocs}\\
 Since the three functions have different scopes and are beneficial in different kinds of applications, the benchmarking tool is configurable in a way that the preferred way of training can be chosen. \\
 Once the models and the training method have been selected, the tool will start training each model accordingly for the number of epochs chosen by the user. Once the training is complete, the results are stored and then represented into a graph. \\
-As suggested in section n. \ref{b_trainig_time}, there are two ways to record training time. For the purpose of this paper, we will use the first one, i.e. the one offered by \textit{fastai}. Even though the second method (Fig. n. \ref{fig:ben_tra}) is be more precise, it does not give actual indications about the time taken for each epoch. On the other side of the coin, this method neglects the time taken to validate the training step, hence not considering this small delay for every epoch. As a result the total training time does not comprise this delay which, even though potentially insignificant, it increases as the number of epochs increases and it will influence the total training time. However, using the first method, we also have information of the accuracy obtained at each epoch
+As suggested in section n. \ref{b_trainig_time}, there are two ways to record training time. For the purpose of this paper, we will use the first one, i.e. the one offered by \textit{fastai}. Even though the second method (Fig. n. \ref{fig:ben_tra}) is be more precise, it does not give actual indications about the time taken for each epoch. On the other hand, this method neglects the time taken to validate the training step, hence not considering this small delay for every epoch. As a result the total training time does not comprise this delay which, even though potentially insignificant, it increases as the number of epochs increases and it will influence the total training time. However, using the first method, we also have information of the accuracy obtained at each epoch
 and thus allowing us to better reason about it. Fig. n. \ref{fig:m_fast_time} shows an example of the information extracted from this process. Furthermore, this information is then extrapolated and graphed, as shown in Fig. n. \ref{fig:res_epo_acc} and Fig. n. \ref{fig:res_time_acc} and saved as a serialized file. 
 
 
@@ -606,21 +621,61 @@ and thus allowing us to better reason about it. Fig. n. \ref{fig:m_fast_time} sh
 
 
 \subsection{Analysing inference time}
-As described in section n. \ref{sec:inference_time_definition} inference time is the time needed for the model to make predictions. We discussed in section n. \ref{sec:ben_inf} different ways to measure inference time, including how to calculate it considering the architecture of the Neural Network we chose. This last method, however, is not suitable for our purpose, since it is not precise enough to lead to correct predictions, therefore the method used for the benchmark tool is the one showed in Fig. n. \ref{fig:corr_inf}, with the only difference that the tool will save the prediction result and calculate the total accuracy achieved. The results will be then graphed as shown in Fig. n.\ref{fig:infere_graph}
+As described in section n. \ref{sec:inference_time_definition} inference time is the time needed for the model to make predictions. We discussed in section n. \ref{sec:ben_inf} different ways to measure inference time, including how to calculate it considering the architecture of the Neural Network we chose. This last method, however, is not suitable for our purpose, since it is not precise enough to lead to correct predictions, therefore the method used for the benchmark tool is the one showed in Fig. n. \ref{fig:corr_inf}, with the only difference that the tool will save the prediction result and calculate the total accuracy achieved. The results will be then graphed as shown in Fig. n.\ref{fig:infere_graph}. 
 \begin{figure}[h]
 \centering
-     \begin{subfigure}[b]{0.5\textwidth}
 	    \includegraphics[width = \gw cm]{img/epoch_inferencetime.png}
-	    \caption[Example of inference time over epoch]{Example of inference time graphed against epoch for resnet18}{\centering}
-	    \label{fig:inference_epo_graph}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.5\textwidth}
-	    \includegraphics[width = \gw cm]{img/accuracy_inferencetime.png}
-	    \caption[Example of inference time over accuracy]{Example of inference time graphed against accuracy for resnet18}{\centering}
-	    \label{fig:inference_acc_graph}
-     \end{subfigure}
-        \caption{Example of graphs produced by the tool when analysing inference time}
+        \caption{Example of the graphs produced by the tool when analysing inference time}
         \label{fig:infere_graph}
 \end{figure}
 
 
+During the analysis of inference time, the tool will calculate accuracy as the percentage of corrected predictions over the whole set, as shown in equation n. \ref{eq:cla_acc}. Since we are not going to treat any binary classification problem, we are going to avoid equation n. \ref{eq:bin_acc}. \\
+Inference time is analysed based on the number of epochs used for training the models. A complete overview of the process is shown in Fig. n. \ref{fig:activity_diagra_inf}.\\
+The user indicates a list containing all the epoch to use for training. For example, in Fig. n. \ref{fig:infere_graph} the epoch inserted were:
+\[
+1,2,5,10,15,20,25,30,35,40,45,50
+\]
+Once the model has been trained for the respective number of epoch and the inference has been tested, the results are saved and the model initialized. The process end when the list ends. 
+
+
+\begin{figure}[th]
+\centering
+   \begin{tikzpicture}
+       \tikzset{start/.style ={circle,minimum width=0.3cm, minimum      height=0.3cm, draw, fill}}
+       
+       \tikzset{activity/.style={rectangle ,minimum width=1cm,
+minimum height=0.5cm, rounded corners=5pt, draw}}
+        \tikzset{decision/.style={diamond,minimum width=1cm, minimum height=1cm, draw}}
+        
+        \tikzset{end/.style={draw,double=white, circle,
+                inner sep=1pt,minimum width=0.3cm,minimum height=0.3, draw, fill}}
+
+
+
+        \node[start] (start) {};
+        %\node[activity, below of = start] (action1) {Read the configuration file};
+        \node[activity, below =  of  start] (action1) {Fetch epochs list};
+        \node[decision, below = of action1] (decision1) {done?};
+        \node[activity, below =of  decision1] (action2) {next epoch};
+        \node[activity, below =of  action2] (action3) {train models};
+        \node[activity, below =of  action3] (action4) {test inference};
+        \node[activity, below = of  action4] (action5) {save result};
+        \node[activity, below = of  action5] (action6) {initialize models};
+        
+        \node[end, right =of  decision1] (end) {};
+
+        
+        \draw[->](start) -- (action1);
+        \draw[->](action1) -- (decision1);
+        \draw[->](decision1) -- (action2)node [left,midway]{no} ;
+        \draw[->](action2) -- (action3);
+        \draw[->](action3) -- (action4);
+        \draw[->](action4) -- (action5);
+        \draw[->](action5) -- (action6);
+        \draw[->] (action6.west) -- ++(-40pt,0pt) |- (decision1.west);
+        \draw[->](decision1) --  (end)node [above,midway]{yes};
+   \end{tikzpicture}
+   \caption{Overview of the process to test inference}
+   \label{fig:activity_diagra_inf}
+\end{figure}

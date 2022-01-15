@@ -262,8 +262,14 @@ In these situation, as a rule of thumb, we can use the following statements to d
 \end{itemize}
 
 
-\section{Architecture}
-In the following section, we are going to briefly analyse the architectures of the models we are going to study to find characteristics and correlations. For the purpose of this paper, we are going to focus only on some of the most common architectures, namely Alexnet, Resnet and VGG. 
+\section{Architecture}\label{sec:arch}
+In the following sections we are going to briefly analyse the architectures of the models we are going to study to find characteristics and correlations. \\
+For the sake of this paper, we are going to limit our analysis to some of the most common architectures for convolutional neural networks which have been proven by other studies (\cite{suh_transfer_2018}, \cite{s20205893}, \cite{phdthesis}) to achieve promising results in the settings of sugar beet recognition. The architecture chosen are listed below and are treated in more details in their respective sections. 
+\begin{itemize}
+\item Resnet
+\item Alexnet
+\item VGG
+\end{itemize}
 \subsection{Alexnet}
 Alexnet is a Convolutional Neural Network (CNN) architecture designed by  Alex Krizhevsky in collaboration with Ilya Sutskever and Geoffrey Hinton. \cite{NIPS2012_c399862d}\\
 The architecture is depicted in Fig. n. \ref{fig:alexnet_architecture}. The net is composed of eight layers:
@@ -286,5 +292,70 @@ As described by \textit{Krizhevsky et al.} in \cite{NIPS2012_c399862d}, the laye
 \item The fifth convolutional layer has 256 kernels of size 3 × 3 × 192 and as input it receives the output of the forth. 
 \item The fully-connected layers are composed of 4096 neurons each
 \end{itemize}
-\subsection{Residual Networks}
-\subsection{VGG}
+\subsection{VGG Networks}\label{sec:VGG}
+VGG stands for Visual Geometry Group at Oxford University and have been developed by Simonyan and Zisserman in \cite{simonyan2015deep} for the 
+ILSVRC (Image Net Large Scale Visual Recognition Challenge) 2014 competition
+(\cite{DBLP:journals/corr/RussakovskyDSKSMHKKBBF14}). 
+The concept of VGG net is similar to Alexnet: as net increases, the number of convolutions and future maps increases as well. Rather than using 11 × 11 feature detectors or filters, however, the authors decided to use smaller 3 x 3  filters. The various architecture proposed in \cite{simonyan2015deep} are showed in Fig. n. \ref{fig:vgg_arch}. In this paper, we are going to consider only the networks D and E, i.e. with 16 and 19 weight layers respectively. For the rest of the paper, we are going to refer to them as VGG16 and VGG19 respectively. 
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale = 0.5]{img/vgg_arch.png}
+    \caption[Overview of the various architecture for VGG]{Overview of the various architecture for VGG \cite{simonyan2015deep}}
+    \label{fig:vgg_arch}
+\end{figure}
+
+
+
+%\begin{figure}[htb]
+ %   \centering
+  %  \includegraphics[scale = 0.5]{img/vgg_picture.jpg}
+   % \caption[Residual learning: a building block]{\cite{vgg_picture}}
+  %  \label{fig:res_block}
+%\end{figure}
+
+
+
+
+
+\subsection[Residual Neural Networks]{Residual Neural Networks (Resnet)}
+Many studies (\citep{simonyan2015deep}, \cite{szegedy2014going}) reveal that the depth of the Neural Networks is crucial and for most visual recognition tasks the trend has been to stack more layers into neural networks and increase their depth. (\cite{simonyan2015deep},\cite{ioffe2015batch},\cite{girshick2014rich},\cite{2014Spatial})\\
+Training deeper networks like VGG19 and VGG16 (section n.\ref{sec:VGG} ), however, is not a trivial task, since,as they start converging, the accuracy starts to saturate and then degrades quickly. This phenomena is due to the gradient vanishing during back-propagation, i.e. when the weights are updated, as it becomes smaller the more layers it goes through and vanishes before reaching the initial layer, hence they can not be updated.  \\
+\textit{He et al. } in \cite{DBLP:journals/corr/HeZRS15} tackle the problem of degradation with the introduction of a \textit{deep residual learning} framework. At the core of the framework there is the so called ''residual block'', shown in Fig. n. \ref{fig:res_block}. 
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale = 0.3]{img/res_block.png}
+    \caption[Residual learning: a building block]{Residual learning: a building block. \cite{DBLP:journals/corr/HeZRS15}}
+    \label{fig:res_block}
+\end{figure}
+
+Differently from plain convolutional networks, these blocks also have the so called ''identity connection'' between the input and the output layer. 
+In plain convolutional networks, the output $\mathcal{H}(x)$ is obtained by:
+\begin{align*}
+\mathcal{H}(x) &= \mathcal{F}(wx + b)\\
+               &or\\
+\mathcal{H}(x) &= \mathcal{F}(x)\\   
+\end{align*}
+with $w$ being the weights and $b$ being the bias\\
+With the introduction of residual blocks, the output function assumes the form showed in equation n. \ref{eq:residual_blocks}.
+\begin{equation}
+\mathcal{H}(x) = \mathcal{F}(x) + x
+\label{eq:residual_blocks}   
+\end{equation}
+Reworking the equation lets us obtain the so called \textit{residual function}: 
+\begin{equation}
+\mathcal{F}(x) = \mathcal{H}(x) - x
+\label{eq:residual_function}   
+\end{equation}
+
+The purpose of residual networks becomes to approximate the residual function, hence the difference between the input and the output.In other words, the aim is to learn the residual function in a way such that it approaches zero, hence making the identity value optimal. \\
+The problem of the vanishing gradient is resolved by the identity function. During back-propagation the gradient can take this path and, since no weights are encountered, there won't be any change in the value computed by the gradient. This effectively allows the gradient to entirely skip the block and reach the initial layers and correct their weights. \\
+The architecture of residual networks we are going to use in this paper is showed in Fig. n. \ref{fig:resnet_arch}. For the rest of the paper, we are going to refer them as ''Resnet'' followed by the amount of layers. For example, Resnet18 refers to the residual network having the 18 layers described in Fig. n.  \ref{fig:resnet_arch}. 
+\begin{figure}[t]
+    \centering
+    \includegraphics[scale = 0.5]{img/resnet_arch.png}
+    \caption[Overview of the Resnet Architecture]{Overview of the Resnet Architecture. The building blocks are shown in brackets \cite{DBLP:journals/corr/HeZRS15}}
+    \label{fig:resnet_arch}
+\end{figure}
+
+

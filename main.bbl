@@ -59,6 +59,12 @@ Simone Bianco, Remi Cadene, Luigi Celona, and Paolo Napoletano.
   architectures.
 \newblock {\em IEEE Access}, 6:64270--64277, 2018.
 
+\bibitem[BHC18]{rs10111690}
+M~Dian Bah, Adel Hafiane, and Raphael Canals.
+\newblock Deep learning with unsupervised data labeling for weed detection in
+  line crops in uav images.
+\newblock {\em Remote Sensing}, 10(11), 2018.
+
 \bibitem[BLW17]{Beyer2017ReliableBR}
 Dirk Beyer, Stefan L{\"o}we, and Philipp Wendler.
 \newblock Reliable benchmarking: requirements and solutions.
@@ -141,6 +147,12 @@ Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
 \newblock {\em Deep Learning}.
 \newblock MIT Press, 2016.
 \newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem[GDDM14]{girshick2014rich}
+Ross Girshick, Jeff Donahue, Trevor Darrell, and Jitendra Malik.
+\newblock Rich feature hierarchies for accurate object detection and semantic
+  segmentation.
+\newblock 2014.
 
 \bibitem[GDP09]{10.1007/978-3-642-04274-4_39}
 Alexander Guzhva, Sergey Dolenko, and Igor Persiantsev.
@@ -247,6 +259,12 @@ Brody Huval, Tao Wang, Sameep Tandon, Jeff Kiske, Will Song, Joel
   Cheng-Yue, Fernando Mujica, Adam Coates, and Andrew~Y. Ng.
 \newblock An empirical evaluation of deep learning on highway driving, 2015.
 
+\bibitem[HZRS14]{2014Spatial}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Spatial pyramid pooling in deep convolutional networks for visual
+  recognition.
+\newblock {\em Lecture Notes in Computer Science}, page 346–361, 2014.
+
 \bibitem[HZRS15]{DBLP:journals/corr/HeZRS15}
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
 \newblock Deep residual learning for image recognition.
@@ -259,6 +277,12 @@ Nahina Islam, Md~Mamunur Rashid, Faezeh Pasandideh, Biplob Ray, Steven Moore,
   {Internet} of {Things} ({IoT}) and {Unmanned} {Aerial} {Vehicle} ({UAV})
   {Based} {Sustainable} {Smart} {Farming}.
 \newblock {\em Sustainability}, 13(4):1821, February 2021.
+
+\bibitem[IS15]{ioffe2015batch}
+Sergey Ioffe and Christian Szegedy.
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock 2015.
 
 \bibitem[ITK{\etalchar{+}}19]{ignatov2019ai}
 Andrey Ignatov, Radu Timofte, Andrei Kulik, Seungsoo Yang, Ke~Wang, Felix Baum,
@@ -321,6 +345,13 @@ P.~Lottes, M.~Hoeferlin, S.~Sander, M.~Müter, P.~Schulze, and Lammers~C.
 Chunjie Luo, Xiwen He, Jianfeng Zhan, Lei Wang, Wanling Gao, and Jiahui Dai.
 \newblock Comparison and benchmarking of ai models and frameworks on mobile
   devices, 2020.
+
+\bibitem[LY20]{lu_survey_2020}
+Yuzhen Lu and Sierra Young.
+\newblock A survey of public datasets for computer vision tasks in precision
+  agriculture.
+\newblock {\em Computers and Electronics in Agriculture}, 178:105760, November
+  2020.
 
 \bibitem[Mas91]{masclef_sugar_1891}
 Amédée Masclef.
@@ -421,6 +452,14 @@ Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma,
 \newblock Imagenet large scale visual recognition challenge.
 \newblock {\em CoRR}, abs/1409.0575, 2014.
 
+\bibitem[RDS{\etalchar{+}}15]{ILSVRC15}
+Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma,
+  Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein,
+  Alexander~C. Berg, and Li~Fei-Fei.
+\newblock {ImageNet Large Scale Visual Recognition Challenge}.
+\newblock {\em International Journal of Computer Vision (IJCV)},
+  115(3):211--252, 2015.
+
 \bibitem[RGC{\etalchar{+}}16]{rhu2016vdnn}
 Minsoo Rhu, Natalia Gimelshein, Jason Clemons, Arslan Zulfiqar, and Stephen~W.
   Keckler.
@@ -475,6 +514,11 @@ Kyoung Song, Myeongchan Kim, and Synho Do.
   illustrated through the stages of deep learning algorithm development.
 \newblock {\em Journal of the Korean Society of Radiology}, 80:202, 03 2019.
 
+\bibitem[SLJ{\etalchar{+}}14]{szegedy2014going}
+Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir
+  Anguelov, Dumitru Erhan, Vincent Vanhoucke, and Andrew Rabinovich.
+\newblock Going deeper with convolutions, 2014.
+
 \bibitem[Smi18]{DBLP:journals/corr/abs-1803-09820}
 Leslie~N. Smith.
 \newblock A disciplined approach to neural network hyper-parameters: Part 1 -
@@ -491,6 +535,12 @@ Leslie~N. Smith and Nicholay Topin.
 David~B. Stewart.
 \newblock Measuring execution time and real-time performance.
 \newblock 2001.
+
+\bibitem[Suh18]{phdthesis}
+Hyun Suh.
+\newblock {\em Advanced classification of volunteer potato in a sugar beet
+  field}.
+\newblock PhD thesis, 01 2018.
 
 \bibitem[SZ15]{simonyan2015deep}
 Karen Simonyan and Andrew Zisserman.
@@ -529,6 +579,13 @@ Peter Wägemann, Tobias Distler, Christian Eichler, and Wolfgang
 \newblock Benchmark generation for timing analysis.
 \newblock In {\em 2017 IEEE Real-Time and Embedded Technology and Applications
   Symposium (RTAS)}, pages 319--330, 2017.
+
+\bibitem[YKU{\etalchar{+}}20]{s20205893}
+Jinhui Yi, Lukas Krusenbaum, Paula Unger, Hubert Hüging, Sabine~J. Seidel,
+  Gabriel Schaaf, and Juergen Gall.
+\newblock Deep learning for non-invasive diagnosis of nutrient deficiencies in
+  sugar beet using rgb images.
+\newblock {\em Sensors}, 20(20), 2020.
 
 \bibitem[ZAZ{\etalchar{+}}18]{8573476}
 Hongyu Zhu, Mohamed Akrout, Bojian Zheng, Andrew Pelegris, Anand Jayarajan,
