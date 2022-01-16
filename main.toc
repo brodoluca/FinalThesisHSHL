@@ -31,14 +31,15 @@
 \contentsline {section}{\numberline {3.4}Benchmarking Tool for Neural Networks}{44}{section.3.4}% 
 \contentsline {subsection}{\numberline {3.4.1}Analysing the training process}{46}{subsection.3.4.1}% 
 \contentsline {subsection}{\numberline {3.4.2}Analysing inference time}{47}{subsection.3.4.2}% 
-\contentsline {chapter}{\numberline {4}Analysis of the characteristics}{49}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Introduction}{49}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Environment use for the test}{49}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Datasets and Training Methodology}{50}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}First experiment}{50}{section.4.4}% 
-\contentsline {section}{\numberline {4.5}Second Experiment}{59}{section.4.5}% 
-\contentsline {section}{\numberline {4.6}Conclusion}{59}{section.4.6}% 
-\contentsline {chapter}{\numberline {5}Conclusion}{61}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Future work}{61}{section.5.1}% 
-\contentsline {chapter}{References}{62}{section.5.1}% 
-\contentsline {chapter}{\numberline {A}Appendix}{71}{appendix.A}% 
+\contentsline {subsection}{\numberline {3.4.3}Further Analysis on the Metrics}{49}{subsection.3.4.3}% 
+\contentsline {chapter}{\numberline {4}Analysis of the characteristics}{51}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{51}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Environment use for the test}{51}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Datasets and Training Methodology}{52}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}First experiment}{52}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Second Experiment}{61}{section.4.5}% 
+\contentsline {section}{\numberline {4.6}Conclusion}{61}{section.4.6}% 
+\contentsline {chapter}{\numberline {5}Conclusion}{63}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Future work}{63}{section.5.1}% 
+\contentsline {chapter}{References}{64}{section.5.1}% 
+\contentsline {chapter}{\numberline {A}Appendix}{73}{appendix.A}% 

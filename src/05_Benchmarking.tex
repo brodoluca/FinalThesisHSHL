@@ -550,7 +550,7 @@ Thanks to \textit{fastai}, we also have the possibility to use publicly availabl
 
 In the following sections, we are going to describe how the the training process and the inference time are analysed. 
 
-\subsection{Analysing the training process}
+\subsection{Analysing the training process}\label{sec:training_process_bench}
 
 \begin{figure}[h]
 \centering
@@ -629,15 +629,14 @@ As described in section n. \ref{sec:inference_time_definition} inference time is
         \label{fig:infere_graph}
 \end{figure}
 
-
+Fig. n. \ref{fig:infere_graph} shows an example of Resnet18 trained for various epochs and tested using 50 images which were not part of the training set. 
 During the analysis of inference time, the tool will calculate accuracy as the percentage of corrected predictions over the whole set, as shown in equation n. \ref{eq:cla_acc}. Since we are not going to treat any binary classification problem, we are going to avoid equation n. \ref{eq:bin_acc}. \\
 Inference time is analysed based on the number of epochs used for training the models. A complete overview of the process is shown in Fig. n. \ref{fig:activity_diagra_inf}.\\
 The user indicates a list containing all the epoch to use for training. For example, in Fig. n. \ref{fig:infere_graph} the epoch inserted were:
 \[
 1,2,5,10,15,20,25,30,35,40,45,50
 \]
-Once the model has been trained for the respective number of epoch and the inference has been tested, the results are saved and the model initialized. The process end when the list ends. 
-
+Once the model has been trained for the respective number of epoch and the inference has been tested, the results are saved and the model initialized. The process ends when the inference time of all the models have been trained for each epoch in the list. \\
 
 \begin{figure}[th]
 \centering
@@ -679,3 +678,17 @@ minimum height=0.5cm, rounded corners=5pt, draw}}
    \caption{Overview of the process to test inference}
    \label{fig:activity_diagra_inf}
 \end{figure}
+\subsection{Further Analysis on the Metrics}
+Once the tests terminate the tool stores the information collected in a file on the disk. The information stored are:
+\begin{itemize}
+\item Epoch
+\item Training loss
+\item Validation loss
+\item Accuracy
+\item Training time for epoch
+\item Inference Time
+\item Prediction
+\item Ground Truth
+\end{itemize}
+The data, however, it is serialized before saved, therefore it can be visualized and further investigated with the use of a ready-to-use Jupyter notebook (\cite{Kluyver2016jupyter}). In addition to the raw visualization of the data, the notebook allows the user to elaborate information for further analysis. This notebook calculates the average training time needed for each epoch, the highest accuracy achieved during training and the highest accuracy during the prediction test.  Furthermore, it also calculates precision (equation n. \ref{eq:pre}), recall (equation n. \ref{eq:rec}) and the F1-score (equation n. \ref{eq:f1_score}). \\
+The notebook gives also the possibility to graph the trend of the single models during the test both over training time and epochs. In addition to the trend during training as discussed in section n. \ref{sec:training_process_bench}, it is also possible to visualize the validation loss and training loss over training time. 

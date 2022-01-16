@@ -35,24 +35,28 @@
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Example of the graphs produced by the tool when analysing inference time\relax }}{47}{figure.caption.34}% 
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Overview of the process to test inference\relax }}{48}{figure.caption.35}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Specifics of the machine which run the experiments\relax }}{49}{figure.caption.36}% 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Categories of the \IeC {\textquoteleft }plant\_seedlings\_v2\IeC {\textquoteright } dataset \cite {giselsson2017public} \relax }}{50}{figure.caption.37}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison between epoch/accuracy for each model}}{51}{figure.caption.38}% 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison between training time/accuracy for each model}}{52}{figure.caption.39}% 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Accuracy of Alexnet and Resnet152 against training time in seconds\relax }}{52}{figure.caption.40}% 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Accuracy of Resnet101 and VGG9 against training time in seconds\relax }}{53}{figure.caption.41}% 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Breaking point of Resnet101 and VGG19\relax }}{53}{figure.caption.42}% 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Comparison between training time and accuracy for each model for 10 epochs}}{54}{figure.caption.43}% 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparison between training time and accuracy for each model for 100 epochs}}{54}{figure.caption.44}% 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Average time for each epoch\relax }}{55}{figure.caption.45}% 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Training loss and validity loss of all models calculated over 100 epochs\relax }}{55}{figure.caption.46}% 
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Inference time measured for each model}}{56}{figure.caption.47}% 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{57}{figure.caption.48}% 
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Size of the images over inference time}}{57}{figure.caption.49}% 
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{58}{figure.caption.50}% 
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{59}{figure.caption.51}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Specifics of the machine which run the experiments\relax }}{51}{figure.caption.36}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Categories of the \IeC {\textquoteleft }plant\_seedlings\_v2\IeC {\textquoteright } dataset \cite {giselsson2017public} \relax }}{52}{figure.caption.37}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison between epoch/accuracy for each model}}{53}{figure.caption.38}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison between training time/accuracy for each model}}{54}{figure.caption.39}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Accuracy of Alexnet and Resnet152 against training time in seconds\relax }}{54}{figure.caption.40}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Accuracy of Resnet101 and VGG9 against training time in seconds\relax }}{55}{figure.caption.41}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Breaking point of Resnet101 and VGG19\relax }}{55}{figure.caption.42}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Comparison between training time and accuracy for each model for 10 epochs}}{56}{figure.caption.43}% 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparison between training time and accuracy for each model for 100 epochs}}{56}{figure.caption.44}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Average time for each epoch\relax }}{57}{figure.caption.45}% 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Training loss and validity loss of all models calculated over 100 epochs\relax }}{57}{figure.caption.46}% 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Inference time measured for each model}}{58}{figure.caption.47}% 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{59}{figure.caption.48}% 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Size of the images over inference time}}{59}{figure.caption.49}% 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{60}{figure.caption.50}% 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{61}{figure.caption.51}% 
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Comparison between training time and accuracy for each model for 10 epochs}}{61}{figure.caption.52}% 
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Highest accuracy achieved on the 'plant\_seedlings\_v2' dataset}}{62}{figure.caption.53}% 
+\contentsline {figure}{\numberline {4.19}{\ignorespaces \relax }}{62}{figure.caption.54}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Example of the architecture of residual networks}}{72}{figure.caption.53}% 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Histogram of the fastest files\relax }}{73}{figure.caption.54}% 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of the slowest files\relax }}{74}{figure.caption.55}% 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the slowest files in common between all models\relax }}{73}{figure.caption.56}% 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Example of the architecture of residual networks}}{74}{figure.caption.57}% 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of the fastest files of Resnet 152\relax }}{75}{figure.caption.58}% 
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Histogram of the slowest files of Resnet152\relax }}{76}{figure.caption.59}% 

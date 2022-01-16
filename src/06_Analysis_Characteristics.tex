@@ -165,16 +165,16 @@ More importantly, however,this graph confirms the results and the hypothesis we 
 \begin{figure}[h]
 \centering
 \begin{tabular}{ p{2cm} p{2cm}   }
- name&time (s)\\
+ Model&Time (s)\\
  \hline
-resnet18&15.01\\
-resnet34&22.0\\
-resnet50&45.02\\
-resnet101&72.11\\
-resnet152&102.02\\
-alexnet&7.01\\
-vgg16&60.09\\
-vgg19&68.97\\
+Resnet18&15.01\\
+Resnet34&22.0\\
+Resnet50&45.02\\
+Resnet101&72.11\\
+Resnet152&102.02\\
+Alexnet&7.01\\
+VGG16&60.09\\
+VGG19&68.97\\
  \hline
 \end{tabular}
 \caption{Average time for each epoch}
@@ -304,8 +304,56 @@ Regardless of which number of epoch is better for this specific case, the purpos
 
 In a real world implementation, if is is known that images with a certain size are going to be among the slowest is useful because it will influence the decision of which camera to mount on the devices sent to the fields. For example, knowing that images with a size of 700 kbs are going to take 200 to 220 ms to be classified will help model the time behaviour of these devices and give information to verify that they won't miss any deadline. Furthermore, if we are able to reason about the trade-off between inference time and accuracy we are also able to choose a suitable model for different requirements. For example, in case the highest accuracy possible is not a hard requirement, but we have a hard deadline to respect, we are able to identify which model and the amount of training necessary to respect those requirements. \\
 
-Size, however, is not the only property of the images that we can analyse in order to accumulate more information about the response of the models.  
+A closer look to the list of slowest images reveals that there are pictures in common amongst all models (Fig. n. \ref{fig:slowest_files_all}). 
 \section{Second Experiment}
+
+
+\begin{figure}[h]
+       \centering 
+	    \includegraphics[width = 12 cm]{seedlings_100.png}
+        \caption[Comparison between training time and accuracy for each model for 10 epochs]{Comparison between training time and accuracy for each model for 10 epochs. The x axis is the training time in seconds, while the y axis is the accuracy achieved}
+         \label{fig:seedlings_100_epoch_accuracy}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\begin{tabular}{ p{2cm} c p{4cm} cp{3cm}  }
+ Model& Highest Accuracy (\%) & Epochs needed \\
+ \hline
+Resnet18&94.39&100\\
+Resnet34&94.48&99\\
+Resnet50&96.65&100\\
+Resnet101&97.01&100\\
+Resnet152&96.56&100\\
+Alexnet&85.88&99\\
+VGG16n&95.20&100\\
+VGG19&95.20&96\\
+ \hline
+\end{tabular}
+\caption[Highest accuracy achieved on the 'plant\_seedlings\_v2' dataset]{Highest accuracy achieved on the 'plant\_seedlings\_v2' dataset}
+\label{fig:highest_accuracy}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\begin{tabular}{ p{2cm} p{2cm}   }
+Model&Time (s)\\
+\hline
+Resnet18&7.47\\
+Resnet34&8.76\\
+Resnet50&14.39\\
+Resnet101&21.01\\
+Resnet152&28.51\\
+Alexnet&7.05\\
+VGG16&17.43\\
+VGG19&19.52\\
+\hline
+\end{tabular}
+\caption{}
+\label{fig:}
+\end{figure}
+
 \begin{itemize}
 \item Talk abot the dataset
 \item talk about the results

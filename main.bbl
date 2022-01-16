@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{WDESP17}
+\begin{thebibliography}{KRKP{\etalchar{+}}16}
 
 \bibitem[10.16]{10.1145/2959100}
 {\em RecSys '16: Proceedings of the 10th ACM Conference on Recommender
@@ -317,6 +317,17 @@ Alex Kendall and Yarin Gal.
 \newblock What uncertainties do we need in bayesian deep learning for computer
   vision?
 \newblock {\em CoRR}, abs/1703.04977, 2017.
+
+\bibitem[KRKP{\etalchar{+}}16]{Kluyver2016jupyter}
+Thomas Kluyver, Benjamin Ragan-Kelley, Fernando P{\'e}rez, Brian Granger,
+  Matthias Bussonnier, Jonathan Frederic, Kyle Kelley, Jessica Hamrick, Jason
+  Grout, Sylvain Corlay, Paul Ivanov, Dami{\'a}n Avila, Safia Abdalla, and
+  Carol Willing.
+\newblock Jupyter notebooks -- a publishing format for reproducible
+  computational workflows.
+\newblock In F.~Loizides and B.~Schmidt, editors, {\em Positioning and Power in
+  Academic Publishing: Players, Agents and Agendas}, pages 87 -- 90. IOS Press,
+  2016.
 
 \bibitem[KSH12]{NIPS2012_c399862d}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
