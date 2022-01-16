@@ -7,10 +7,10 @@ for the deployment of Neural Networks in practical applications. Furthermore, tr
 Finding relations between these metrics and other factors as well, like influence of a given input feature to the prediction of the model (\cite{hooker2019benchmark}), will allow us to optimize applications, saving time and resources in the process.
 
 \section{Environment use for the test}
-All the experiments have been run on the same machine running Ubuntu 20.04.3 LTS (Focal Fossa). For the specific of the machine, please refer to in Fig. n. \ref{fig:gpu_info}
+All the experiments have been run on the same machine running Ubuntu 20.04.3 LTS (Focal Fossa). For the specific of the machine, please refer to table \ref{tab:gpu_info}
 
 
-\begin{figure}[h]
+\begin{table}[h]
 \centering
 \begin{tabular}{|l  |r|}
  \hline
@@ -24,8 +24,8 @@ Number of GPUs & 8\\
 \hline
 \end{tabular}
 \caption{Specifics of the machine which run the experiments}
-\label{fig:gpu_info}
-\end{figure}
+\label{tab:gpu_info}
+\end{table}
 
 
 
@@ -35,9 +35,9 @@ Number of GPUs & 8\\
 \section{Datasets and Training Methodology}\label{sec:data_models}
 It is assumed for all the experiments that, if no specification is made, the training of the models has been carried out by the \textit{fit\_one\_cycle()} function present in fastai using the default learning rate. Furthermore, the models have not been pre-trained, hence no transferred learning is applied, and the models have been trained using full precision. \\
 For each experiment we use rather different datasets, some of which are not related to the farming world. In the first experiment, we use the dataset proposed by \textit{Vevaldi et al.} in \cite{parkhi12a}, which will be referred to as "the Pets dataset" for the rest of the paper. This dataset is directly accessible from the library and contains 37 category of pets, with roughly 200 pictures each. \\
-For the second experiment, we are going to use the dataset proposed by \textit{Giselsson et al.} in \cite{giselsson2017public}, which we are going to refer to as the ‘plant\_seedlings\_v2’ dataset. This dataset contains \textasciitilde 1000 RGB images with a resolution of 10 pixels per mm divided in 12 different plant spices. The plants in the dataset are listed in Fig. n.  \ref{tab:dataset_species}. This dataset contains pictures of one of the most common weed found in sugar beets plantations, a plant commonly referred to as ''charlock''. \cite{cioni_weed_2010}\\
+For the second experiment, we are going to use the dataset proposed by \textit{Giselsson et al.} in \cite{giselsson2017public}, which we are going to refer to as the ‘plant\_seedlings\_v2’ dataset. This dataset contains \textasciitilde 1000 RGB images with a resolution of 10 pixels per mm divided in 12 different plant spices. The plants in the dataset are listed in table \ref{tab:dataset_species}. This dataset contains pictures of one of the most common weed found in sugar beets plantations, a plant commonly referred to as ''charlock''. \cite{cioni_weed_2010}\\
 Even though the dataset is mainly focused on seedlings and it contains pictures of other plants as well, this will give us proper insights of the models' behaviours in a farming settings. 
-\begin{figure}[ht]
+\begin{table}[ht]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
@@ -61,7 +61,7 @@ Even though the dataset is mainly focused on seedlings and it contains pictures 
 \end{tabular}
 \caption{Categories of the ‘plant\_seedlings\_v2’ dataset \cite{giselsson2017public} }
 \label{tab:dataset_species}
-\end{figure}
+\end{table}
 
 
 
@@ -71,7 +71,7 @@ Even though the dataset is mainly focused on seedlings and it contains pictures 
 As mentioned in section \ref{sec:data_models}, this experiment has been carried out using a data-set which is rather far from the agricultural field. However, it already gives us some insights of what is to come. \\
 The first metrics we are going to analyse are number of epochs, training time and accuracy. We will study those metrics to be able to recognize some patterns and use those to be able to find correlations between the three with the final aim of being able to predict one of them knowing the others. These prediction patterns can be used to save time during the learning process in future applications, as we can estimate the accuracy before starting the process.  \\
 The benchmarking tool run the test for each model using three different amounts of epochs, i.e. different training time, in order to simulate three different scenarios: one example with low training time,one with a medium training time and finally one with a very high training time. The tool run with ten, fifty and 100 epochs respectively. \\
-The one scenario which yield more promising results and the one we are going to analyse first is the one with fifty epochs. Fig. n. \ref{fig:com_ep_ac_models} shows the results of each model's accuracy graphed against the number of epochs used for training, while  Fig. n. \ref{fig:com_ti_ac_models} shows the results of each model's accuracy graphed against the necessary training time needed to reach that accuracy.\\
+The one scenario which yield more promising results and the one we are going to analyse first is the one with fifty epochs. Fig. \ref{fig:com_ep_ac_models} shows the results of each model's accuracy graphed against the number of epochs used for training, while  Fig. \ref{fig:com_ti_ac_models} shows the results of each model's accuracy graphed against the necessary training time needed to reach that accuracy.\\
 
 
 
@@ -91,7 +91,7 @@ The one scenario which yield more promising results and the one we are going to 
 
 
 
-As suspected, for each model, the accuracy grows logarithmically higher as the number of  epochs increments, or as the training time increments. A closer inspection of Fig. n. \ref{fig:com_ti_ac_models} lets us derive other conclusions. Alexnet finishes training in considerably less time compared to the other networks(\textasciitilde 6 minutes), reaching however the lowest accuracy overall(45\%). We can observe this difference in time by looking at Fig. n.\ref{fig:sing_acc_train2} and Fig. n.\ref{fig:sing_acc_train}, which shows the behaviour of Alexnet, Resnet101, Resnet152 and VGG19 in the same settings. \\
+As suspected, for each model, the accuracy grows logarithmically higher as the number of  epochs increments, or as the training time increments. A closer inspection of Fig. \ref{fig:com_ti_ac_models} lets us derive other conclusions. Alexnet finishes training in considerably less time compared to the other networks(\textasciitilde 6 minutes), reaching however the lowest accuracy overall(45\%). We can observe this difference in time by looking at Fig.\ref{fig:sing_acc_train2} and Fig.\ref{fig:sing_acc_train}, which shows the behaviour of Alexnet, Resnet101, Resnet152 and VGG19 in the same settings. \\
 As also shown in the previous graphs, Resnet101 reached overall the better accuracy at around 65\% with a training time of \textasciitilde 62 minutes, second only to Resnet152, which needed  \textasciitilde 90 minutes to reach an accuracy of \textasciitilde 64\%. Finally, VGG19 took \textasciitilde 60 minutes to reach an accuracy of 61\%. \\
 In order to collect more information about the response of the model, we should take a closer look to how they performed individually.\\
 
@@ -120,8 +120,8 @@ In order to collect more information about the response of the model, we should 
         \caption{Accuracy of Resnet101 and VGG9 against training time in seconds}
         \label{fig:sing_acc_train}
 \end{figure}
-Fig. n.\ref{fig:sing_acc_train2} and Fig. n.\ref{fig:sing_acc_train} also show how stable each model were during training. The stability we are observing right now is how fluctuating each model has been during training regarding its accuracy. The less fluctuating it is, the better we able to predict the accuracy from training time or number of epoch, and vice-versa. From the results, we can see that Resnet152 and Resnet101 tend to fluctuate more compared to Alexnet or VGG19 (Fig. n. \ref{fig:sing_acc_train}). \\
-Such fluctuation, however, does not hide a trend which is in common amongst all models: after a certain number of epochs, the accuracy tends to stabilize and grow significantly slower. Fig. n. \ref{fig:com_ep_ac_models} can help us locate the point at which the accuracy stops increasing at a high rate at around 10 epochs and this is further proved by Fig. n. \ref{fig:sing_acc_ep}.\\
+Fig.\ref{fig:sing_acc_train2} and Fig.\ref{fig:sing_acc_train} also show how stable each model were during training. The stability we are observing right now is how fluctuating each model has been during training regarding its accuracy. The less fluctuating it is, the better we able to predict the accuracy from training time or number of epoch, and vice-versa. From the results, we can see that Resnet152 and Resnet101 tend to fluctuate more compared to Alexnet or VGG19 (Fig. \ref{fig:sing_acc_train}). \\
+Such fluctuation, however, does not hide a trend which is in common amongst all models: after a certain number of epochs, the accuracy tends to stabilize and grow significantly slower. Fig. \ref{fig:com_ep_ac_models} can help us locate the point at which the accuracy stops increasing at a high rate at around 10 epochs and this is further proved by Fig. \ref{fig:sing_acc_ep}.\\
 \begin{figure}[h]
      \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{resnet_101_acc_ep.png}
@@ -137,9 +137,9 @@ Such fluctuation, however, does not hide a trend which is in common amongst all 
 
 
 
-We can further analyse the behaviour of each models for the first 10 epochs by observing Fig. n. \ref{fig:acc_training_10}. This graph gives us a closer look to how the models have been trained and how the curve looks like. Differently from the previous graph, Resnet152 this time reached a higher accuracy, however it was also the models who took the most time to fully complete the training.\\
-On the other hand, from Fig. n. \ref{fig:acc_training_10}, we can clearly observe  that, if compared with each other for the same training time, shallower networks like Resnet34 or Resnet50 achieved higher accuracy than deeper networks like Resnet152. This is obviously due to the fact that within the same training time shallower networks manage to complete more epochs, therefore complete more training cycles. As a matter of fact, if we were to compare models on an epoch base we will find that deeper networks will achieve better accuracy given the same number of epochs. \\
-If we observe Fig. n. \ref{fig:com_ti_ac_models} before the 1000 seconds mark, we can see that Resnet18's curve starts to flatten reaching an accuracy of \textasciitilde 61\%, while the others tend to reach smaller accuracy values. Around the 1000 seconds marks the behaviour of all the models starts to equalize and afterwards the accuracy of deeper networks will increase reaching higher values. As mentioned previously, this is due to the models being able to finish more epochs within the same time frame. In this case, the models reached to finish the training completely, as shown in \ref{fig:com_ti_ac_models}. 
+We can further analyse the behaviour of each models for the first 10 epochs by observing Fig. \ref{fig:acc_training_10}. This graph gives us a closer look to how the models have been trained and how the curve looks like. Differently from the previous graph, Resnet152 this time reached a higher accuracy, however it was also the models who took the most time to fully complete the training.\\
+On the other hand, from Fig. \ref{fig:acc_training_10}, we can clearly observe  that, if compared with each other for the same training time, shallower networks like Resnet34 or Resnet50 achieved higher accuracy than deeper networks like Resnet152. This is obviously due to the fact that within the same training time shallower networks manage to complete more epochs, therefore complete more training cycles. As a matter of fact, if we were to compare models on an epoch base we will find that deeper networks will achieve better accuracy given the same number of epochs. \\
+If we observe Fig. \ref{fig:com_ti_ac_models} before the 1000 seconds mark, we can see that Resnet18's curve starts to flatten reaching an accuracy of \textasciitilde 61\%, while the others tend to reach smaller accuracy values. Around the 1000 seconds marks the behaviour of all the models starts to equalize and afterwards the accuracy of deeper networks will increase reaching higher values. As mentioned previously, this is due to the models being able to finish more epochs within the same time frame. In this case, the models reached to finish the training completely, as shown in \ref{fig:com_ti_ac_models}. 
 Models from different architectures do not follow this trend. Alexnet, as we already discussed above, does not manage to reach somewhat close to the same accuracy of the other models. VGG16 and VGG19 follow similar trends and both curves overlap multiple times.  Even though VGG19 is considerably bigger than VGG16 (\cite{simonyan2015deep}), they reach very similar accuracy even before the 1000 seconds marks with very similar training time. \\
 \begin{figure}[h]
        \centering 
@@ -159,10 +159,10 @@ Models from different architectures do not follow this trend. Alexnet, as we alr
 
 
 
-This behaviour is further highlighted in Fig. n. \ref{fig:time_acc_100} which shows the behaviour of the models trained for 100 epochs. We can see that once again around 1000 seconds the curve of every model starts to flatten and the models using the Resnet architectures achieve similar accuracy. The highest accuracy is achieved by Resnet152, which also needed the most training time. Surprisingly, Resnet50 performed better than Resnet101 achieving better accuracy with less training time.
+This behaviour is further highlighted in Fig. \ref{fig:time_acc_100} which shows the behaviour of the models trained for 100 epochs. We can see that once again around 1000 seconds the curve of every model starts to flatten and the models using the Resnet architectures achieve similar accuracy. The highest accuracy is achieved by Resnet152, which also needed the most training time. Surprisingly, Resnet50 performed better than Resnet101 achieving better accuracy with less training time.
 VGG16 and VGG19 performed similarly displaying overlapping curves, with VGG19 once again requiring more training time. \\
-More importantly, however,this graph confirms the results and the hypothesis we made previously.Furthermore, we can use all the data we acquired to calculate the average training time required for each epoch. The results are provided in Fig. n. \ref{fig:time_f_epoch}.
-\begin{figure}[h]
+More importantly, however,this graph confirms the results and the hypothesis we made previously.Furthermore, we can use all the data we acquired to calculate the average training time required for each epoch. The results are provided in table \ref{tab:time_f_epoch}.
+\begin{table}[h]
 \centering
 \begin{tabular}{ p{2cm} p{2cm}   }
  Model&Time (s)\\
@@ -178,8 +178,8 @@ VGG19&68.97\\
  \hline
 \end{tabular}
 \caption{Average time for each epoch}
-\label{fig:time_f_epoch}
-\end{figure}
+\label{tab:time_f_epoch}
+\end{table}
 
 Training for 100 epochs gives us also more complete insights regarding the future performance of our models. In other words, we can determine when the model starts to over-fit or under-fit and when to stop the training to avoid future poor performances. \\
 \begin{figure}[h]
@@ -202,12 +202,12 @@ Training for 100 epochs gives us also more complete insights regarding the futur
 \end{figure}
 
 
-As shown in Fig. n. \ref{fig:train_loss}, the train loss decreases at each epoch for each model. For Alexnet, the curve tends to flatten at around 15 epochs, while for the others it flattens at around 60. Rather than observing the training loss trend alone, however,which does not give us the possibility to comprehend correctly the response of the models, we should compare it to the trend of the validation loss shown in Fig. n. \ref{fig:valid_loss}. Alexnet remained stable for the duration of the training, with a validation loss comparable to the training loss. The other models, on the other hand, show a rather different behaviour. At around 20 epochs, the validation loss of deeper networks, i.e. Resnet152, Resnet101 and VGG19 starts to increment drastically. For shallower networks of the Resnet architecture, i.e. Resnet18, Resnet34 and Resnet50, and for VGG16 the validation loss decreased for the first 15 epochs and started to increment only after \textasciitilde40.\\
-In section n. \ref{sec:of_uf} we defined over-fitting to be a situation in which the validation loss is much larger than training and from Fig. n. \ref{fig:valid_loss} we can see that, although after various number of epochs, most of the networks start to enter this condition as the validation loss increases and it becomes much larger than their training loss.We also discussed some techniques to avoid this, like for i.g. Cross-Validation. For the purpose of this experiment, we only split the dataset 80-20, hence we used no cross-validation or augmentation on the data-set whatsoever. \\
+As shown in Fig. \ref{fig:train_loss}, the train loss decreases at each epoch for each model. For Alexnet, the curve tends to flatten at around 15 epochs, while for the others it flattens at around 60. Rather than observing the training loss trend alone, however,which does not give us the possibility to comprehend correctly the response of the models, we should compare it to the trend of the validation loss shown in Fig. \ref{fig:valid_loss}. Alexnet remained stable for the duration of the training, with a validation loss comparable to the training loss. The other models, on the other hand, show a rather different behaviour. At around 20 epochs, the validation loss of deeper networks, i.e. Resnet152, Resnet101 and VGG19 starts to increment drastically. For shallower networks of the Resnet architecture, i.e. Resnet18, Resnet34 and Resnet50, and for VGG16 the validation loss decreased for the first 15 epochs and started to increment only after \textasciitilde40.\\
+In section n. \ref{sec:of_uf} we defined over-fitting to be a situation in which the validation loss is much larger than training and from Fig. \ref{fig:valid_loss} we can see that, although after various number of epochs, most of the networks start to enter this condition as the validation loss increases and it becomes much larger than their training loss.We also discussed some techniques to avoid this, like for i.g. Cross-Validation. For the purpose of this experiment, we only split the dataset 80-20, hence we used no cross-validation or augmentation on the data-set whatsoever. \\
  
 In addition to the training time, we can also use the benchmark tool we developed to measure and analyse the inference time of each model.\\
 As we are mostly focused on sugar beet recognition, it is safe to assume use cases where field robots would scan the field to recognize the vegetation, similarly to the one proposed by \textit{Lottes et al.} in \cite{7487720}. In such setting, the time taken to classify the image results in a soft deadline, as the time taken to scan the field is greatly influenced by it, therefore being able to estimate the needed inference time could help optimize this part of the application. \\
-To measure inference time, we need to collect a dataset of related pictures which are not part of the training dataset to feed to each model. For our tests, we are going to use a dataset comprising of 200 random pictures. The pictures we are going to use are going be of different dimensions and different quality in order to see if we can recognize patterns. We can see the results in Fig. n. \ref{fig:inf_time_epoch_c}, which displays the training time in milliseconds graphed against the accuracy and the number of epoch used to train. From this figure, we can clearly see that the inference time for every model rarely is measured to be more than 230 milliseconds, with the exception of few outliers, and most of the models for most epochs have an accuracy between 87\% and 92\%. In addition, if we analyse the inference time based on the number of epoch (Fig. n. \ref{fig:inf_time_epoch}) the models display similar responses.  \\
+To measure inference time, we need to collect a dataset of related pictures which are not part of the training dataset to feed to each model. For our tests, we are going to use a dataset comprising of 200 random pictures. The pictures we are going to use are going be of different dimensions and different quality in order to see if we can recognize patterns. We can see the results in Fig. \ref{fig:inf_time_epoch_c}, which displays the training time in milliseconds graphed against the accuracy and the number of epoch used to train. From this figure, we can clearly see that the inference time for every model rarely is measured to be more than 230 milliseconds, with the exception of few outliers, and most of the models for most epochs have an accuracy between 87\% and 92\%. In addition, if we analyse the inference time based on the number of epoch (Fig. \ref{fig:inf_time_epoch}) the models display similar responses.  \\
 
 
 \begin{figure}[h]
@@ -243,9 +243,9 @@ To measure inference time, we need to collect a dataset of related pictures whic
      \caption{Inference time measured for model Resnet18 and Alexnet}
         \label{fig:inf_acc_c}
 \end{figure}
-When we compare model individually like in Fig. n. \ref{fig:inf_acc_c}, other similarities appear. As a matter of fact, when we analyse each model, we can observe that some pictures require considerably more time than others. For example, Fig. n. \ref{fig:inf_acc_c} shows the measurements obtained by model Resnet18 (\ref{fig:inf_acc_resnet18}) and Alexnet (\ref{fig:inf_acc_alexnet}) and from their response it appears that, at each epoch, there is a constant number of images which takes more time to be processed. \\
+When we compare model individually like in Fig. \ref{fig:inf_acc_c}, other similarities appear. As a matter of fact, when we analyse each model, we can observe that some pictures require considerably more time than others. For example, Fig. \ref{fig:inf_acc_c} shows the measurements obtained by model Resnet18 (\ref{fig:inf_acc_resnet18}) and Alexnet (\ref{fig:inf_acc_alexnet}) and from their response it appears that, at each epoch, there is a constant number of images which takes more time to be processed. \\
 We can run the tool once again to identify the 10 images that took more time to be processed at each epoch in order to analyse them and find elements which can explain such difference. \\
-The first property of the image we are going to take a look is the size of the images. Fig. n. \ref{fig:size_inference_time_compared} shows the results obtained for each model. 
+The first property of the image we are going to take a look is the size of the images. Fig. \ref{fig:size_inference_time_compared} shows the results obtained for each model. 
 
 
 \begin{figure}[h]
@@ -259,7 +259,7 @@ The first property of the image we are going to take a look is the size of the i
 
 From the graph we are able to spot some rather interesting behaviours. First of all, we would expect that for each epoch the slowest images would be the same. This hypothesis would be confirmed if the graph showed group of pictures of the same size having different inference time. However, this is only the case for sizes bigger than 500 kbs. As a matter of fact, we are not able to cluster pictures before 500 kbs under a certain inference time range as effectively as we can do for heavier pictures. We can conclude from this that regardless of the amount of training, pictures over 500kbs are going to be the slowest ones. \\
 From a closer investigation of the individual models emerged some differences in the response of the single models. \\
-For deeper networks the situation is similar to the discussion we made. As shown in Fig. n. \ref{fig:sl_f_deep}, for both Resnet152 and VGG16, the response for pictures smaller than 500 kb is noisy, although Resnet152 show a more stable behaviour than VGG16. This implies that for these networks only the response with images over 500kbs displays similarities.  
+For deeper networks the situation is similar to the discussion we made. As shown in Fig. \ref{fig:sl_f_deep}, for both Resnet152 and VGG16, the response for pictures smaller than 500 kb is noisy, although Resnet152 show a more stable behaviour than VGG16. This implies that for these networks only the response with images over 500kbs displays similarities.  
 \begin{figure}[h]
      \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{resnet152_sl_f.png}
@@ -278,11 +278,8 @@ For deeper networks the situation is similar to the discussion we made. As shown
         \label{fig:sl_f_deep}
 \end{figure}
 
-For shallower networks, however, the situation is slightly more different. Fig. n. \ref{fig:sl_f_shallow} shows the slowest images identified in the models Resnet18 (Fig. n. \ref{fig:resnet18_sl_f}) and Alexnet (Fig. n. \ref{fig:alexnet_sl_f}). Differently from what we concluded before, these models show a much more precise response for images smaller than 500 kbs. We are in fact able to cluster the images by size, with the exception of very few outliers. In addition, we can also point out which number of epoch would yield faster predictions for the slowest images. For Resnet18, we can observe that the model trained with 40 epochs is among the fastest for most sizes, with very few exceptions. For alexnet, on the other hand, the fastest model is the one trained for only 10 epochs. This conclusion, however, does not take into account the accuracy that those models achieved. Using Fig. n. \ref{fig:inf_acc_resnet18} we can see that the same models, i.e. Resnet18 trained with 10 epochs, achieved one of the lowest accuracy rate over all (\textasciitilde90\%) and from Fig. n. \ref{fig:inf_acc_alexnet} we can extrapolate a similar conclusion for Alexnet trained with 10 epochs.(\textasciitilde80\%). \\
+For shallower networks, however, the situation is slightly more different. Fig. \ref{fig:sl_f_shallow} shows the slowest images identified in the models Resnet18 (Fig. \ref{fig:resnet18_sl_f}) and Alexnet (Fig. \ref{fig:alexnet_sl_f}). Differently from what we concluded before, these models show a much more precise response for images smaller than 500 kbs. We are in fact able to cluster the images by size, with the exception of very few outliers. In addition, we can also point out which number of epoch would yield faster predictions for the slowest images. For Resnet18, we can observe that the model trained with 40 epochs is among the fastest for most sizes, with very few exceptions. For alexnet, on the other hand, the fastest model is the one trained for only 10 epochs. This conclusion, however, does not take into account the accuracy that those models achieved. Using Fig. \ref{fig:inf_acc_resnet18} we can see that the same models, i.e. Resnet18 trained with 10 epochs, achieved one of the lowest accuracy rate over all (\textasciitilde90\%) and from Fig. \ref{fig:inf_acc_alexnet} we can extrapolate a similar conclusion for Alexnet trained with 10 epochs.(\textasciitilde80\%). \\
 The best trade off between fast inference time and accuracy is achieved when both models have been trained with 50 epochs, however, in case of Resnet18, as we discussed before, this is also the number of epochs when the validation loss is bigger than the training loss, hence we found ourself in a situation of slight over-fitting. \\
-Regardless of which number of epoch is better for this specific case, the purpose of our exploration is to identify correlation between certain characteristics. From these graphs we are able to find a correlation and to reason about it in order to tailor future applications. 
-
-
 \begin{figure}[h]
      \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{resnet18_sl_f.png}
@@ -302,66 +299,93 @@ Regardless of which number of epoch is better for this specific case, the purpos
 \end{figure}
 
 
+Regardless of which number of epoch is better for this specific case, the purpose of our exploration is to identify correlation between certain characteristics. From these graphs we are able to find a correlation and to reason about it in order to tailor future applications. \\
 In a real world implementation, if is is known that images with a certain size are going to be among the slowest is useful because it will influence the decision of which camera to mount on the devices sent to the fields. For example, knowing that images with a size of 700 kbs are going to take 200 to 220 ms to be classified will help model the time behaviour of these devices and give information to verify that they won't miss any deadline. Furthermore, if we are able to reason about the trade-off between inference time and accuracy we are also able to choose a suitable model for different requirements. For example, in case the highest accuracy possible is not a hard requirement, but we have a hard deadline to respect, we are able to identify which model and the amount of training necessary to respect those requirements. \\
 
-A closer look to the list of slowest images reveals that there are pictures in common amongst all models (Fig. n. \ref{fig:slowest_files_all}). 
-\section{Second Experiment}
+A closer look to the list of slowest images reveals that there are pictures in common amongst all models (Fig. \ref{fig:slowest_files_all}). Using the tool we can investigate if those pictures present similarities that may explain why this is the case. The information collected from the pictures are shown in table 
+\ref{tab:pictures_info}.
 
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ p{2cm} p{4cm}  p{2cm}  p{2cm}  }
+ Picture n.& Dimensions(x,y) & DPI(x,y)&size(kb) \\
+ \hline
+1&(3888, 2187)&N/A& 727\\
+2&(3018, 2585)&(300,300)&2209\\
+3&(3000, 2019)&(300,300)&1341\\
+4&(2003, 2003)&N/A&558\\
+5&(1373, 1012)&(72,72)&1409\\
+ \hline
+\end{tabular}
+\caption{Information collected from the slowest pictures}
+\label{tab:pictures_info}
+\end{table}
+
+As already demonstrated by Fig. \ref{fig:size_inference_time_compared}, each of the five pictures has a size bigger than 500kb, i.e. they are amongst the heaviest pictures on the dataset. Furthermore, they are also amongst the pictures having the highest dimensions. Even though not available for all the pictures, table \ref{tab:pictures_info} also shows that the pictures have high DPI, which implies that these pictures have very high quality. 
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Second Experiment}
+In this section, we are going to analyse the performances of the models over the 'plant\_ seedlings \_v2' data-set. This dataset contains information taken from the agricultural field, we can therefore use the benchmarking tool to measure the metrics in a setting that reflects better a real-world use of the tool. \\
+Similarly to the first experiment, the first metric we are going to analyse is training time. The tool run the test three times for 100, 200 and 50 epochs. 
+We are going to start our analysis by studying the results obtained when trained for 100 epochs, which are shown in Fig. \ref{fig:seedlings_100_epoch_accuracy} and \ref{fig:seedlings_100_acc}. \\
+As already encountered in the first experiment, Alexnet is the model that achieved the lowest accuracy overall reaching \textasciitilde86\% after 99 epochs. The highest accuracy has been achieved by Resnet101, peaking at \textasciitilde97\% after 66 epochs. Moreover, VGG16 and VGG19 achieved the same peak accuracy at \textasciitilde95\%, however VGG16 required 13 epochs less (43 compared to the 56 needed for VGG19). Similarly, Resnet18 and Resnet34 achieved comparable top accuracies at  94.39\% and 94.48\% respectively, however Resnet34 required considerably less time to reach this number peaking after 62 epochs, while Resnet18 achieved this number when the training cycle was almost done, namely after 96 epochs. An overview of the performances of all the models can be seen in table \ref{tab:performances_seeds}. 
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ p{2cm} p{4cm} p{3cm} p{3cm} p{2cm}  }
+ Model& Top Accuracy (\%) & Epochs needed &Average Time (s)&Total Time (s)\\
+ \hline
+Resnet18&94.39&96&7&747\\
+Resnet34&94.48&62&9&876\\
+Resnet50&96.65&67&14&1439\\
+Resnet101&97.01&66&21&2101\\
+Resnet152&96.56&98&29&2851\\
+Alexnet&85.88&63&7&705\\
+VGG16&95.20&43&17&1743\\
+VGG19&95.20&56&20&1952\\
+ \hline
+\end{tabular}
+\caption{Performances of the models trained the 'plant\_seedlings\_v2' dataset}
+\label{tab:performances_seeds}
+\end{table}\\
+
+
+
+Fig. \ref{fig:seedlings_100_epoch_accuracy} shows the response of all models during the training based on the epoch used for training. Similarly to the first experiment, the response of the model show that within the first ten epochs the accuracy increases quickly to stabilize afterwards. However, contrary to the first experiment, here we can observe a more compact graph, meaning that the all the models except Alexnet achieved accuracies not far off from each other during the training. 
 
 \begin{figure}[h]
        \centering 
 	    \includegraphics[width = 12 cm]{seedlings_100.png}
-        \caption[Comparison between training time and accuracy for each model for 10 epochs]{Comparison between training time and accuracy for each model for 10 epochs. The x axis is the training time in seconds, while the y axis is the accuracy achieved}
+        \caption[Accuracy achieved when training for 100 epochs]{Accuracy achieved when training for 100 epochs. The x axis is the number of epochs, while the y axis is the accuracy achieved}
          \label{fig:seedlings_100_epoch_accuracy}
 \end{figure}
 
 
+In Fig. \ref{fig:seedlings_100_acc}, on the other hand, depicts the accuracy graphed over training time. Alexnet took the least amount of time to finish the training cycle (747 seconds), however Resnet took only \textasciitilde40 seconds more and reached a far better accuracy. Resnet152 took 47 Minutes and 30 Seconds (2851 seconds) to complete the test and is the model that required the most time. 
 \begin{figure}[h]
-\centering
-\begin{tabular}{ p{2cm} c p{4cm} cp{3cm}  }
- Model& Highest Accuracy (\%) & Epochs needed \\
- \hline
-Resnet18&94.39&100\\
-Resnet34&94.48&99\\
-Resnet50&96.65&100\\
-Resnet101&97.01&100\\
-Resnet152&96.56&100\\
-Alexnet&85.88&99\\
-VGG16n&95.20&100\\
-VGG19&95.20&96\\
- \hline
-\end{tabular}
-\caption[Highest accuracy achieved on the 'plant\_seedlings\_v2' dataset]{Highest accuracy achieved on the 'plant\_seedlings\_v2' dataset}
-\label{fig:highest_accuracy}
+       \centering 
+	    \includegraphics[width = 12 cm]{seedlings_100_acc.png}
+        \caption[Accuracy achieved when training for 100 epochs in relation with training time]{Accuracy achieved when training for 100 epochs in relation with training time. The x axis is the training time in seconds, while the y axis is the accuracy achieved}
+         \label{fig:seedlings_100_acc}
 \end{figure}
 
 \begin{figure}[h]
-\centering
-\begin{tabular}{ p{2cm} p{2cm}   }
-Model&Time (s)\\
-\hline
-Resnet18&7.47\\
-Resnet34&8.76\\
-Resnet50&14.39\\
-Resnet101&21.01\\
-Resnet152&28.51\\
-Alexnet&7.05\\
-VGG16&17.43\\
-VGG19&19.52\\
-\hline
-\end{tabular}
-\caption{}
-\label{fig:}
+     \begin{subfigure}{0.5\textwidth}
+	    \includegraphics[width = \gws cm]{acc_time_resnet152.png}
+        \label{fig:acc_time_resnet152}
+     \end{subfigure}
+     \begin{subfigure}{0.5\textwidth}
+	    \includegraphics[width = \gws cm]{acc_time_resnet18.png}
+        \label{fig:acc_time_resnet18}
+     \end{subfigure}
+        \caption{Breaking point of Resnet101 and VGG19}
+        \label{fig:sing_acc_time_rr}
 \end{figure}
 
-\begin{itemize}
-\item Talk abot the dataset
-\item talk about the results
-\end{itemize}
+
 \section{Conclusion}
 
-\begin{itemize}
-\item talk about the example with the pets
-\item describe the accuracy over epoch
-\item describe all the other graphs too
-\end{itemize}

@@ -25,7 +25,7 @@ Differently from Training Time (section \ref{sec:training_time}), the memory foo
 
 \section{Uncertainty in Deep Neural Networks}
 In the previous section we observed that a benchmark should produce predictable results. Although this is true in general terms, we can not properly use the term "predictability" when discussing DNNs. \\
-Due to the increased trust given by the advancements in recent years, DNNs are being applied in numerous different fields, as shown by the increasing number of peer review papers about Deep Learning (Fig n. \ref{fig:annual_trend}), even the higher-risk ones 
+Due to the increased trust given by the advancements in recent years, DNNs are being applied in numerous different fields, as shown by the increasing number of peer review papers about Deep Learning (Fig. \ref{fig:annual_trend}), even the higher-risk ones 
 like medical image analysis or autonomous vehicle control. \cite{gawlikowski2021survey}
 \begin{figure}[h]
     \centering
@@ -61,7 +61,7 @@ We previously modelled a neural network simply as a function $f\theta$. Although
 A further source of uncertainty in DNNs is also related to the very own nature of DNNs. DNNs are not deterministic, rather they are stochastic\footnote{Stochastic is a synonym for randomness} in many ways : the order of data, the weight initialization or random regularization as augmentation or dropout. \cite{gawlikowski2021survey} Moreover, the stochastic gradient descent algorithm is widely use to optimize the learning process of DNNs. \cite{ruder2017overview}\\
 Another version of the gradient descent algorithm which is also used is the mini-batch version, which selects random batches with aleatory size (called batch size) from the learning data-set to optimize the training process. \cite{ruder2017overview} This parameter, in addition to other ones like learning rate, and the number of training epochs, is also source of unpredictability in the DNN, as they could heavily change its performances  \\
 The stochastic nature of DNN and the choices of the aforementioned parameters are the forth cause of uncertainty in DNNs : \textbf{the errors in the training procedure of the DNN}\\
-Previously we modelled the training set as $\mathcal{D} \subset \mathbb{D}$, hence as being a subset of a certain domain $\mathbb{D}$. However, the realm of input which could be fed to a neural network is not limited to this domain, rather the DNN is trained to solve tasks with inputs belonging to this domain. Another source of uncertainty can be therefore an input which the DNN is not trained for, even though it is able to process it. For instance, if a DNN is trained to classify dogs from images, an image as input could also depict a bird. The last factor which could cause uncertainty is therefore the \textbf{errors caused by unknown data}. Such unknown data, could also be caused by highly noisy measurement devices, like a broken camera, and some researches show how easy is to fool DNN with images that are meaningless for us humans.\cite{nguyen2015deep} Fig n. \ref{fig:fooling_DNN} depicts some examples of picture which could fool even the most advanced DNN. The figures on the top row could also be produced by random noise from a malfunctioning camera and yet could be classified as something else with an accuracy $\geq$ 99.6\%. \cite{nguyen2015deep}\\
+Previously we modelled the training set as $\mathcal{D} \subset \mathbb{D}$, hence as being a subset of a certain domain $\mathbb{D}$. However, the realm of input which could be fed to a neural network is not limited to this domain, rather the DNN is trained to solve tasks with inputs belonging to this domain. Another source of uncertainty can be therefore an input which the DNN is not trained for, even though it is able to process it. For instance, if a DNN is trained to classify dogs from images, an image as input could also depict a bird. The last factor which could cause uncertainty is therefore the \textbf{errors caused by unknown data}. Such unknown data, could also be caused by highly noisy measurement devices, like a broken camera, and some researches show how easy is to fool DNN with images that are meaningless for us humans.\cite{nguyen2015deep} Fig.\ref{fig:fooling_DNN} depicts some examples of picture which could fool even the most advanced DNN. The figures on the top row could also be produced by random noise from a malfunctioning camera and yet could be classified as something else with an accuracy $\geq$ 99.6\%. \cite{nguyen2015deep}\\
 \begin{figure}[htb]
     \centering
     \includegraphics[scale = 0.4]{img/images_fooling_DNN.png}
@@ -85,7 +85,7 @@ Aleatoric uncertainty is of the irreducible type, meaning it is impossible to ge
 \textit{Epistemic uncertainty}, or systemic or epistemic uncertainty, on the other hand, refers to the type of uncertainty cause by ignorance or short comings of the model, hence not on any other underlying stochastic phenomenon. \cite{DBLP:journals/corr/abs-1811-01412}. Usually, this is due to unknown or lack of coverage of the dataset used for training, hence covers factors I,III, IV and V. \\
 Epistemic uncertainty can be theoretically explained away by improving the architecture of the model and broadening the dataset.
 For example,let us consider a model which is able to determine whether a word is part of the Italian or English dictionary. If we feed the word 'macchina'' to the model, given that we provided enough data to train and the model is perfect, we can be confident that it will predict the correct language, in this case Italian. However, if we feed it with the word ''pasta'', we can not be confident that the prediction is correct, i.e. we can only obtain the probability of this word to be part of one of the dictionaries \textbf{given the dataset we provided}. As a matter of fact, the word ''pasta'' is present in both dictionaries and the outcome depends on the probability of the word to appear in one of the dictionaries in our dataset. The first case is clear case of epistemic uncertainty, which we were able to completely remove with a perfect dataset; while the second case is a clear case of aleatoric uncertainty and it is impossible to remove. 
-Fig n\ref{fig:un_visua} helps visualize the difference between the two. In pictures (\textit{d}), we can see that the aleatoric uncertainty increases on object boundaries and objects far from the camera. Pictures (\textit{e}), on the other hand, shows how epistemic uncertainty increases for semantically and visually challenging pixels. For example, the bottom row shows a failure case when the model fails to segment the footpath due to high epistemic uncertainty, but low aleatoric uncertainty. \cite{DBLP:journals/corr/KendallG17}\\
+Fig. \ref{fig:un_visua} helps visualize the difference between the two. In pictures (\textit{d}), we can see that the aleatoric uncertainty increases on object boundaries and objects far from the camera. Pictures (\textit{e}), on the other hand, shows how epistemic uncertainty increases for semantically and visually challenging pixels. For example, the bottom row shows a failure case when the model fails to segment the footpath due to high epistemic uncertainty, but low aleatoric uncertainty. \cite{DBLP:journals/corr/KendallG17}\\
 Although this distinction is very helpful for further and more precise analysis on a DNN model, it is also important to note that the distinction between the two is highly dependent on the context: they are not absolute notions.(\cite{KIUREGHIAN2009105}) Hence, changing the settings of the model will blur the distinction line between the two and therefore make their classification considerably more difficult.\cite{Separation_uncer}\\
 We mentioned previously that theoretically model uncertainty is 100\% reducible. However, in case of real world data this is not the case. In addition to the probabilistic nature of the DNNs, the training dataset used for the model is very likely to be only a subset of all possible input data of the application, hence it is also very likely that unknown data for the domain is unavoidable. In addition, represent exactly the uncertainty of the DNN is not possible, as the different sources of uncertainty can not be generally modelled accurately. \cite{gawlikowski2021survey}\\
 
@@ -114,9 +114,9 @@ Accuracy = \dfrac{TP+TN}{TP+TN+FP+FN}
 \label{eq:bin_acc}    
 \end{equation}
 Where TP = True Positives, TN = True Negatives, FP = False Positives, and FN = False Negatives.\\
-Similarly to classification accuracy, however, this definition could be misleading as well.  For example, considering a model that classified 100 tumors as malignant (the positive class) or benign (the negative class) as shown in Fig. n. \ref{fig:tumor}. 
+Similarly to classification accuracy, however, this definition could be misleading as well.  For example, considering a model that classified 100 tumors as malignant (the positive class) or benign (the negative class) as shown in table \ref{tab:tumor}. 
 
-\begin{figure}[h]
+\begin{table}[h]
 \centering
 \begin{tabular}{ p{1cm} p{2cm} p{2cm} p{2cm}}
  TP&FP&FN&TN\\
@@ -124,8 +124,8 @@ Similarly to classification accuracy, however, this definition could be misleadi
     1 & 1& 8& 90\\
 \end{tabular}
 \caption{Example for binary classification}
-\label{fig:tumor}
-\end{figure}
+\label{tab:tumor}
+\end{table}
 Calculating the accuracy using equation n. \ref{eq:bin_acc}. will give an accuracy of :
  \begin{equation}
 Accuracy = \dfrac{1+90}{1+90+1+80} = 0.91
@@ -152,7 +152,7 @@ Recall = \dfrac{TP}{TP+FN}
 \end{equation}
 Where TP = True Positives and FN = False Negatives\\
 
-We can use the example in Fig. n . \ref{fig:tumor} to calculate both precision and recall. 
+We can use the example in table \ref{tab:tumor} to calculate both precision and recall. 
 \begin{equation}
 \begin{aligned}
 Precision &= \dfrac{TP}{TP+FP}\\
@@ -216,7 +216,7 @@ Under-fitting, on the other hand, can be considered as the opposite process. Thi
 
 One strategy to avoid over-fitting is to use a so-called ''early-stopping'' approach. This approach consists simply of stopping the training before over-fitting can occur and it is one of the mostly used strategies to avoid this phenomena, as it is simple to understand and proven to be the superior one in many cases (\citep{FINNOFF1993771}, \cite{early_stopping}). \\
 The key part of this approach is to divide the training set into two parts, namely the validation set and the training set, and to use those to find a criteria to stop the training process. \\
-Fig. n. \ref{fig:over_fitting_curve} shows the idealized evolution over time of the error on the training set and on a validation set not used for training, i.e. training and validation loss.\cite{early_stopping}
+Fig. \ref{fig:over_fitting_curve} shows the idealized evolution over time of the error on the training set and on a validation set not used for training, i.e. training and validation loss.\cite{early_stopping}
 
 \begin{figure}[htb]
     \centering
@@ -226,7 +226,7 @@ Fig. n. \ref{fig:over_fitting_curve} shows the idealized evolution over time of 
 \end{figure}
 
 
-Following the trend in Fig. n. \ref{fig:over_fitting_curve}, we can observe that the validation error decreases until a certain point together with the training loss before increasing indefinitely. We can use the validation error to approximate the generalization error and, therefore, stop the training in the moment where the validation loss is increasing again. 
+Following the trend in Fig. \ref{fig:over_fitting_curve}, we can observe that the validation error decreases until a certain point together with the training loss before increasing indefinitely. We can use the validation error to approximate the generalization error and, therefore, stop the training in the moment where the validation loss is increasing again. 
 We can summarize the ''early-stopping'' approach in the following steps:
 \begin{enumerate}
 \item Split the training data into a training set and a validation set, for i.g. in a 4-to-1 proportion
@@ -235,7 +235,7 @@ We can summarize the ''early-stopping'' approach in the following steps:
 \item Use the weights the network had in that previous step as the result of the training run
 
 \end{enumerate}
-Furthermore, depending on the data, there might be also situations in which the validation loss is not constantly bigger than the training loss, as shown in Fig. n. \ref{fig:over_fitting_curve}. As a matter of fact, this graph shows an idealized behaviour of the two curves. A real example for this curve can be seen in Fig. n. \ref{fig:over_fitting_curve_real}.
+Furthermore, depending on the data, there might be also situations in which the validation loss is not constantly bigger than the training loss, as shown in Fig. \ref{fig:over_fitting_curve}. As a matter of fact, this graph shows an idealized behaviour of the two curves. A real example for this curve can be seen in Fig. \ref{fig:over_fitting_curve_real}.
 \begin{figure}[htb]
     \centering
     \includegraphics[scale = 0.4]{img/over_fitting_real.png}
@@ -244,7 +244,7 @@ Furthermore, depending on the data, there might be also situations in which the 
 \end{figure}
 
 In such situations, it would be particularly difficult to choose an optimal stopping criteria, as the validation function as multiple local minima (16 in the pictures case). It is left to the reader to investigate strategies to optimize early-stopping in these situations. \\
-Furthermore, there are also scenarios in which, depending on the data presented, the validation loss is at first less than the training loss, as shown in Fig. n. \ref{fig:over_fitting_curve_2}. 
+Furthermore, there are also scenarios in which, depending on the data presented, the validation loss is at first less than the training loss, as shown in Fig. \ref{fig:over_fitting_curve_2}. 
 \begin{figure}[htb]
     \centering
     \includegraphics[scale = 0.4]{img/over_fitting_2.png}
@@ -272,7 +272,7 @@ For the sake of this paper, we are going to limit our analysis to some of the mo
 \end{itemize}
 \subsection{Alexnet}
 Alexnet is a Convolutional Neural Network (CNN) architecture designed by  Alex Krizhevsky in collaboration with Ilya Sutskever and Geoffrey Hinton. \cite{NIPS2012_c399862d}\\
-The architecture is depicted in Fig. n. \ref{fig:alexnet_architecture}. The net is composed of eight layers:
+The architecture is depicted in Fig. \ref{fig:alexnet_architecture}. The net is composed of eight layers:
 The first 5 are convolutional layer an convolutional and the remaining three are fully- connected. The output of the last fully-connected layer is fed to a 1000-way Softmax which produces a distribution over the 1000 class labels. \cite{NIPS2012_c399862d}\\
 \begin{figure}[htb]
     \centering
@@ -296,7 +296,7 @@ As described by \textit{Krizhevsky et al.} in \cite{NIPS2012_c399862d}, the laye
 VGG stands for Visual Geometry Group at Oxford University and have been developed by Simonyan and Zisserman in \cite{simonyan2015deep} for the 
 ILSVRC (Image Net Large Scale Visual Recognition Challenge) 2014 competition
 (\cite{DBLP:journals/corr/RussakovskyDSKSMHKKBBF14}). 
-The concept of VGG net is similar to Alexnet: as net increases, the number of convolutions and future maps increases as well. Rather than using 11 × 11 feature detectors or filters, however, the authors decided to use smaller 3 x 3  filters. The various architecture proposed in \cite{simonyan2015deep} are showed in Fig. n. \ref{fig:vgg_arch}. In this paper, we are going to consider only the networks D and E, i.e. with 16 and 19 weight layers respectively. For the rest of the paper, we are going to refer to them as VGG16 and VGG19 respectively. 
+The concept of VGG net is similar to Alexnet: as net increases, the number of convolutions and future maps increases as well. Rather than using 11 × 11 feature detectors or filters, however, the authors decided to use smaller 3 x 3  filters. The various architecture proposed in \cite{simonyan2015deep} are showed in Fig. \ref{fig:vgg_arch}. In this paper, we are going to consider only the networks D and E, i.e. with 16 and 19 weight layers respectively. For the rest of the paper, we are going to refer to them as VGG16 and VGG19 respectively. 
 
 \begin{figure}[htb]
     \centering
@@ -321,7 +321,7 @@ The concept of VGG net is similar to Alexnet: as net increases, the number of co
 \subsection[Residual Neural Networks]{Residual Neural Networks (Resnet)}
 Many studies (\citep{simonyan2015deep}, \cite{szegedy2014going}) reveal that the depth of the Neural Networks is crucial and for most visual recognition tasks the trend has been to stack more layers into neural networks and increase their depth. (\cite{simonyan2015deep},\cite{ioffe2015batch},\cite{girshick2014rich},\cite{2014Spatial})\\
 Training deeper networks like VGG19 and VGG16 (section n.\ref{sec:VGG} ), however, is not a trivial task, since,as they start converging, the accuracy starts to saturate and then degrades quickly. This phenomena is due to the gradient vanishing during back-propagation, i.e. when the weights are updated, as it becomes smaller the more layers it goes through and vanishes before reaching the initial layer, hence they can not be updated.  \\
-\textit{He et al. } in \cite{DBLP:journals/corr/HeZRS15} tackle the problem of degradation with the introduction of a \textit{deep residual learning} framework. At the core of the framework there is the so called ''residual block'', shown in Fig. n. \ref{fig:res_block}. 
+\textit{He et al. } in \cite{DBLP:journals/corr/HeZRS15} tackle the problem of degradation with the introduction of a \textit{deep residual learning} framework. At the core of the framework there is the so called ''residual block'', shown in Fig. \ref{fig:res_block}. 
 \begin{figure}[htb]
     \centering
     \includegraphics[scale = 0.3]{img/res_block.png}
@@ -350,7 +350,7 @@ Reworking the equation lets us obtain the so called \textit{residual function}:
 
 The purpose of residual networks becomes to approximate the residual function, hence the difference between the input and the output.In other words, the aim is to learn the residual function in a way such that it approaches zero, hence making the identity value optimal. \\
 The problem of the vanishing gradient is resolved by the identity function. During back-propagation the gradient can take this path and, since no weights are encountered, there won't be any change in the value computed by the gradient. This effectively allows the gradient to entirely skip the block and reach the initial layers and correct their weights. \\
-The architecture of residual networks we are going to use in this paper is showed in Fig. n. \ref{fig:resnet_arch}. For the rest of the paper, we are going to refer them as ''Resnet'' followed by the amount of layers. For example, Resnet18 refers to the residual network having the 18 layers described in Fig. n.  \ref{fig:resnet_arch}. 
+The architecture of residual networks we are going to use in this paper is showed in Fig. \ref{fig:resnet_arch}. For the rest of the paper, we are going to refer them as ''Resnet'' followed by the amount of layers. For example, Resnet18 refers to the residual network having the 18 layers described in Fig.  \ref{fig:resnet_arch}. 
 \begin{figure}[t]
     \centering
     \includegraphics[scale = 0.5]{img/resnet_arch.png}
