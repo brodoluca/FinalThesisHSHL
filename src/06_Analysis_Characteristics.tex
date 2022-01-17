@@ -64,7 +64,7 @@ Even though the dataset is mainly focused on seedlings and it contains pictures 
 \end{table}
 
 
-
+%\hfill
 \section{First experiment}
 
 
@@ -330,7 +330,7 @@ As already demonstrated by Fig. \ref{fig:size_inference_time_compared}, each of 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Second Experiment}
-In this section, we are going to analyse the performances of the models over the 'plant\_ seedlings \_v2' data-set. This dataset contains information taken from the agricultural field, we can therefore use the benchmarking tool to measure the metrics in a setting that reflects better a real-world use of the tool. \\
+In this section, we are going to analyse the performances of the models over the 'plant\_ seedlings \_v2' data-set. This dataset contains information taken from the agricultural field, we can therefore use the benchmarking tool to measure the metrics in a setting that reflects better a real-world use of the tool.\\
 Similarly to the first experiment, the first metric we are going to analyse is training time. The tool run the test three times for 100, 200 and 50 epochs. 
 We are going to start our analysis by studying the results obtained when trained for 100 epochs, which are shown in Fig. \ref{fig:seedlings_100_epoch_accuracy} and \ref{fig:seedlings_100_acc}. \\
 As already encountered in the first experiment, Alexnet is the model that achieved the lowest accuracy overall reaching \textasciitilde86\% after 99 epochs. The highest accuracy has been achieved by Resnet101, peaking at \textasciitilde97\% after 66 epochs. Moreover, VGG16 and VGG19 achieved the same peak accuracy at \textasciitilde95\%, however VGG16 required 13 epochs less (43 compared to the 56 needed for VGG19). Similarly, Resnet18 and Resnet34 achieved comparable top accuracies at  94.39\% and 94.48\% respectively, however Resnet34 required considerably less time to reach this number peaking after 62 epochs, while Resnet18 achieved this number when the training cycle was almost done, namely after 96 epochs. An overview of the performances of all the models can be seen in table \ref{tab:performances_seeds}. 
@@ -349,23 +349,22 @@ VGG16&95.20&43&17&1743\\
 VGG19&95.20&56&20&1952\\
  \hline
 \end{tabular}
-\caption{Performances of the models trained the 'plant\_seedlings\_v2' dataset}
+\caption{Performances of the models trained with the 'plant\_seedlings\_v2' dataset for 100 epochs}
 \label{tab:performances_seeds}
 \end{table}\\
 
 
 
-Fig. \ref{fig:seedlings_100_epoch_accuracy} shows the response of all models during the training based on the epoch used for training. Similarly to the first experiment, the response of the model show that within the first ten epochs the accuracy increases quickly to stabilize afterwards. However, contrary to the first experiment, here we can observe a more compact graph, meaning that the all the models except Alexnet achieved accuracies not far off from each other during the training. 
-
+Fig. \ref{fig:seedlings_100_epoch_accuracy} shows the response of all models during the training based on the epoch used for training. Similarly to the first experiment, the response of the model shows that within the first ten epochs the accuracy increases quickly and tends to stabilize afterwards, increasing slowly over time. However, contrary to the first experiment, here we can observe a more compact graph, meaning that the all the models except Alexnet achieved accuracies not far off from each other.
+As a matter of fact, the difference in accuracy between the highest performing model (Resnet101) and the lowest performing model (Resnet18) was only 3\%.  
 \begin{figure}[h]
        \centering 
-	    \includegraphics[width = 12 cm]{seedlings_100.png}
+	    \includegraphics[width = 11 cm]{seedlings_100.png}
         \caption[Accuracy achieved when training for 100 epochs]{Accuracy achieved when training for 100 epochs. The x axis is the number of epochs, while the y axis is the accuracy achieved}
          \label{fig:seedlings_100_epoch_accuracy}
 \end{figure}
 
-
-Fig. \ref{fig:seedlings_100_acc}, on the other hand, depicts the accuracy graphed over training time. Alexnet took the least amount of time to finish the training cycle (747 seconds), however Resnet took only \textasciitilde40 seconds more and reached a far better accuracy. Resnet152 took 47 Minutes and 30 Seconds (2851 seconds) to complete the test and is the model that required the most time. 
+Fig. \ref{fig:seedlings_100_acc}, on the other hand, depicts the accuracy graphed over training time. Alexnet took the least amount of time to finish the training cycle (747 seconds), however Resnet18 took only \textasciitilde40 seconds more and reached a far better accuracy(94\% compared to 85\%). Resnet152 took 47 Minutes and 30 Seconds (2851 seconds) to complete the test and is the model that required the most time. \\
 \begin{figure}[h]
        \centering 
 	    \includegraphics[width = 12 cm]{seedlings_100_acc.png}
@@ -374,18 +373,75 @@ Fig. \ref{fig:seedlings_100_acc}, on the other hand, depicts the accuracy graphe
 \end{figure}
 
 \begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+	    \includegraphics[width = \gws cm]{epoch_train_loss_seeds_100.png}
+	    \caption{Training Loss calculated over 100 epochs}
+        \label{fig:train_loss_seeds_100}
+     \end{subfigure} \hfill
      \begin{subfigure}{0.5\textwidth}
-	    \includegraphics[width = \gws cm]{acc_time_resnet152.png}
-        \label{fig:acc_time_resnet152}
+	    \includegraphics[width = \gws cm]{epoch_valid_loss_seeds_100.png}
+	    \caption{Validation Loss calculated over 100 epochs}
+         \label{fig:valid_loss_seeds_100}
      \end{subfigure}
-     \begin{subfigure}{0.5\textwidth}
-	    \includegraphics[width = \gws cm]{acc_time_resnet18.png}
-        \label{fig:acc_time_resnet18}
+     
+     \caption{Training loss and validation loss of all models calculated over 100 epochs}
+        \label{fig:tran_valid_loss_seeds_100}
+        
+      
+\end{figure}
+
+In Fig. \ref{fig:tran_valid_loss_seeds_100}, we can analyse the loss calculated for the models during the training. As shown in Fig. \ref{fig:train_loss_seeds_100}, all the models except Alexnet reached 0 loss within the first 30 epochs. This means that theoretically the models learned the data-set perfectly within the first 20 epochs. Usually, when the training loss is 0, we are excepting a situation of over-fitting and it would be proven by a high validation loss. We can study the validation loss of the models in Fig. \ref{fig:valid_loss_seeds_100}. From their response, we can observe that the validation loss does not increase drastically like we saw in the first experiment. On the contrary, we can see in table \ref{tab:difference_val_tra_loss} that the difference between validation loss and training loss rarely is more than 0.4. Furthermore, the curve seems to be quite stable, especially for shallower networks, and the validation loss tends to increase slowly. \\
+
+
+\begin{table}[h]
+\centering
+        \begin{tabular}{ c c  }
+                 Model&Difference\\
+                 \hline
+                   Resnet18&0.42\\
+                    Resnet34&0.38\\
+                    Resnet50&0.35\\
+                    Resnet101&0.25\\
+                    Resnet152&0.28\\
+                    Alexnet&0.34\\
+                        VGG16&0.38\\
+                    VGG19&0.33\\
+                    \end{tabular}
+                    \caption{Difference between validation loss and train loss after 100 epochs }                   
+                     \label{tab:difference_val_tra_loss}
+     \end{table} 
+
+
+For example, we can analyse the trend for the model which reached the highest accuracy overall, namely Resnet101, shown in Fig. \ref{fig:epoch_valid_loss_resnet101}. As shown in table \ref{tab:difference_val_tra_loss}, the difference at the end of the training is 0.25. Furthermore, as we suspected before, the training loss approaches zero within the first 30 epochs, while the validation loss remains stable for the entire training process, with some spikes around the 30 epochs. Furthermore, the validation loss becomes higher than the training loss around 10 epochs.\\
+We can observe in the response of Resnet152 (Fig. \ref{fig:epoch_valid_loss_resnet152}) a similar behaviour. The training loss approaches once again zero around the 30 epochs and becomes smaller than the validation loss around 10. Although the validation loss tends to stabilize for this model as well, the graph shows a less stable behaviour with more fluctuations between 20 and 50 epochs. \\
+\begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+     \centering
+	    \includegraphics[width = \gws cm]{epoch_valid_loss_resnet101.png}
+\caption{Validation loss and training loss for Resnet101 over 100 epochs}\label{fig:epoch_valid_loss_resnet101}
      \end{subfigure}
-        \caption{Breaking point of Resnet101 and VGG19}
-        \label{fig:sing_acc_time_rr}
+\begin{subfigure}{0.5\textwidth}
+     \centering
+	    \includegraphics[width = \gws cm]{epoch_valid_loss_resnet152.png}
+\caption{Validation loss and training loss for Resnet152 over 100 epochs}\label{fig:epoch_valid_loss_resnet152}
+     \end{subfigure}  
+     \caption{Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs}
+        \label{fig:tran_valid_loss_seeds_res_100}
 \end{figure}
 
 
-\section{Conclusion}
-
+\begin{figure}[h]
+     \begin{subfigure}{0.5\textwidth}
+	    \includegraphics[width = \gws cm]{inf_acc_models_seeds.png}
+	    \caption{Based on accuracy}
+         \label{fig:inf_acc_models_seeds}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.5\textwidth}
+	    \includegraphics[width = \gws cm]{inf_epoch_models_seeds.png}
+	    \caption{Based on the epoch}
+        \label{fig:inf_epoch_models_seeds}
+     \end{subfigure}\\
+     \caption[Inference time measured for each model]{Inference time measured for each model using dataset discussed previously. The inference time is in milliseconds, while the accuracy for Fig. \ref{fig:inf_time_accuracy}is the percentage of correct predictions.}
+        \label{fig:inf_time_epoch_seeds}
+\end{figure}

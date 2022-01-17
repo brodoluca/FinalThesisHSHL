@@ -38,8 +38,8 @@
 \contentsline {section}{\numberline {4.3}Datasets and Training Methodology}{54}{section.4.3}% 
 \contentsline {section}{\numberline {4.4}First experiment}{54}{section.4.4}% 
 \contentsline {section}{\numberline {4.5}Second Experiment}{63}{section.4.5}% 
-\contentsline {section}{\numberline {4.6}Conclusion}{65}{section.4.6}% 
-\contentsline {chapter}{\numberline {5}Conclusion}{67}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Future work}{67}{section.5.1}% 
-\contentsline {chapter}{References}{68}{section.5.1}% 
-\contentsline {chapter}{\numberline {A}Appendix}{77}{appendix.A}% 
+\contentsline {chapter}{\numberline {5}Conclusion}{69}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Future work}{69}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Conclusion}{69}{section.5.2}% 
+\contentsline {chapter}{References}{70}{section.5.2}% 
+\contentsline {chapter}{\numberline {A}Appendix}{79}{appendix.A}% 

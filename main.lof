@@ -46,10 +46,12 @@
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{62}{figure.caption.52}% 
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Accuracy achieved when training for 100 epochs}}{64}{figure.caption.55}% 
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Accuracy achieved when training for 100 epochs in relation with training time}}{65}{figure.caption.56}% 
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Breaking point of Resnet101 and VGG19\relax }}{65}{figure.caption.57}% 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Training loss and validation loss of all models calculated over 100 epochs\relax }}{65}{figure.caption.57}% 
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs\relax }}{66}{figure.caption.59}% 
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Inference time measured for each model}}{67}{figure.caption.60}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the slowest files in common amongst all models\relax }}{77}{figure.caption.59}% 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Example of the architecture of residual networks}}{78}{figure.caption.60}% 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of the fastest files of Resnet 152\relax }}{79}{figure.caption.61}% 
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Histogram of the slowest files of Resnet152\relax }}{80}{figure.caption.62}% 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the slowest files in common amongst all models\relax }}{79}{figure.caption.62}% 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Example of the architecture of residual networks}}{80}{figure.caption.63}% 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of the fastest files of Resnet 152\relax }}{81}{figure.caption.64}% 
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Histogram of the slowest files of Resnet152\relax }}{82}{figure.caption.65}% 
