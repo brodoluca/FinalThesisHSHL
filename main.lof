@@ -49,9 +49,12 @@
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Training loss and validation loss of all models calculated over 100 epochs\relax }}{65}{figure.caption.57}% 
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs\relax }}{66}{figure.caption.59}% 
 \contentsline {figure}{\numberline {4.18}{\ignorespaces Inference time measured for each model}}{67}{figure.caption.60}% 
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Inference time measured for Resnet101 and Resnet152}}{67}{figure.caption.61}% 
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Size of the images over inference time for the seedlings dataset}}{68}{figure.caption.62}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the slowest files in common amongst all models\relax }}{79}{figure.caption.62}% 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Example of the architecture of residual networks}}{80}{figure.caption.63}% 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of the fastest files of Resnet 152\relax }}{81}{figure.caption.64}% 
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Histogram of the slowest files of Resnet152\relax }}{82}{figure.caption.65}% 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the slowest files in common amongst all models\relax }}{81}{figure.caption.64}% 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Example of the architecture of residual networks}}{82}{figure.caption.65}% 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of the fastest files of Resnet 152\relax }}{83}{figure.caption.66}% 
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Histogram of the slowest files of Resnet152\relax }}{84}{figure.caption.67}% 
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Complete result of the test for inference time in the seedlings dataset\relax }}{85}{figure.caption.68}% 

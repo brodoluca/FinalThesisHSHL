@@ -430,6 +430,10 @@ We can observe in the response of Resnet152 (Fig. \ref{fig:epoch_valid_loss_resn
 \end{figure}
 
 
+
+As we already did for the first experiment, we can use the tool to test the inference time of each model. We are going to use a data-set composed of \textasciitilde120 pictures taken from the original dataset. These pictures were taken before starting the process, therefore they have not been used for training. \\
+The results are shown in Fig. \ref{fig:inf_time_epoch_seeds}. Fig. \ref{fig:inf_acc_models_seeds} shows the inference time based on the accuracy, while figure \ref{fig:inf_epoch_models_seeds} shows the inference time based on the epoch used to train. \\
+From Fig. \ref{fig:inf_acc_models_seeds} we can start to observe some rather interesting properties. For each model, as they achieve accuracy less than 88\%, the inference time is rarely measured to be more than 60 ms with only 2 exceptions (\textasciitilde100ms and \textasciitilde390ms). Furthermore, the only model that achieved an accuracy smaller than \textasciitilde82\% is Alexnet\footnote{The whole results can be seen in Fig. \ref{fig:accuracy_inferencetime_seedlings}}.
 \begin{figure}[h]
      \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{inf_acc_models_seeds.png}
@@ -445,3 +449,44 @@ We can observe in the response of Resnet152 (Fig. \ref{fig:epoch_valid_loss_resn
      \caption[Inference time measured for each model]{Inference time measured for each model using dataset discussed previously. The inference time is in milliseconds, while the accuracy for Fig. \ref{fig:inf_time_accuracy}is the percentage of correct predictions.}
         \label{fig:inf_time_epoch_seeds}
 \end{figure}
+
+
+For accuracies over 88\%, although the behaviour of the models seems to be less compact, the inference time rarely measures more than 100 milliseconds, with only two outliers(\textasciitilde135ms and \textasciitilde180s).\\
+From Fig. \ref{fig:inf_epoch_models_seeds} we can see that, with the exception of the outliers we identified before, the number of epochs that measured the highest value for inference is 30. As a matter of fact, when trained for different numbers of epochs, the models never require more than 100 milliseconds to process the images. 
+\begin{figure}[h]
+     \begin{subfigure}{0.5\textwidth}
+	    \includegraphics[width = \gws cm]{inf_resnet101_seeds.png}
+	    \caption{Resnet101}
+         \label{fig:inf_resnet101_seeds}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.5\textwidth}
+	    \includegraphics[width = \gws cm]{inf_acc_152_seeds.png}
+	    \caption{Resnet152}
+        \label{fig:inf_acc_152_seeds}
+     \end{subfigure}\\
+     \caption[Inference time measured for Resnet101 and Resnet152]{Inference time measured for Resnet101 and Resnet152. The inference time is in milliseconds, while the accuracy is the percentage of correct predictions.}
+        \label{fig:inf_time_epoch_seeds}
+\end{figure}
+
+
+
+A closer investigation of the individual performance of each model shows further interesting aspects. For the purpose of this experiment, we are going to analyse only Resnet101 and Resnet152, whose behaviour is shown in Fig. \ref{fig:inf_resnet101_seeds} and Fig. \ref{fig:inf_acc_152_seeds} respectively. For both model, we can see that the highest accuracy is achieved when trained for only one (\textasciitilde91\% for both) and two epochs (slightly lower of 91\% for Resnet18 and \textasciitilde90\% for Resnet152). For the other epoch, the accuracy achieved was consistently lower than 90\%. \\
+In the case of Resnet101, the fastest training time has been achieved when trained for ten and five epochs, with an inference time over 45 milliseconds only in two occasions. Although the fastest, the model trained with these epochs also achieved the lowest accuracy. The slowest inference time has been achieved when the model has been trained for two epochs, with an inference as high as 135 milliseconds. However, the model achieved the worst performance when trained for 30 epochs. As a matter of fact, even though when trained for two epochs it measured the lowest inference time, this happened only in one case, while, when trained for 30 epochs, for a considerable amount of pictures, the inference time was in a range between 57 and 95 milliseconds. \\
+Resnet152, on the other hand, showed more consistent results, with an inference time being in the range of 40 to 90 milliseconds for all epochs with the exception of one case where it reached 180 milliseconds. The fastest inference time for this model is measured when the model has been trained for 20 epochs.\\
+From this investigation we can conclude that the performances of these two models are quite comparable when it comes to inference. Both in terms of inference time and accuracy achieved, the two models show similar results, however for different levels of training. \\
+For example, in case of Resnet152, with a training time of 580 seconds (20 epochs), we will obtain a model that can make predictions in a range between 45 and 85 milliseconds with an accuracy of \textasciitilde89\%. In the case of Resnet101, we can obtain similar results (prediction time between 70 and 30 milliseconds with an accuracy of \textasciitilde89\%) with a training time of 210 seconds (10 epochs). \\
+
+\begin{figure}[h]
+       \centering 
+	    \includegraphics[width = 14 cm]{inf_size_seeds.png}
+        \caption[Size of the images over inference time for the seedlings dataset]{This graph shows the size in kb (y axis) of the ten slowest images over the time taken to be processed (x axis)}
+         \label{fig:inf_size_seeds}
+\end{figure}
+
+
+As we already performed for the first experiment, we can also run the tool discover which pictures took the most amount of time to be processed. Fig. \ref{fig:inf_size_seeds} shows the ten slowest image for each model graphed based on their sizes. \\
+The graph shows a rather compact and stable behaviour, with the slowest time measured for images having a size bigger than 1500 kb. \\
+For pictures of more than 100 kb and less than 300 kb, the inference time is between 0 and 100 ms, with each model performing rather similarly. \\
+For this experiment, both for training and for testing inference, we used a dataset with images having rather similar size and resolution, therefore this analysis is not as valuable as the one we did for the first experiment. \\
+However, we can run the tool to make modifications on the images of the dataset. As a matter of fact, the tool also allows to make a copy of the pictures in the dataset and transform them into gray-scale. Therefore, we can double the amount of pictures on the dataset and include gray-scale copies of those. 
