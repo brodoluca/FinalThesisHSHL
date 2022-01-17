@@ -13,5 +13,7 @@
 \contentsline {table}{\numberline {4.4}{\ignorespaces Information collected from the slowest pictures\relax }}{63}{table.caption.53}% 
 \contentsline {table}{\numberline {4.5}{\ignorespaces Performances of the models trained with the 'plant\_seedlings\_v2' dataset for 100 epochs\relax }}{64}{table.caption.54}% 
 \contentsline {table}{\numberline {4.6}{\ignorespaces Difference between validation loss and train loss after 100 epochs \relax }}{66}{table.caption.58}% 
+\contentsline {table}{\numberline {4.7}{\ignorespaces Performances of the models trained for 100 epochs on the 'plant\_seedlings\_v2' dataset and the gray-scale pictures\relax }}{69}{table.caption.63}% 
+\contentsline {table}{\numberline {4.8}{\ignorespaces Difference between validation loss and train loss after 100 epochs \relax }}{70}{table.caption.64}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }

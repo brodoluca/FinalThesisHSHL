@@ -489,4 +489,61 @@ As we already performed for the first experiment, we can also run the tool disco
 The graph shows a rather compact and stable behaviour, with the slowest time measured for images having a size bigger than 1500 kb. \\
 For pictures of more than 100 kb and less than 300 kb, the inference time is between 0 and 100 ms, with each model performing rather similarly. \\
 For this experiment, both for training and for testing inference, we used a dataset with images having rather similar size and resolution, therefore this analysis is not as valuable as the one we did for the first experiment. \\
-However, we can run the tool to make modifications on the images of the dataset. As a matter of fact, the tool also allows to make a copy of the pictures in the dataset and transform them into gray-scale. Therefore, we can double the amount of pictures on the dataset and include gray-scale copies of those. 
+However, we can run the tool to make modifications on the images of the dataset. As a matter of fact, the tool also allows to make a copy of the pictures in the dataset and transform them into gray-scale. Therefore, we can double the amount of pictures on the dataset and include gray-scale copies of those. \\
+The results of the first run are shown in table \ref{tab:performances_seeds_gray}. When compared to 
+table \ref{tab:performances_seeds}, we can observe that all the models have reached better accuracy except Alexnet. As a matter of fact, Alexnet peaked at \textasciitilde80\%, while all the other peaked at accuracies over 95\%. The best accuracy has been achieved by Resnet101 (\textasciitilde99\%) in 80 epochs. Furthermore, in comparison to the previous run, this time all the models took more time to train, with a difference on average time for epoch from one second (Alexnet) to 23 seconds (Resnet152). This is the result of introducing more pictures in the dataset, which makes the training process more time-consuming. \\
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ p{2cm} p{4cm} p{3cm} p{3cm} p{2cm}  }
+ Model& Top Accuracy (\%) & Epochs needed &Average Time (s)&Total Time (s)\\
+ \hline
+Resnet18&95.98&82&9.16&916\\
+Resnet34&96.72&90&12.67&1267\\
+Resnet50&98.15&82&23.66&2366\\
+Resnet101&99.12&80&37.05&3705\\
+Resnet152&98.84&85&52.01&5201\\
+Alexnet&79.81&89&8.12&812\\
+VGG16&97.27&93&29.87&2987\\
+VGG19&96.77&64&33.74&3374\\
+ \hline
+\end{tabular}
+\caption{Performances of the models trained for 100 epochs on the 'plant\_seedlings\_v2' dataset and the gray-scale pictures}
+\label{tab:performances_seeds_gray}
+\end{table}
+
+The analysis of the training loss and validation loss trends offers also rather different results. An overview can be seen in table \ref{tab:difference_val_tra_loss_2}. The difference in loss between the validation and the training set decreased quite substantially. For example, Resnet101 and Resnet152, which were also the ones with the lowest difference in the previous run (see table \ref{tab:difference_val_tra_loss_2}), measured a difference of only 0.07 and 0.08 respectively. \\
+Fig. \ref{fig:tran_valid_loss_seeds_res_100_2} shows the trend for the two models. We can observe that the training loss approaches zero after around 30 epochs, while the validation loss tends to decrease further and stabilizes after around 80. It is also worth pointing out that, in the case of Resnet101, the validation loss starts to increase after around 10 epochs and, since the training loss is already approaching zero, it would satisfy the criteria for an early stopping of the training. However, after the 20 epochs mark, the validation loss decreases once again until becoming only slightly larger than the training and then stabilizes. 
+
+\begin{table}[h]
+\centering
+        \begin{tabular}{ c c  }
+                 Model&Difference\\
+                 \hline
+                   Resnet18&0.20\\
+Resnet34&0.18\\
+Resnet50&0.12\\
+Resnet101&0.07\\
+Resnet152&0.08\\
+Alexnet&0.20\\
+VGG16&0.12\\
+VGG19&0.14\\
+                    \end{tabular}
+                    \caption{Difference between validation loss and train loss after 100 epochs }                   
+                     \label{tab:difference_val_tra_loss_2}
+     \end{table} 
+     
+     
+\begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+     \centering
+	    \includegraphics[width = \gws cm]{epoch_valid_loss_resnet101_2.png}
+\caption{Validation loss and training loss for Resnet101 over 100 epochs}\label{fig:epoch_valid_loss_resnet101_2}
+     \end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+     \centering
+	    \includegraphics[width = \gws cm]{epoch_valid_loss_resnet152_2.png}
+\caption{Validation loss and training loss for Resnet152 over 100 epochs}\label{fig:epoch_valid_loss_resnet152_2}
+     \end{subfigure}  
+     \caption{Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs on the  'plant\_seedlings\_v2' dataset and the gray-scale pictures}
+        \label{fig:tran_valid_loss_seeds_res_100_2}
+\end{figure}
