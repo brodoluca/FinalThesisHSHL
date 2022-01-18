@@ -466,7 +466,7 @@ From Fig. \ref{fig:inf_epoch_models_seeds} we can see that, with the exception o
         \label{fig:inf_acc_152_seeds}
      \end{subfigure}\\
      \caption[Inference time measured for Resnet101 and Resnet152]{Inference time measured for Resnet101 and Resnet152. The inference time is in milliseconds, while the accuracy is the percentage of correct predictions.}
-        \label{fig:inf_time_epoch_seeds}
+        \label{fig:inf_time_epoch_seeds2}
 \end{figure}
 
 
@@ -546,4 +546,25 @@ VGG19&0.14\\
      \end{subfigure}  
      \caption{Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs on the  'plant\_seedlings\_v2' dataset and the gray-scale pictures}
         \label{fig:tran_valid_loss_seeds_res_100_2}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[h]
+     \begin{subfigure}{0.5\textwidth}
+	    \includegraphics[width = \gws cm]{inf_seeds_grey_no_grey.png}
+	    \caption{Resnet101}
+         \label{fig:inf_seeds_grey_no_grey}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.5\textwidth}
+	    \includegraphics[width = \gws cm]{inf_acc_152_seeds.png}
+	    \caption{Resnet152}
+        \label{fig:inf_seeds_grey_grey}
+     \end{subfigure}\\
+     \caption[Inference time measured for Resnet101 and Resnet152]{Inference time measured for Resnet101 and Resnet152. The inference time is in milliseconds, while the accuracy is the percentage of correct predictions.}
+        \label{fig:inf_seeds_with_grey}
 \end{figure}
