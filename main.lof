@@ -2,27 +2,27 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Representation of a sugar beet plant}}{14}{figure.caption.5}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Trend in publications about Deep Learning}}{18}{figure.caption.7}% 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Differences between how DNNs and humans recognize objects}}{21}{figure.caption.8}% 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Illustrating the difference between aleatoric and epistemic uncertainty}}{22}{figure.caption.9}% 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Validation and training loss curve}}{26}{figure.caption.11}% 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Real Example of the Validation and training loss curve}}{27}{figure.caption.12}% 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Real Example of the Validation and training loss curve}}{27}{figure.caption.13}% 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Overview of the architecture of Alexnet}}{28}{figure.caption.14}% 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Overview of the various architecture for VGG}}{29}{figure.caption.15}% 
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Residual learning: a building block}}{30}{figure.caption.16}% 
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Overview of the Resnet Architecture}}{31}{figure.caption.17}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Validation and training loss curve}}{22}{figure.caption.8}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Real Example of the Validation and training loss curve}}{23}{figure.caption.9}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Real Example of the Validation and training loss curve}}{23}{figure.caption.10}% 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Overview of the architecture of Alexnet}}{24}{figure.caption.11}% 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Overview of the various architecture for VGG}}{25}{figure.caption.12}% 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Residual learning: a building block}}{26}{figure.caption.13}% 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Overview of the Resnet Architecture}}{27}{figure.caption.14}% 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Trend in publications about Deep Learning}}{28}{figure.caption.15}% 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Differences between how DNNs and humans recognize objects}}{30}{figure.caption.16}% 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Illustrating the difference between aleatoric and epistemic uncertainty}}{31}{figure.caption.17}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Example of use for the function \textit {clock()}\relax }}{36}{figure.caption.18}% 
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Synopsis of the command \textit {time}\relax }}{36}{figure.caption.19}% 
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Program used to test the command \textit {time}\relax }}{37}{figure.caption.20}% 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Disable turbo boost in both AMD and Intel devices\relax }}{39}{figure.caption.21}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Disable turbo boost in both AMD and Intel devices\relax }}{38}{figure.caption.21}% 
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Disable Hyper-Threading\relax }}{39}{figure.caption.22}% 
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Set the scaling governor policy to be \textit {performance} for every cpu\relax }}{39}{figure.caption.23}% 
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Wrong benchmark for inference time}}{41}{figure.caption.24}% 
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Correct way to measure inference\relax }}{42}{figure.caption.25}% 
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Run benchmark on android with Tensorflow Lite}}{42}{figure.caption.26}% 
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Command to access the inference in Tensorflow Lite}}{43}{figure.caption.27}% 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Command to access the inference in Tensorflow Lite}}{42}{figure.caption.27}% 
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Architecture of the convolutional neural network used as an example to calculate inference time}}{44}{figure.caption.28}% 
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Benchmark for training time\relax }}{46}{figure.caption.30}% 
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Fastai calculation for accuracy \cite {fastaidocs}\relax }}{46}{figure.caption.31}% 

@@ -1,9 +1,10 @@
 \chapter{Characteristics of Neural Networks}\label{char_nn}
 \section{Introduction}
-In this chapter, we will explore the characteristics of NN models we want to measure and analyse. From now on, we will use the term \textit{characteristics} to identify all the metrics of the model which will have an influence on its performances once the model is deployed. The term is therefore an umbrella term for any type of measurable property which we can use for our application. In the following sections we will then take a closer look to each one of them with the purpose of understanding them. 
+In this chapter, we will explore the characteristics of NN models we want to measure and analyse. For the rest of the paper, we will use the term \textit{characteristics} to identify all the metrics and properties of NNs which will have an influence on their performances in an actual deployment. The term is therefore an umbrella term for any type of measurable property which can influence the recognition of sugar beets. In the following sections we will give a through overview of each one of them with the main goal of understanding them. 
 
 \section{Learning Process and Training Time}\label{sec:training_time}
-Training time, as the name implies, is the time required to train a Neural Network, or any machine learning model. \textit{Mitchell} in \cite{machine_learning} provides a general definition for the training, or learning, process : \textit{“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.”} This definition is quite broad (\cite{Goodfellow-et-al-2016}) and it is out of the scope of this paper to give a formal definition for the experience E, task T, and performance measure P.\\More practically, the process of training is the process of updating the weights of the neural network to so that the network is able to achieve the desired goal. \cite{murphy2016overview} The network weights are updated during back propagation by the following equation(\cite{murphy2016overview}):
+Training time, as the name implies, is the time required to train a Neural Network, or any machine learning model to perform a specific task. \textit{Mitchell} in \cite{machine_learning} provides a general definition for the training, or learning, process : \textit{“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.”} This definition is quite broad (\cite{Goodfellow-et-al-2016}) and it is out of the scope of this paper to give a formal definition for the experience E, task T, and performance measure P.\\When it comes to Neural Networks, the process of training is the process of updating the weights of the network so that the network is able to achieve the desired goal. \cite{murphy2016overview} \\
+The network weights are updated during back propagation by the following equation(\cite{murphy2016overview}):
 \begin{equation}
 W_{new} = W - \eta \frac{dE}{dW}
 \end{equation}
@@ -13,91 +14,13 @@ E(W,b) = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{2} \vert \vert h_{W,b} (x^{(i)}) - 
 \label{eq:MSE}
 \end{equation}
 The learning experience can be broadly categorized into two main categories: supervised and unsupervised learning. Roughly speaking, given a dataset $\mathcal{D}$ , an unsupervised learning algorithm aims to learn useful properties of this dataset. In the context of deep learning, we aim to learn the entire probability distribution $p(\mathcal{D})$ that generated the dataset or some useful properties of it. On the other hand, supervised learning implies the use of a dataset $\mathcal{D}$ and an associated value or label $\mathbb{Y}$ to teach the model to predict $\mathbb{Y}$ from $\mathbb{X} \subset \mathcal{D}$, usually by estimating $p(\mathbb{Y} \vert \mathbb{X})$(\cite{murphy2016overview})\\
-Usually the learning process proceeds in waves of mini-batches, which allow to avoid both over-fitting and under utilization of GPU’s compute parallelism, therefore throughput is a key performance metrics to measure.\cite{8573476}
-Finally, the learning process is a memory demanding one, as  backward pass and weight updates, operations unique to training, need to save intermediate results in GPU memory (in some cases tens of gigabytes are required). \cite{rhu2016vdnn}
-Training time is often an overlooked metrics of Neural Network compared to inference(\ref{sec:inference_time_definition}) or accuracy (\ref{sec:accuracy}) (\cite{8573476}), however, due to the recent growth in applications of Deep Learning technologies in different fields (\cite{bojarski2016end}, \cite{huval2015empirical}, \cite{10.1145/2959100}, \cite{amodei2015deep}) training time is acquiring importance. \cite{8573476}\\
+Usually the learning process proceeds in waves of mini-batches, which allow to avoid both over-fitting and under utilization of GPU’s compute parallelism.\cite{8573476}\\
+Finally, the learning process is a memory demanding task, as backward pass and weight updates, operations unique to training, need to save intermediate results in GPU memory (in some cases tens of gigabytes are required). \cite{rhu2016vdnn}\\
+Training time is often an overlooked metrics of Neural Network compared to inference(\ref{sec:inference_time_definition}) or accuracy (\ref{sec:accuracy},\cite{8573476}), however, due to the recent growth in applications of Deep Learning technologies in various fields (\cite{bojarski2016end}, \cite{huval2015empirical}, \cite{10.1145/2959100}, \cite{amodei2015deep}) training time is acquiring importance. \cite{8573476}\\
 \section{Inference Time}\label{sec:inference_time_definition}
 In Machine Learning, therefore in Deep Learning as well, the term \textbf{inference time} is used to indicate the time required for the trained model to make predictions, regardless of the correctness of those. \\
 Inference time has attracted a lot of attention in the research field, since execute already trained Neural Networks efficiently is inarguably a still open problem. \cite{8573476}\\
-Differently from Training Time (section \ref{sec:training_time}), the memory footprint for inference is in the order of Mega-Bytes.(\cite{han2016eie}) As a matter of fact, inference is latency sensitive, but computationally less demanding. \cite{8573476}\\
-
-
-
-\section{Uncertainty in Deep Neural Networks}
-In the previous section we observed that a benchmark should produce predictable results. Although this is true in general terms, we can not properly use the term "predictability" when discussing DNNs. \\
-Due to the increased trust given by the advancements in recent years, DNNs are being applied in numerous different fields, as shown by the increasing number of peer review papers about Deep Learning (Fig. \ref{fig:annual_trend}), even the higher-risk ones 
-like medical image analysis or autonomous vehicle control. \cite{gawlikowski2021survey}
-\begin{figure}[h]
-    \centering
-    \includegraphics{img/Annual-trend-in-the-number-of-papers-related-to-deep-learning-in-the-medical-field_W640.jpg}
-    \caption[Trend in publications about Deep Learning]{Trend in publications about Deep Learning  \cite{Number_of_DL_papers}}
-    \label{fig:annual_trend}
-\end{figure}
-
-
-In such high-risk scenarios, DNNs should not only be highly accurate, as a mistake in detecting an obstacle could cause catastrophic consequences for the passengers, but also be trustworthy enough so that the probability of the predicted values reflects the ground truth. DNNs, however, are subjected to different source of uncertainty and errors. \textit{Galiwoski et al.} in \cite{gawlikowski2021survey} recognize five crucial factors which can cause uncertainty and errors in DNNs.\\\hfill
-
-Those factors are:
-
-\begin{enumerate}[label=\Roman*.]
-    \item the variability in real world situations. 
-    \item the errors inherent to the measurement systems,
-    \item the errors in the architecture specification of the DNN,
-    \item the errors in the training procedure of the DNN,
-    \item the errors caused by unknown data.
-\end{enumerate}
-%In the next section, we will explore these factor in more details. Subsequently, we will reason about methods to reduce it and finally, in the third section, we will individuate methods to classify it. 
-%\subsection{Factors causing Uncertainty}
-We can model a neural network as a function $f$, parametrized by weight $\theta$, which maps a set of input $\mathbb{X}$ to a set of measurable outputs $\mathbb{Y}$, hence:
-\begin{equation}
-    f\theta : \mathbb{X} \rightarrow \mathbb{Y} \quad\quad\quad
-    f\theta(x) = y
-    \label{eq:DNN_model}
-\end{equation}
-In case of supervised learning, we also model the training set as $\mathcal{D} \subset \mathbb{D} = \mathbb{X} \times \mathbb{Y}$, where $\mathbb{X}$ is an instance space and $\mathbb{Y}$ the set of outcomes that can be associated with an instance (\cite{uncertainity_classi}), containing $N$ samples. A DNN trained in $\mathcal{D}$ can therefore predict a a corresponding target $f\theta(x^*) = y^*$.\\
-During the data acquisition process, a measurement $x$ and a target variable $y$ are taken from space $\Omega$ to  represent a real world situation $\omega$. For example, $\omega$ could be a sugar beet, $y$ the label ''sugar beet'' and $x$ a picture of a sugar beet. The job of the DNN is therefore to predict the label from the image of the sugar beet (Eq n. \ref{eq:DNN_model}). In a real world situation, however, measurements could be potentially different from the ones used for training and this could influence the prediction of $y$. The source of this difference could be different lighting condition, different environmental condition or general conditions not taken into account when training.A new measurement generally is not part of the training set, hence $x^* \notin \mathcal{D}$.These differences in real world scenarios compared to the training set are called \textit{distribution shifts}(\cite{ovadia2019trust}) and DNN are very sensitive to that. Moreover, source of noise could also be individuated in errors in labelling. This is the first factor that can cause uncertainty, i.e. \textbf{the variability in real world situations}. \cite{gawlikowski2021survey}\\
-In addition, it has to be taken into account that measurement devices are also subjected to noise due to defects or imprecision. This kind of noise is the second factor, i.e. \textbf{tthe errors inherent to the measurement systems}. \cite{gawlikowski2021survey}\\
-We previously modelled a neural network simply as a function $f\theta$. Although in most applications DNN are treated similarly to how we modelled them, i.e. as a black box which takes as input some data and outputs a prediction, they have a certain structure with certain parameters to take care of. These parameters can be for example the amount of layer, the parameters which need to be configured and the chosen activation function. These configurations are up to the modeller and are the third cause of uncertainty in DNNs, i.e. \textbf{the errors in the architecture specification of the DNN}. \cite{gawlikowski2021survey}\\
-A further source of uncertainty in DNNs is also related to the very own nature of DNNs. DNNs are not deterministic, rather they are stochastic\footnote{Stochastic is a synonym for randomness} in many ways : the order of data, the weight initialization or random regularization as augmentation or dropout. \cite{gawlikowski2021survey} Moreover, the stochastic gradient descent algorithm is widely use to optimize the learning process of DNNs. \cite{ruder2017overview}\\
-Another version of the gradient descent algorithm which is also used is the mini-batch version, which selects random batches with aleatory size (called batch size) from the learning data-set to optimize the training process. \cite{ruder2017overview} This parameter, in addition to other ones like learning rate, and the number of training epochs, is also source of unpredictability in the DNN, as they could heavily change its performances  \\
-The stochastic nature of DNN and the choices of the aforementioned parameters are the forth cause of uncertainty in DNNs : \textbf{the errors in the training procedure of the DNN}\\
-Previously we modelled the training set as $\mathcal{D} \subset \mathbb{D}$, hence as being a subset of a certain domain $\mathbb{D}$. However, the realm of input which could be fed to a neural network is not limited to this domain, rather the DNN is trained to solve tasks with inputs belonging to this domain. Another source of uncertainty can be therefore an input which the DNN is not trained for, even though it is able to process it. For instance, if a DNN is trained to classify dogs from images, an image as input could also depict a bird. The last factor which could cause uncertainty is therefore the \textbf{errors caused by unknown data}. Such unknown data, could also be caused by highly noisy measurement devices, like a broken camera, and some researches show how easy is to fool DNN with images that are meaningless for us humans.\cite{nguyen2015deep} Fig.\ref{fig:fooling_DNN} depicts some examples of picture which could fool even the most advanced DNN. The figures on the top row could also be produced by random noise from a malfunctioning camera and yet could be classified as something else with an accuracy $\geq$ 99.6\%. \cite{nguyen2015deep}\\
-\begin{figure}[htb]
-    \centering
-    \includegraphics[scale = 0.4]{img/images_fooling_DNN.png}
-    \caption[Differences between how DNNs and humans recognize objects]{This result highlights differences between how DNNs and humans recognize objects. Images are either directly (top) or indirectly (bottom) encoded \cite{nguyen2015deep}}
-    \label{fig:fooling_DNN}
-\end{figure}
-
-With the help of the five factors we studied before, we can further categorize uncertainty in two main categories: aleatoric and epistemic uncertainty. \cite{Separation_uncer}
-
-\begin{figure}[htb]
-    \includegraphics[scale = 0.4]{img/uncert_visua.png}
-    \caption[Illustrating the difference between aleatoric and epistemic uncertainty]{Illustrating the difference between aleatoric and epistemic uncertainty for semantic segmentation on the CamVid dataset \cite{DBLP:journals/corr/abs-1811-01412}}
-    \label{fig:un_visua}
-\end{figure}
-
-
-
-
-\textit{Aleatoric uncertainty} is also usually referred to as data or statistical uncertainty) and it is generally used to identify the type of uncertainty cause by the nature of randomness, that is \textit{ the variability in the outcome of an experiment which is due to inherently random effects} \cite{Separation_uncer}. Moreover, it also comprises the type of noise directly stemming from the noise in data used to train, validate, test and for inference, therefore referring to factor II \cite{gawlikowski2021survey} \cite{DBLP:journals/corr/abs-1811-01412}.  \\
-Aleatoric uncertainty is of the irreducible type, meaning it is impossible to get rid of.(\cite{DBLP:journals/corr/KendallG17}, \cite{Separation_uncer}) For example, a model that predicts the output of a flip coin, even in case of a perfect model, is not able to produce the definite, correct answer for it, but only a prediction of the possibilities for the two outcomes. This is due to the fact that the data used for this model is of random, stochastic nature and this random component can not be reduced. \cite{Separation_uncer}\\
-\textit{Epistemic uncertainty}, or systemic or epistemic uncertainty, on the other hand, refers to the type of uncertainty cause by ignorance or short comings of the model, hence not on any other underlying stochastic phenomenon. \cite{DBLP:journals/corr/abs-1811-01412}. Usually, this is due to unknown or lack of coverage of the dataset used for training, hence covers factors I,III, IV and V. \\
-Epistemic uncertainty can be theoretically explained away by improving the architecture of the model and broadening the dataset.
-For example,let us consider a model which is able to determine whether a word is part of the Italian or English dictionary. If we feed the word 'macchina'' to the model, given that we provided enough data to train and the model is perfect, we can be confident that it will predict the correct language, in this case Italian. However, if we feed it with the word ''pasta'', we can not be confident that the prediction is correct, i.e. we can only obtain the probability of this word to be part of one of the dictionaries \textbf{given the dataset we provided}. As a matter of fact, the word ''pasta'' is present in both dictionaries and the outcome depends on the probability of the word to appear in one of the dictionaries in our dataset. The first case is clear case of epistemic uncertainty, which we were able to completely remove with a perfect dataset; while the second case is a clear case of aleatoric uncertainty and it is impossible to remove. 
-Fig. \ref{fig:un_visua} helps visualize the difference between the two. In pictures (\textit{d}), we can see that the aleatoric uncertainty increases on object boundaries and objects far from the camera. Pictures (\textit{e}), on the other hand, shows how epistemic uncertainty increases for semantically and visually challenging pixels. For example, the bottom row shows a failure case when the model fails to segment the footpath due to high epistemic uncertainty, but low aleatoric uncertainty. \cite{DBLP:journals/corr/KendallG17}\\
-Although this distinction is very helpful for further and more precise analysis on a DNN model, it is also important to note that the distinction between the two is highly dependent on the context: they are not absolute notions.(\cite{KIUREGHIAN2009105}) Hence, changing the settings of the model will blur the distinction line between the two and therefore make their classification considerably more difficult.\cite{Separation_uncer}\\
-We mentioned previously that theoretically model uncertainty is 100\% reducible. However, in case of real world data this is not the case. In addition to the probabilistic nature of the DNNs, the training dataset used for the model is very likely to be only a subset of all possible input data of the application, hence it is also very likely that unknown data for the domain is unavoidable. In addition, represent exactly the uncertainty of the DNN is not possible, as the different sources of uncertainty can not be generally modelled accurately. \cite{gawlikowski2021survey}\\
-
-%\subsubsection{Modelling Uncertainty}
-%\subsection{Classification of uncertainty}
-
-%\subsection{Quantification of uncertainty}
-
-%For a desired degree of confidence (namely, foir a given probability), a confidence interval is a prediction of the range of the output of a model where the actual value exists. With an assumption of a normal distribution of the errors, confidence intervals can be calculated for neural networks.\cite{Confidence_Interval}
-%\subsection{Calibration of Neural Networks}
-%\subsection{Final remarks on Uncertainty}
-
+Differently from Training Time (section \ref{sec:training_time}), the memory footprint for inference is in the order of Mega-Bytes(\cite{han2016eie}). As a matter of fact, inference is latency sensitive, but computationally less demanding. \cite{8573476}\\
 
 \section{Accuracy}\label{sec:accuracy}
 Accuracy is usually one of the most looked after metrics when analysing Neural Network performances(\cite{hendrycks2019benchmarking},\cite{bianco2018dnnsbench}). Accuracy is usually the factor taken into account when the training process is evaluated, as could be a potential factor deciding when to stop it. Being able to predict accuracy, for example, could help detecting, and therefore terminate, unsuccessful training run \cite{unterthiner2021predicting}. \\
@@ -359,3 +282,75 @@ The architecture of residual networks we are going to use in this paper is showe
 \end{figure}
 
 
+\section{Uncertainty in Deep Neural Networks}
+As the scope of our investigation is to be able to recognize characteristics and find empirically their correlations in the field of sugar beet recognition, we need to be able to produce predictable and reliable results in order to pose foundation for our analysis. Although this is true in general terms, before we explore techniques to measure Neural Networks, it is important that we understand that we can not properly use the term ''predictability'' when discussing DNNs. \\
+Due to the increased trust given by the advancements in recent years, DNNs are being applied in numerous different fields, as shown by the increasing number of peer review papers about Deep Learning (Fig. \ref{fig:annual_trend}), even the higher-risk ones 
+like medical image analysis or autonomous vehicle control. \cite{gawlikowski2021survey}
+\begin{figure}[h]
+    \centering
+    \includegraphics{img/Annual-trend-in-the-number-of-papers-related-to-deep-learning-in-the-medical-field_W640.jpg}
+    \caption[Trend in publications about Deep Learning]{Trend in publications about Deep Learning  \cite{Number_of_DL_papers}}
+    \label{fig:annual_trend}
+\end{figure}
+
+
+In such high-risk scenarios, DNNs should not only be highly accurate, as a mistake in detecting an obstacle could cause catastrophic consequences for the passengers, but also be trustworthy enough so that the probability of the predicted values reflects the ground truth. DNNs, however, are subjected to different source of uncertainty and errors. \textit{Galiwoski et al.} in \cite{gawlikowski2021survey} recognize five crucial factors which can cause uncertainty and errors in DNNs.\\\hfill
+
+Those factors are:
+
+\begin{enumerate}[label=\Roman*.]
+    \item the variability in real world situations. 
+    \item the errors inherent to the measurement systems,
+    \item the errors in the architecture specification of the DNN,
+    \item the errors in the training procedure of the DNN,
+    \item the errors caused by unknown data.
+\end{enumerate}
+%In the next section, we will explore these factor in more details. Subsequently, we will reason about methods to reduce it and finally, in the third section, we will individuate methods to classify it. 
+%\subsection{Factors causing Uncertainty}
+We can model a neural network as a function $f$, parametrized by weight $\theta$, which maps a set of input $\mathbb{X}$ to a set of measurable outputs $\mathbb{Y}$, hence:
+\begin{equation}
+    f\theta : \mathbb{X} \rightarrow \mathbb{Y} \quad\quad\quad
+    f\theta(x) = y
+    \label{eq:DNN_model}
+\end{equation}
+In case of supervised learning, we also model the training set as $\mathcal{D} \subset \mathbb{D} = \mathbb{X} \times \mathbb{Y}$, where $\mathbb{X}$ is an instance space and $\mathbb{Y}$ the set of outcomes that can be associated with an instance (\cite{uncertainity_classi}), containing $N$ samples. A DNN trained in $\mathcal{D}$ can therefore predict a a corresponding target $f\theta(x^*) = y^*$.\\
+During the data acquisition process, a measurement $x$ and a target variable $y$ are taken from space $\Omega$ to  represent a real world situation $\omega$. For example, $\omega$ could be a sugar beet, $y$ the label ''sugar beet'' and $x$ a picture of a sugar beet. The job of the DNN is therefore to predict the label from the image of the sugar beet (Eq n. \ref{eq:DNN_model}). In a real world situation, however, measurements could be potentially different from the ones used for training and this could influence the prediction of $y$. The source of this difference could be different lighting condition, different environmental condition or any other general conditions not taken into account when training. A new measurement generally is not part of the training set, hence $x^* \notin \mathcal{D}$.These differences in real world scenarios compared to the training set are called \textit{distribution shifts}(\cite{ovadia2019trust}) and DNN are very sensitive to that. Moreover, source of noise could also be individuated in errors in labelling. This is the first factor that can cause uncertainty, i.e. \textbf{the variability in real world situations}. \cite{gawlikowski2021survey}\\
+In addition, it has to be taken into account that measurement devices are also subjected to noise due to defects or imprecision. This kind of noise is the second factor, i.e. \textbf{tthe errors inherent to the measurement systems}. \cite{gawlikowski2021survey}\\
+We previously modelled a neural network simply as a function $f\theta$. Although in most applications DNN are treated similarly to how we modelled them, i.e. as a black box which takes as input some data and outputs a prediction, they have a certain structure with certain parameters to take care of. These parameters can be for example the amount of layer, the parameters which need to be configured and the chosen activation function. These configurations are up to the modeller and are the third cause of uncertainty in DNNs, i.e. \textbf{the errors in the architecture specification of the DNN}. \cite{gawlikowski2021survey}\\
+A further source of uncertainty in DNNs is also related to the very own nature of DNNs. DNNs are not deterministic, rather they are stochastic\footnote{Stochastic is a synonym for randomness} in many ways : the order of data, the weight initialization or random regularization as augmentation or dropout. \cite{gawlikowski2021survey} Moreover, the stochastic gradient descent algorithm is widely use to optimize the learning process of DNNs. \cite{ruder2017overview}\\
+Another version of the gradient descent algorithm which is also used is the mini-batch version, which selects random batches with aleatory size (called batch size) from the learning data-set to optimize the training process. \cite{ruder2017overview} This parameter, in addition to other ones like learning rate, and the number of training epochs, is also source of unpredictability in the DNN, as they could heavily change its performances  \\
+The stochastic nature of DNN and the choices of the aforementioned parameters are the forth cause of uncertainty in DNNs : \textbf{the errors in the training procedure of the DNN}\\
+Previously we modelled the training set as $\mathcal{D} \subset \mathbb{D}$, hence as being a subset of a certain domain $\mathbb{D}$. However, the realm of input which could be fed to a neural network is not limited to this domain, rather the DNN is trained to solve tasks with inputs belonging to this domain. Another source of uncertainty can be therefore an input which the DNN is not trained for, even though it is able to process it. For instance, if a DNN is trained to classify dogs from images, an image as input could also depict a bird. The last factor which could cause uncertainty is therefore the \textbf{errors caused by unknown data}. Such unknown data, could also be caused by highly noisy measurement devices, like a broken camera, and some researches show how easy is to fool DNN with images that are meaningless for us humans.\cite{nguyen2015deep} Fig.\ref{fig:fooling_DNN} depicts some examples of picture which could fool even the most advanced DNN. The figures on the top row could also be produced by random noise from a malfunctioning camera and yet could be classified as something else with an accuracy $\geq$ 99.6\%. \cite{nguyen2015deep}\\
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale = 0.4]{img/images_fooling_DNN.png}
+    \caption[Differences between how DNNs and humans recognize objects]{This result highlights differences between how DNNs and humans recognize objects. Images are either directly (top) or indirectly (bottom) encoded \cite{nguyen2015deep}}
+    \label{fig:fooling_DNN}
+\end{figure}
+
+With the help of the five factors we studied before, we can further categorize uncertainty in two main categories: aleatoric and epistemic uncertainty. \cite{Separation_uncer}
+
+\begin{figure}[htb]
+    \includegraphics[scale = 0.4]{img/uncert_visua.png}
+    \caption[Illustrating the difference between aleatoric and epistemic uncertainty]{Illustrating the difference between aleatoric and epistemic uncertainty for semantic segmentation on the CamVid dataset \cite{DBLP:journals/corr/abs-1811-01412}}
+    \label{fig:un_visua}
+\end{figure}
+
+\textit{Aleatoric uncertainty} is also usually referred to as data or statistical uncertainty) and it is generally used to identify the type of uncertainty cause by the nature of randomness, that is \textit{ the variability in the outcome of an experiment which is due to inherently random effects} \cite{Separation_uncer}. Moreover, it also comprises the type of noise directly stemming from the noise in data used to train, validate, test and for inference, therefore referring to factor II \cite{gawlikowski2021survey} \cite{DBLP:journals/corr/abs-1811-01412}.  \\
+Aleatoric uncertainty is of the irreducible type, meaning it is impossible to get rid of.(\cite{DBLP:journals/corr/KendallG17}, \cite{Separation_uncer}) For example, a model that predicts the output of a flip coin, even in case of a perfect model, is not able to produce the definite, correct answer for it, but only a prediction of the possibilities for the two outcomes. This is due to the fact that the data used for this model is of random, stochastic nature and this random component can not be reduced. \cite{Separation_uncer}\\
+\textit{Epistemic uncertainty}, or systemic or epistemic uncertainty, on the other hand, refers to the type of uncertainty cause by ignorance or short comings of the model, hence not on any other underlying stochastic phenomenon. \cite{DBLP:journals/corr/abs-1811-01412}. Usually, this is due to unknown or lack of coverage of the dataset used for training, hence covers factors I,III, IV and V. \\
+Epistemic uncertainty can be theoretically explained away by improving the architecture of the model and broadening the dataset.
+For example,let us consider a model which is able to determine whether a word is part of the Italian or English dictionary. If we feed the word 'macchina'' to the model, given that we provided enough data to train and the model is perfect, we can be confident that it will predict the correct language, in this case Italian. However, if we feed it with the word ''pasta'', we can not be confident that the prediction is correct, i.e. we can only obtain the probability of this word to be part of one of the dictionaries \textbf{given the dataset we provided}. As a matter of fact, the word ''pasta'' is present in both dictionaries and the outcome depends on the probability of the word to appear in one of the dictionaries in our dataset. The first case is clear case of epistemic uncertainty, which we were able to completely remove with a perfect dataset; while the second case is a clear case of aleatoric uncertainty and it is impossible to remove. 
+Fig. \ref{fig:un_visua} helps visualize the difference between the two. In pictures (\textit{d}), we can see that the aleatoric uncertainty increases on object boundaries and objects far from the camera. Pictures (\textit{e}), on the other hand, shows how epistemic uncertainty increases for semantically and visually challenging pixels. For example, the bottom row shows a failure case when the model fails to segment the footpath due to high epistemic uncertainty, but low aleatoric uncertainty. \cite{DBLP:journals/corr/KendallG17}\\
+Although this distinction is very helpful for further and more precise analysis on a DNN model, it is also important to note that the distinction between the two is highly dependent on the context: they are not absolute notions.(\cite{KIUREGHIAN2009105}) Hence, changing the settings of the model will blur the distinction line between the two and therefore make their classification considerably more difficult.\cite{Separation_uncer}\\
+We mentioned previously that theoretically model uncertainty is 100\% reducible. However, in case of real world data this is not the case. In addition to the probabilistic nature of the DNNs, the training dataset used for the model is very likely to be only a subset of all possible input data of the application, hence it is also very likely that unknown data for the domain is unavoidable. In addition, represent exactly the uncertainty of the DNN is not possible, as the different sources of uncertainty can not be generally modelled accurately. \cite{gawlikowski2021survey}\\
+
+Fur the purpose of this paper, we are not going to explore methodologies to reduce this uncertainty nor we are going to investigate any further whether this uncertainty can be predict from other properties. Our goal will be to research whether we will be able to correlate the other metrics in a way that we can be predictable in time, meaning whether we can define certain time frame for training or inference based on the other characteristics we defined above. 
+%\subsubsection{Modelling Uncertainty}
+%\subsection{Classification of uncertainty}
+
+%\subsection{Quantification of uncertainty}
+
+%For a desired degree of confidence (namely, foir a given probability), a confidence interval is a prediction of the range of the output of a model where the actual value exists. With an assumption of a normal distribution of the errors, confidence intervals can be calculated for neural networks.\cite{Confidence_Interval}
+%\subsection{Calibration of Neural Networks}
+%\subsection{Final remarks on Uncertainty}

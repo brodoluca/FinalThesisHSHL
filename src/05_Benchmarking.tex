@@ -1,8 +1,8 @@
 \chapter{Analysing the models}\label{ana_models}
 \section{Introduction}
 
-Before discussing how to use the characteristics of a model to optimize complex application, it is vital we find a way to measure and evaluate models. As the whole application will have its foundations on those measurements, finding them precisely and reliably is our main goal. Moreover, we are expecting applications to be composed of devices with completely different characteristics, both in hardware and software. Although it is possible to predict some of the characteristics of NNs using their weights (\cite{Unterthiner2020PredictingNN}), in this paper we will rely upon methods to find the empirically. The output of our investigation will be a toolbox which we can easily run on any device to measure the characteristics we are mostly interested in. \\
-In section \ref{benchmarking} we will explore benchmarking in general terms to make an idea of benchmarks and to develop the requirements we will need to full-fill. In section \ref{benchmarking_nn} we will dive deep into measuring NNs' performances and to find the tools we can use for our own benchmark. Finally, in section \ref{sec:my_bench} we will describe the benchmark and we will use it to measure the performances of some networks. 
+In this chapter, we will study how to properly perform tests on NNs to measure and analyse their characteristics and to find links among them in the context of the recognition of sugar beets. Although it is possible to predict some of the characteristics using NNs' weights (\cite{Unterthiner2020PredictingNN}), in this paper we will rely upon methods to find them empirically. The output of our investigation will be a toolbox which we can easily run on most devices to measure the characteristics we are mostly interested in. \\
+In section \ref{benchmarking} we will explore the concept benchmarking in general terms to make an idea  the requirements we will need to full-fill for produce reliable results. In section \ref{benchmarking_nn} we will dive deep into measuring NNs' performances and we will introduce techniques we can use for our own benchmark. Finally, in section \ref{sec:my_bench} we will describe the benchmark to use it in future sections to measure the characteristics of some networks. 
 
 \section{Benchmarking}\label{benchmarking}
 Benchmarking is a widely used tool to evaluate the performance of a system, either software or hardware, whose main goal is to produce consistent and precise measurements of said systems. High precision and affidabilty in benchmarks, however, have been always tricky to achieve and the complexity of these tasks have reached a high complexity in later years, due to advanced processor designs and very intricate interaction between programs and operating systems.\cite{DBLP:journals/corr/abs-1811-01412}\\
@@ -203,6 +203,7 @@ On the other hand, \textit{Zou et al. } in \cite{8573476}, among other contribut
     \item[\textbf{Memory consumption }] \hfill\\ The memory consumed by the NNs during training
 \end{description}
 Although the aforementioned benchmarks have brought many advancements on the field, they are not meant to be used to study the characteristics of the NNs, but rather to compare and assess NNs performance under different condition and workloads. Therefore, in this section, we will explore techniques to measure NNs performance and determine their behaviour for our own specific goal and under our conditions.  
+
 
 \subsection{Benchmark Inference Time}\label{sec:ben_inf}
 As we already delineated in section n.\ref{sec:inference_time_definition}, inference time is one essential characteristics of DNN and some cases fast inference time is an important requirement, therefore speeding up calculations is of vital importance. To achieve faster inference time, and faster calculations in general, DNNs are trained and run on Graphics processing units (GPUs), which means exploiting their hardware acceleration capabilities and their asynchronous execution (multi-threading).  (\cite{8090194}, \cite{10.1007/978-3-642-04274-4_39}, \cite{10.1145/3089801.3089804}, \cite{paine2013gpu},\cite{OH20041311})\\
@@ -490,7 +491,7 @@ def accuracy(inp, targ, axis=-1):
 
 \section{Benchmarking Tool for Neural Networks }\label{sec:my_bench}
 Following the characteristics delineated in section n. \ref{key_char} and the techniques we analysed in sections n. \ref{BTaM} and n. \ref{benchmarking_nn}, we can build a tool which allows us to study the behaviour of Neural Networks. \\
-Conceptually, the behaviour of the suite is shown in Fig. \ref{fig:activity_diagram_suite}. \\
+Conceptually, the behaviour of the test is shown in Fig. \ref{fig:activity_diagram_suite}. \\
 \begin{figure}[th]
 \centering
    \begin{tikzpicture}
@@ -508,8 +509,8 @@ minimum height=0.5cm, rounded corners=5pt, draw}}
         %\node[activity, below of = start] (action1) {Read the configuration file};
         \node[activity, below of = start] (action1) {Fetch the dataset};
         \node[activity, below of = action1] (action2) {Fetch the models};
-        \node[activity, below of = action2] (action3) {est training};
-        \node[activity, below of = action3] (action4) {Test inference};
+        \node[activity, below of = action2] (action3) {Test training time};
+        \node[activity, below of = action3] (action4) {Test inference inference time};
         \node[activity, below of = action4] (action5) {Save Results};
         \node[end,below of = action5](end){};
 

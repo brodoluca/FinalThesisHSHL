@@ -226,14 +226,6 @@ Haibo He and Yunqian Ma.
 \newblock {\em Imbalanced Learning: Foundations, Algorithms, and Applications}.
 \newblock Wiley-IEEE Press, 1st edition, 2013.
 
-\bibitem[HSD{\etalchar{+}}21]{hasan_survey_2021}
-A.~S. M.~Mahmudul Hasan, Ferdous Sohel, Dean Diepeveen, Hamid Laga, and Michael
-  G.~K. Jones.
-\newblock A {Survey} of {Deep} {Learning} {Techniques} for {Weed} {Detection}
-  from {Images}.
-\newblock {\em arXiv:2103.01415 [cs]}, March 2021.
-\newblock arXiv: 2103.01415.
-
 \bibitem[HSHK21]{Separation_uncer}
 Denis Huseljic, Bernhard Sick, Marek Herde, and Daniel Kottke.
 \newblock Separation of aleatoric and epistemic uncertainty in deterministic
@@ -379,6 +371,13 @@ Tom~M Mitchell.
 \newblock {\em Machine Learning}.
 \newblock New York McGraw-Hill, 1997.
 
+\bibitem[MLS17]{milioto2017real}
+Andres Milioto, Philipp Lottes, and Cyrill Stachniss.
+\newblock Real-time blob-wise sugar beets vs weeds classification for
+  monitoring fields using convolutional neural networks.
+\newblock {\em ISPRS Annals of Photogrammetry, Remote Sensing \& Spatial
+  Information Sciences}, 4, 2017.
+
 \bibitem[MPSG21]{machleb_sensor-based_2021}
 Jannis Machleb, Gerassimos~G. Peteinatos, Markus Sökefeld, and Roland
   Gerhards.
@@ -391,6 +390,12 @@ John Murphy.
 \newblock An overview of convolutional neural network architectures for deep
   learning.
 \newblock {\em Microway Inc}, 2016.
+
+\bibitem[NWH21]{agriculture11111111}
+Abozar Nasirahmadi, Ulrike Wilczek, and Oliver Hensel.
+\newblock Sugar beet damage detection during harvesting using different
+  convolutional neural network models.
+\newblock {\em Agriculture}, 11(11), 2021.
 
 \bibitem[NYC15]{nguyen2015deep}
 Anh Nguyen, Jason Yosinski, and Jeff Clune.

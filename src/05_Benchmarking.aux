@@ -25,10 +25,10 @@
 \newlabel{key_char}{{3.2.1}{34}{Key characteristics for a correct benchmark}{subsection.3.2.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.1}Relevance}{34}{subsubsection.3.2.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.2}Reproducibility}{34}{subsubsection.3.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.3}Fairness}{34}{subsubsection.3.2.1.3}\protected@file@percent }
 \citation{how_to_bench}
 \citation{Stewart2001MeasuringET}
 \citation{Stewart2001MeasuringET}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.3}Fairness}{35}{subsubsection.3.2.1.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.4}Verifiability}{35}{subsubsection.3.2.1.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.5}Usability}{35}{subsubsection.3.2.1.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Benchmark Techniques and Methodologies}{35}{subsection.3.2.2}\protected@file@percent }
@@ -53,6 +53,8 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Common Practices in benchmarking}{38}{subsection.3.2.3}\protected@file@percent }
 \newlabel{sec:ben_challenges}{{3.2.3}{38}{Common Practices in benchmarking}{subsection.3.2.3}{}}
 \newlabel{sec:remove_inter}{{3.2.3}{38}{Common Practices in benchmarking}{subsection.3.2.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Disable turbo boost in both AMD and Intel devices\relax }}{38}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:no_boos}{{3.4}{38}{Disable turbo boost in both AMD and Intel devices\relax }{figure.caption.21}{}}
 \citation{LinuxManualWeb}
 \citation{LinuxManualWeb}
 \citation{reddi2020mlperf}
@@ -61,8 +63,6 @@
 \citation{hendrycks2019benchmarking}
 \citation{reddi2020mlperf}
 \citation{8573476}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Disable turbo boost in both AMD and Intel devices\relax }}{39}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:no_boos}{{3.4}{39}{Disable turbo boost in both AMD and Intel devices\relax }{figure.caption.21}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Disable Hyper-Threading\relax }}{39}{figure.caption.22}\protected@file@percent }
 \newlabel{fig:no_ht}{{3.5}{39}{Disable Hyper-Threading\relax }{figure.caption.22}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Set the scaling governor policy to be \textit  {performance} for every cpu\relax }}{39}{figure.caption.23}\protected@file@percent }
@@ -92,8 +92,8 @@
 \newlabel{fig:corr_inf}{{3.8}{42}{Correct way to measure inference\relax }{figure.caption.25}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Run benchmark on android with Tensorflow Lite}}{42}{figure.caption.26}\protected@file@percent }
 \newlabel{fig:bench_ten_lite_an}{{3.9}{42}{Run benchmark on android with Tensorflow Lite}{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Command to access the inference in Tensorflow Lite}}{43}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:inf_ten}{{3.10}{43}{Command to access the inference in Tensorflow Lite}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Command to access the inference in Tensorflow Lite}}{42}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:inf_ten}{{3.10}{42}{Command to access the inference in Tensorflow Lite}{figure.caption.27}{}}
 \newlabel{eq:Pl_FLOPS}{{3.6}{43}{Benchmark Inference Time}{equation.3.3.6}{}}
 \citation{intel_bench_suite}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Architecture of the convolutional neural network used as an example to calculate inference time}}{44}{figure.caption.28}\protected@file@percent }
@@ -145,7 +145,7 @@
 \@setckpt{src/05_Benchmarking}{
 \setcounter{page}{52}
 \setcounter{equation}{10}
-\setcounter{enumi}{4}
+\setcounter{enumi}{5}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
