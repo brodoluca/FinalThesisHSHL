@@ -550,7 +550,8 @@ VGG19&0.14\\
 
 
 
-
+Fig. \ref{fig:inf_seeds_with_grey} shows the results of the inference time tests run using the aforementioned dataset for training. In Fig. \ref{fig:inf_seeds_grey_no_grey}, the performance of the models has been tested using the same inference dataset we used for the results in Fig. \ref{fig:inf_acc_models_seeds}. Comparing the two graphs we can observe that the accuracy dropped significantly. As a matter of fact, without the grey images for training, the lowest accuracy achieved was around \textasciitilde75\%, while in this run we calculated accuracies at around \textasciitilde69\%. Furthermore, the highest accuracy calculated in this run is around \textasciitilde88\%,
+while in the run before the highest achieved was \textasciitilde92\%. The inference time did not improve as well, as the models showed a comparable or oven worst response time for the images at each epochs. Interestingly, when we observe the overall trend of the models, we can see that as the accuracy increases, it appears that they require more time to process the images and make their predictions.\footnote{The whole results can be seen in Fig. \ref{fig:accuracy_inferencetime_seedlings_grey_train}}
 
 
 \begin{figure}[h]
@@ -561,10 +562,15 @@ VGG19&0.14\\
      \end{subfigure}
      \hfill
      \begin{subfigure}{0.5\textwidth}
-	    \includegraphics[width = \gws cm]{inf_acc_152_seeds.png}
+	    \includegraphics[width = \gws cm]{inf_acc_seeds_grey_img.png}
 	    \caption{Resnet152}
-        \label{fig:inf_seeds_grey_grey}
+        \label{fig:inf_acc_seeds_grey_img}
      \end{subfigure}\\
-     \caption[Inference time measured for Resnet101 and Resnet152]{Inference time measured for Resnet101 and Resnet152. The inference time is in milliseconds, while the accuracy is the percentage of correct predictions.}
+     \caption[Inference time of each model trained with grey images as well]{Inference time of each model trained with grey images as well. In Fig. \ref{fig:inf_seeds_grey_no_grey}, the inference is calculated using the same dataset used in Fig. \ref{fig:inf_acc_models_seeds}, while in Fig.  \ref{fig:inf_acc_seeds_grey_img} the dataset is composed with the same pictures, but in grey scale. }
         \label{fig:inf_seeds_with_grey}
 \end{figure}
+
+
+Finally, in Fig. \ref{fig:inf_acc_seeds_grey_img}, we can see the inference time of the models using the same image we used before, but in grey scale. In this run, the accuracy dropped to a lowest point of \textasciitilde35\%, a considerable downgrade from the \textasciitilde75\% of the original run. The highest accuracy, on the other hand, dropped to \textasciitilde85\%, i.e. similar to the \textasciitilde88\% of before. In this run, the overall inference time did not improve as well, but rather tends to increase as the accuracy increases.\footnote{The whole results can be seen in Fig. \ref{fig:accuracy_inferencetime_seeds_grey}} \\ 
+From this second run we can conclude that, for this dataset and for these models, including grey scale versions of the images increases the performances in training, but effects negatively the inference behaviour of the models. 
+

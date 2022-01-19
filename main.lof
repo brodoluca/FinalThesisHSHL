@@ -52,7 +52,7 @@
 \contentsline {figure}{\numberline {4.19}{\ignorespaces Inference time measured for Resnet101 and Resnet152}}{67}{figure.caption.61}% 
 \contentsline {figure}{\numberline {4.20}{\ignorespaces Size of the images over inference time for the seedlings dataset}}{68}{figure.caption.62}% 
 \contentsline {figure}{\numberline {4.21}{\ignorespaces Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs on the 'plant\_seedlings\_v2' dataset and the gray-scale pictures\relax }}{70}{figure.caption.65}% 
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Inference time measured for Resnet101 and Resnet152}}{71}{figure.caption.66}% 
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Inference time of each model trained with grey images as well}}{71}{figure.caption.66}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the slowest files in common amongst all models\relax }}{83}{figure.caption.68}% 
@@ -60,3 +60,5 @@
 \contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of the fastest files of Resnet 152\relax }}{85}{figure.caption.70}% 
 \contentsline {figure}{\numberline {A.4}{\ignorespaces Histogram of the slowest files of Resnet152\relax }}{86}{figure.caption.71}% 
 \contentsline {figure}{\numberline {A.5}{\ignorespaces Complete result of the test for inference time in the seedlings dataset\relax }}{87}{figure.caption.72}% 
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Complete result of the test for inference time in the seedlings dataset with grey images\relax }}{88}{figure.caption.73}% 
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Complete result of the test for inference time in the seedlings dataset with grey images. The inference here is calculated by feeding grey scale images to the models\relax }}{89}{figure.caption.74}% 
