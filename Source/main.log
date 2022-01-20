@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.23)  20 JAN 2022 16:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.23)  20 JAN 2022 16:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1074,6 +1074,10 @@ Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 \multirow@dima=\skip79
 \bigstrutjot=\dimen259
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
 (/usr/local/texlive/2019/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
 
@@ -1093,7 +1097,7 @@ Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
 \FV@TabBox=\box74
 \c@FancyVerbLine=\count166
 \FV@StepNumber=\count167
-\FV@OutFile=\write4
+\FV@OutFile=\write5
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
@@ -1158,7 +1162,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 \minted@appexistsfile=\read3
 \minted@bgbox=\box82
-\minted@code=\write5
+\minted@code=\write6
 \c@minted@FancyVerbLineTemp=\count187
 \c@minted@pygmentizecounter=\count188
 \@float@every@listing=\toks40
@@ -1405,7 +1409,7 @@ Class scrreprt Warning: Usage of package `parskip' together
 (scrreprt)              I'd suggest to use option
 (scrreprt)              `parskip' with one of it's several values.
 (scrreprt)              Nevertheless, using requested
-(scrreprt)              package `parskip' on input line 153.
+(scrreprt)              package `parskip' on input line 154.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2019-01-16 v2.0c non-zero parskip adjustments
@@ -1502,8 +1506,8 @@ LaTeX Info: Redefining \pageref on input line 22.
 LaTeX Info: Redefining \nameref on input line 22.
 
 (./main.out) (./main.out)
-\@outlinefile=\write6
-\openout6 = `main.out'.
+\@outlinefile=\write7
+\openout7 = `main.out'.
 
 Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           Using `bookmark' together with `hyperref' is recommended,
@@ -1672,8 +1676,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package tocbasic Info: character protrusion at toc deactivated on input line 59
 .
  (./main.toc [7])
-\tf@toc=\write7
-\openout7 = `main.toc'.
+\tf@toc=\write8
+\openout8 = `main.toc'.
 
  [8]
 Package tocbasic Info: character protrusion at lof deactivated on input line 60
@@ -1683,21 +1687,21 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 60
 
 
 ])
-\tf@lof=\write8
-\openout8 = `main.lof'.
+\tf@lof=\write9
+\openout9 = `main.lof'.
 
  [10]
 Package tocbasic Info: character protrusion at lot deactivated on input line 61
 .
  (./main.lot
-Overfull \hbox (7.3903pt too wide) in paragraph at lines 15--15
+Overfull \hbox (7.3903pt too wide) in paragraph at lines 14--14
  [][] [][]\T1/lmr/m/n/12 (-20) Performances of the mo-dels trai-ned for 100 epo
 chs on the 'plant_seedlings_v2' 
  []
 
 )
-\tf@lot=\write9
-\openout9 = `main.lot'.
+\tf@lot=\write10
+\openout10 = `main.lot'.
 
  [11
 
@@ -1726,13 +1730,16 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface .
 
-<img/276_Beta_vulgaris_L.jpg, id=322, 144.54pt x 225.0006pt>
+<img/276_Beta_vulgaris_L.jpg, id=324, 144.54pt x 225.0006pt>
 File: img/276_Beta_vulgaris_L.jpg Graphic file (type jpg)
 <use img/276_Beta_vulgaris_L.jpg>
 Package pdftex.def Info: img/276_Beta_vulgaris_L.jpg  used on input line 9.
 (pdftex.def)             Requested size: 142.26378pt x 221.46722pt.
-) [13]
-Underfull \vbox (badness 2065) has occurred while \output is active []
+Excluding 'comment' comment.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13])
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14 <./img/276_Beta_vulgaris_L.jpg>] [15]
 \openout2 = `src/03_Related_work.aux'.
@@ -1744,18 +1751,17 @@ Underfull \vbox (badness 2065) has occurred while \output is active []
 
 ]
 chapter 2.
-) [17]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 18.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [17]) [18]
 \openout2 = `src/04_Characteristics_of_the_model.aux'.
 
- (./src/04_Characteristics_of_the_model.tex [18
 
-
-
-
-]
+(./src/04_Characteristics_of_the_model.tex
 chapter 3.
 <img/Annual-trend-in-the-number-of-papers-related-to-deep-learning-in-the-medic
-al-field_W640.jpg, id=393, 215.1293pt x 133.78354pt>
+al-field_W640.jpg, id=411, 215.1293pt x 133.78354pt>
 File: img/Annual-trend-in-the-number-of-papers-related-to-deep-learning-in-the-
 medical-field_W640.jpg Graphic file (type jpg)
 <use img/Annual-trend-in-the-number-of-papers-related-to-deep-learning-in-the-m
@@ -1768,21 +1774,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[19 <./img/Annual-trend-in-the-number-of-papers-related-to-deep-learning-in-the
--medical-field_W640.jpg>]
+[19
+
+
+
+
+ <./img/Annual-trend-in-the-number-of-papers-related-to-deep-learning-in-the-me
+dical-field_W640.jpg>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 39.
-<img/images_fooling_DNN.png, id=417, 507.8975pt x 587.19376pt>
+<img/images_fooling_DNN.png, id=435, 507.8975pt x 587.19376pt>
 File: img/images_fooling_DNN.png Graphic file (type png)
 <use img/images_fooling_DNN.png>
 Package pdftex.def Info: img/images_fooling_DNN.png  used on input line 45.
 (pdftex.def)             Requested size: 203.1554pt x 234.87334pt.
  [20]
-<img/uncert_visua.png, id=442, 1239.63126pt x 599.23875pt>
+<img/uncert_visua.png, id=457, 1239.63126pt x 599.23875pt>
 File: img/uncert_visua.png Graphic file (type png)
 <use img/uncert_visua.png>
 Package pdftex.def Info: img/uncert_visua.png  used on input line 53.
@@ -1834,29 +1845,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--214
 
  []
 
-<img/over_fitting.png, id=592, 532.99126pt x 416.55624pt>
+<img/over_fitting.png, id=603, 532.99126pt x 416.55624pt>
 File: img/over_fitting.png Graphic file (type png)
 <use img/over_fitting.png>
 Package pdftex.def Info: img/over_fitting.png  used on input line 221.
 (pdftex.def)             Requested size: 159.8986pt x 124.96783pt.
 [28 <./img/over_fitting.png>]
-<img/over_fitting_real.png, id=608, 532.99126pt x 416.55624pt>
+<img/over_fitting_real.png, id=619, 532.99126pt x 416.55624pt>
 File: img/over_fitting_real.png Graphic file (type png)
 <use img/over_fitting_real.png>
 Package pdftex.def Info: img/over_fitting_real.png  used on input line 239.
 (pdftex.def)             Requested size: 213.19272pt x 166.61954pt.
-<img/over_fitting_2.png, id=612, 532.99126pt x 416.55624pt>
+<img/over_fitting_2.png, id=623, 532.99126pt x 416.55624pt>
 File: img/over_fitting_2.png Graphic file (type png)
 <use img/over_fitting_2.png>
 Package pdftex.def Info: img/over_fitting_2.png  used on input line 248.
 (pdftex.def)             Requested size: 213.19272pt x 166.61954pt.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 255.
-
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [29 <./img/over_fitting_real.png>]
-<img/alexnet_architecture.png, id=629, 1224.575pt x 416.55624pt>
+ [29 <./img/over_fitting_real.png>]
+<img/alexnet_architecture.png, id=639, 1224.575pt x 416.55624pt>
 File: img/alexnet_architecture.png Graphic file (type png)
 <use img/alexnet_architecture.png>
 Package pdftex.def Info: img/alexnet_architecture.png  used on input line 277.
@@ -1867,12 +1873,12 @@ Overfull \hbox (34.57721pt too wide) in paragraph at lines 277--278
  []
 
 [30 <./img/over_fitting_2.png>]
-<img/vgg_arch.png, id=647, 558.085pt x 564.1075pt>
+<img/vgg_arch.png, id=658, 558.085pt x 564.1075pt>
 File: img/vgg_arch.png Graphic file (type png)
 <use img/vgg_arch.png>
 Package pdftex.def Info: img/vgg_arch.png  used on input line 301.
 (pdftex.def)             Requested size: 279.04182pt x 282.05305pt.
-<img/res_block.png, id=659, 1013.7875pt x 586.19pt>
+<img/res_block.png, id=670, 1013.7875pt x 586.19pt>
 File: img/res_block.png Graphic file (type png)
 <use img/res_block.png>
 Package pdftex.def Info: img/res_block.png  used on input line 325.
@@ -1881,7 +1887,7 @@ Package pdftex.def Info: img/res_block.png  used on input line 325.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32 <./img/vgg_arch.png> <./img/res_block.png>]
-<img/resnet_arch.png, id=685, 942.52126pt x 412.54124pt>
+<img/resnet_arch.png, id=695, 942.52126pt x 412.54124pt>
 File: img/resnet_arch.png Graphic file (type png)
 <use img/resnet_arch.png>
 Package pdftex.def Info: img/resnet_arch.png  used on input line 354.
@@ -1936,24 +1942,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [39] [40] [41]
-[42] [43]
+[42]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 272.
- [44]
+(Font)              <10.95> on input line 247.
+ [43]
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathreplacing.code.tex
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathreplacing.code.tex))
-Overfull \hbox (48.27005pt too wide) in paragraph at lines 379--380
+Overfull \hbox (48.27005pt too wide) in paragraph at lines 354--355
  [][] 
  []
 
 
 Underfull \vbox (badness 1845) has occurred while \output is active []
 
- [45]
-[46]
-Overfull \hbox (0.66106pt too wide) in paragraph at lines 418--418
+ [44]
+[45]
+Overfull \hbox (0.66106pt too wide) in paragraph at lines 393--393
 []\T1/lmr/m/n/12 (-20) epoch| 
  []
 
@@ -1963,66 +1969,66 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[47] [48]
-Underfull \hbox (badness 10000) in paragraph at lines 542--544
+[46] [47]
+Underfull \hbox (badness 10000) in paragraph at lines 517--519
 
  []
 
-[49]
-Overfull \hbox (1.49144pt too wide) in paragraph at lines 565--579
+[48]
+Overfull \hbox (1.49144pt too wide) in paragraph at lines 540--554
 []\T1/lmr/m/n/12 (-20) 54.769957065582275| 
  []
 
-[50]
-<img/resnet18_epoch-accuracy.png, id=1031, 462.528pt x 346.896pt>
+[49]
+<img/resnet18_epoch-accuracy.png, id=1026, 462.528pt x 346.896pt>
 File: img/resnet18_epoch-accuracy.png Graphic file (type png)
 <use img/resnet18_epoch-accuracy.png>
-Package pdftex.def Info: img/resnet18_epoch-accuracy.png  used on input line 60
-1.
+Package pdftex.def Info: img/resnet18_epoch-accuracy.png  used on input line 57
+6.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
-<img/resnet18_time-accuracy.png, id=1032, 462.528pt x 346.896pt>
+<img/resnet18_time-accuracy.png, id=1027, 462.528pt x 346.896pt>
 File: img/resnet18_time-accuracy.png Graphic file (type png)
 <use img/resnet18_time-accuracy.png>
-Package pdftex.def Info: img/resnet18_time-accuracy.png  used on input line 606
+Package pdftex.def Info: img/resnet18_time-accuracy.png  used on input line 581
 .
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 600--610
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 575--585
 [][] [] 
  []
 
-<img/epoch_inferencetime.png, id=1037, 642.4803pt x 388.0899pt>
+<img/epoch_inferencetime.png, id=1032, 642.4803pt x 388.0899pt>
 File: img/epoch_inferencetime.png Graphic file (type png)
 <use img/epoch_inferencetime.png>
-Package pdftex.def Info: img/epoch_inferencetime.png  used on input line 625.
+Package pdftex.def Info: img/epoch_inferencetime.png  used on input line 600.
 (pdftex.def)             Requested size: 227.62204pt x 137.4916pt.
-[51 <./img/resnet18_epoch-accuracy.png> <./img/resnet18_time-accuracy.png> <./i
+[50 <./img/resnet18_epoch-accuracy.png> <./img/resnet18_time-accuracy.png> <./i
 mg/epoch_inferencetime.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 636--638
+Underfull \hbox (badness 10000) in paragraph at lines 611--613
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52])
-[53]
+ [51])
+[52]
 \openout2 = `src/06_Analysis_Characteristics.aux'.
 
- (./src/06_Analysis_Characteristics.tex [54
-
-
-
-
-]
+ (./src/06_Analysis_Characteristics.tex
 chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-(./src/First_Experiment/plants.tex [55] [56]
-<img/seedlings_100.png, id=1098, 830.10126pt x 480.79625pt>
+(./src/First_Experiment/plants.tex [53
+
+
+
+
+] [54]
+<img/seedlings_100.png, id=1088, 830.10126pt x 480.79625pt>
 File: img/seedlings_100.png Graphic file (type png)
 <use img/seedlings_100.png>
 Package pdftex.def Info: img/seedlings_100.png  used on input line 37.
@@ -2032,19 +2038,19 @@ Overfull \hbox (3.09444pt too wide) in paragraph at lines 45--58
  [][] 
  []
 
-<img/seedlings_100_acc.png, id=1101, 1214.5375pt x 699.61375pt>
+<img/seedlings_100_acc.png, id=1091, 1214.5375pt x 699.61375pt>
 File: img/seedlings_100_acc.png Graphic file (type png)
 <use img/seedlings_100_acc.png>
 Package pdftex.def Info: img/seedlings_100_acc.png  used on input line 70.
 (pdftex.def)             Requested size: 341.43306pt x 196.6698pt.
-[57 <./img/seedlings_100.png>]
-<img/epoch_train_loss_seeds_100.png, id=1107, 433.62pt x 289.08pt>
+[55 <./img/seedlings_100.png>]
+<img/epoch_train_loss_seeds_100.png, id=1098, 433.62pt x 289.08pt>
 File: img/epoch_train_loss_seeds_100.png Graphic file (type png)
 <use img/epoch_train_loss_seeds_100.png>
 Package pdftex.def Info: img/epoch_train_loss_seeds_100.png  used on input line
  77.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
-<img/epoch_valid_loss_seeds_100.png, id=1108, 433.62pt x 289.08pt>
+<img/epoch_valid_loss_seeds_100.png, id=1099, 433.62pt x 289.08pt>
 File: img/epoch_valid_loss_seeds_100.png Graphic file (type png)
 <use img/epoch_valid_loss_seeds_100.png>
 Package pdftex.def Info: img/epoch_valid_loss_seeds_100.png  used on input line
@@ -2058,13 +2064,13 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 76--86
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/epoch_valid_loss_resnet101.png, id=1116, 433.62pt x 289.08pt>
+<img/epoch_valid_loss_resnet101.png, id=1107, 433.62pt x 289.08pt>
 File: img/epoch_valid_loss_resnet101.png Graphic file (type png)
 <use img/epoch_valid_loss_resnet101.png>
 Package pdftex.def Info: img/epoch_valid_loss_resnet101.png  used on input line
  119.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
-<img/epoch_valid_loss_resnet152.png, id=1117, 433.62pt x 289.08pt>
+<img/epoch_valid_loss_resnet152.png, id=1108, 433.62pt x 289.08pt>
 File: img/epoch_valid_loss_resnet152.png Graphic file (type png)
 <use img/epoch_valid_loss_resnet152.png>
 Package pdftex.def Info: img/epoch_valid_loss_resnet152.png  used on input line
@@ -2075,14 +2081,14 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 117--127
 []$[]$ $[]$ 
  []
 
-[58 <./img/seedlings_100_acc.png> <./img/epoch_train_loss_seeds_100.png> <./img
+[56 <./img/seedlings_100_acc.png> <./img/epoch_train_loss_seeds_100.png> <./img
 /epoch_valid_loss_seeds_100.png>]
-<img/inf_acc_models_seeds.png, id=1133, 868.24374pt x 499.8675pt>
+<img/inf_acc_models_seeds.png, id=1124, 868.24374pt x 499.8675pt>
 File: img/inf_acc_models_seeds.png Graphic file (type png)
 <use img/inf_acc_models_seeds.png>
 Package pdftex.def Info: img/inf_acc_models_seeds.png  used on input line 138.
 (pdftex.def)             Requested size: 227.62204pt x 131.04556pt.
-<img/inf_epoch_models_seeds.png, id=1134, 868.24374pt x 499.8675pt>
+<img/inf_epoch_models_seeds.png, id=1125, 868.24374pt x 499.8675pt>
 File: img/inf_epoch_models_seeds.png Graphic file (type png)
 <use img/inf_epoch_models_seeds.png>
 Package pdftex.def Info: img/inf_epoch_models_seeds.png  used on input line 144
@@ -2098,14 +2104,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--148
 
  []
 
-[59 <./img/epoch_valid_loss_resnet101.png> <./img/epoch_valid_loss_resnet152.pn
+[57 <./img/epoch_valid_loss_resnet101.png> <./img/epoch_valid_loss_resnet152.pn
 g>]
-<img/inf_resnet101_seeds.png, id=1145, 889.3225pt x 499.8675pt>
+<img/inf_resnet101_seeds.png, id=1136, 889.3225pt x 499.8675pt>
 File: img/inf_resnet101_seeds.png Graphic file (type png)
 <use img/inf_resnet101_seeds.png>
 Package pdftex.def Info: img/inf_resnet101_seeds.png  used on input line 157.
 (pdftex.def)             Requested size: 227.62204pt x 127.94122pt.
-<img/inf_acc_152_seeds.png, id=1146, 889.3225pt x 499.8675pt>
+<img/inf_acc_152_seeds.png, id=1137, 889.3225pt x 499.8675pt>
 File: img/inf_acc_152_seeds.png Graphic file (type png)
 <use img/inf_acc_152_seeds.png>
 Package pdftex.def Info: img/inf_acc_152_seeds.png  used on input line 163.
@@ -2128,8 +2134,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--178
 
  []
 
-[60 <./img/inf_acc_models_seeds.png> <./img/inf_epoch_models_seeds.png>]
-<img/inf_size_seeds.png, id=1156, 889.3225pt x 502.87875pt>
+[58 <./img/inf_acc_models_seeds.png> <./img/inf_epoch_models_seeds.png>]
+<img/inf_size_seeds.png, id=1147, 889.3225pt x 502.87875pt>
 File: img/inf_size_seeds.png Graphic file (type png)
 <use img/inf_size_seeds.png>
 Package pdftex.def Info: img/inf_size_seeds.png  used on input line 181.
@@ -2143,15 +2149,15 @@ Overfull \hbox (3.09444pt too wide) in paragraph at lines 196--209
  [][] 
  []
 
-[61 <./img/inf_resnet101_seeds.png> <./img/inf_acc_152_seeds.png>] [62 <./img/i
+[59 <./img/inf_resnet101_seeds.png> <./img/inf_acc_152_seeds.png>] [60 <./img/i
 nf_size_seeds.png>]
-<epoch_valid_loss_resnet101_2.png, id=1175, 433.62pt x 289.08pt>
+<epoch_valid_loss_resnet101_2.png, id=1165, 433.62pt x 289.08pt>
 File: epoch_valid_loss_resnet101_2.png Graphic file (type png)
 <use epoch_valid_loss_resnet101_2.png>
 Package pdftex.def Info: epoch_valid_loss_resnet101_2.png  used on input line 2
 38.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
-<epoch_valid_loss_resnet152_2.png, id=1176, 433.62pt x 289.08pt>
+<epoch_valid_loss_resnet152_2.png, id=1166, 433.62pt x 289.08pt>
 File: epoch_valid_loss_resnet152_2.png Graphic file (type png)
 <use epoch_valid_loss_resnet152_2.png>
 Package pdftex.def Info: epoch_valid_loss_resnet152_2.png  used on input line 2
@@ -2167,14 +2173,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--251
 
  []
 
-[63 <./epoch_valid_loss_resnet101_2.png> <./epoch_valid_loss_resnet152_2.png>]
-<img/inf_seeds_grey_no_grey.png, id=1188, 877.2775pt x 502.87875pt>
+[61 <./epoch_valid_loss_resnet101_2.png> <./epoch_valid_loss_resnet152_2.png>]
+<img/inf_seeds_grey_no_grey.png, id=1179, 877.2775pt x 502.87875pt>
 File: img/inf_seeds_grey_no_grey.png Graphic file (type png)
 <use img/inf_seeds_grey_no_grey.png>
 Package pdftex.def Info: img/inf_seeds_grey_no_grey.png  used on input line 255
 .
 (pdftex.def)             Requested size: 227.62204pt x 130.47682pt.
-<img/inf_acc_seeds_grey_img.png, id=1189, 881.2925pt x 502.87875pt>
+<img/inf_acc_seeds_grey_img.png, id=1180, 881.2925pt x 502.87875pt>
 File: img/inf_acc_seeds_grey_img.png Graphic file (type png)
 <use img/inf_acc_seeds_grey_img.png>
 Package pdftex.def Info: img/inf_acc_seeds_grey_img.png  used on input line 261
@@ -2200,14 +2206,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--7
 
  []
 
-[64 <./img/inf_seeds_grey_no_grey.png> <./img/inf_acc_seeds_grey_img.png>]
-<img/epoch-accuracy_comparison.png, id=1211, 628.0263pt x 374.3586pt>
+[62 <./img/inf_seeds_grey_no_grey.png> <./img/inf_acc_seeds_grey_img.png>]
+<img/epoch-accuracy_comparison.png, id=1202, 628.0263pt x 374.3586pt>
 File: img/epoch-accuracy_comparison.png Graphic file (type png)
 <use img/epoch-accuracy_comparison.png>
 Package pdftex.def Info: img/epoch-accuracy_comparison.png  used on input line 
 13.
 (pdftex.def)             Requested size: 341.43306pt x 203.52728pt.
-<img/time-accuracy_comparison.png, id=1212, 625.1355pt x 377.2494pt>
+<img/time-accuracy_comparison.png, id=1203, 625.1355pt x 377.2494pt>
 File: img/time-accuracy_comparison.png Graphic file (type png)
 <use img/time-accuracy_comparison.png>
 Package pdftex.def Info: img/time-accuracy_comparison.png  used on input line 1
@@ -2218,8 +2224,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--29
 
  []
 
-[65 <./img/epoch-accuracy_comparison.png> <./img/time-accuracy_comparison.png>]
-<img/alexnet_acc_train.png, id=1222, 891.33pt x 527.9725pt>
+[63 <./img/epoch-accuracy_comparison.png> <./img/time-accuracy_comparison.png>]
+<img/alexnet_acc_train.png, id=1213, 891.33pt x 527.9725pt>
 File: img/alexnet_acc_train.png Graphic file (type png)
 <use img/alexnet_acc_train.png>
 Package pdftex.def Info: img/alexnet_acc_train.png  used on input line 32.
@@ -2229,7 +2235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--34
 [][]
  []
 
-<img/resnet_152_acc_train.png, id=1223, 891.33pt x 527.9725pt>
+<img/resnet_152_acc_train.png, id=1214, 891.33pt x 527.9725pt>
 File: img/resnet_152_acc_train.png Graphic file (type png)
 <use img/resnet_152_acc_train.png>
 Package pdftex.def Info: img/resnet_152_acc_train.png  used on input line 37.
@@ -2249,7 +2255,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--40
 
  []
 
-<img/resnet_101_acc_train.png, id=1224, 891.33pt x 527.9725pt>
+<img/resnet_101_acc_train.png, id=1215, 891.33pt x 527.9725pt>
 File: img/resnet_101_acc_train.png Graphic file (type png)
 <use img/resnet_101_acc_train.png>
 Package pdftex.def Info: img/resnet_101_acc_train.png  used on input line 45.
@@ -2259,7 +2265,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--47
 [][]
  []
 
-<img/vgg_19_acc_train.png, id=1225, 891.33pt x 527.9725pt>
+<img/vgg_19_acc_train.png, id=1216, 891.33pt x 527.9725pt>
 File: img/vgg_19_acc_train.png Graphic file (type png)
 <use img/vgg_19_acc_train.png>
 Package pdftex.def Info: img/vgg_19_acc_train.png  used on input line 49.
@@ -2274,7 +2280,7 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 44--52
 []$[]$ $[]$ 
  []
 
-<img/resnet_101_acc_ep.png, id=1231, 891.33pt x 527.9725pt>
+<img/resnet_101_acc_ep.png, id=1222, 891.33pt x 527.9725pt>
 File: img/resnet_101_acc_ep.png Graphic file (type png)
 <use img/resnet_101_acc_ep.png>
 Package pdftex.def Info: img/resnet_101_acc_ep.png  used on input line 59.
@@ -2284,7 +2290,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--61
 [][]
  []
 
-<img/vgg_19_acc_ep.png, id=1232, 891.33pt x 527.9725pt>
+<img/vgg_19_acc_ep.png, id=1223, 891.33pt x 527.9725pt>
 File: img/vgg_19_acc_ep.png Graphic file (type png)
 <use img/vgg_19_acc_ep.png>
 Package pdftex.def Info: img/vgg_19_acc_ep.png  used on input line 63.
@@ -2304,9 +2310,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--69
 
  []
 
-[66 <./img/alexnet_acc_train.png> <./img/resnet_152_acc_train.png> <./img/resne
+[64 <./img/alexnet_acc_train.png> <./img/resnet_152_acc_train.png> <./img/resne
 t_101_acc_train.png> <./img/vgg_19_acc_train.png>]
-<img/acc_training_time_10.png, id=1246, 891.33pt x 527.9725pt>
+<img/acc_training_time_10.png, id=1237, 891.33pt x 527.9725pt>
 File: img/acc_training_time_10.png Graphic file (type png)
 <use img/acc_training_time_10.png>
 Package pdftex.def Info: img/acc_training_time_10.png  used on input line 78.
@@ -2315,7 +2321,7 @@ Package pdftex.def Info: img/acc_training_time_10.png  used on input line 78.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/time_acc_100.png, id=1247, 891.33pt x 527.9725pt>
+<img/time_acc_100.png, id=1238, 891.33pt x 527.9725pt>
 File: img/time_acc_100.png Graphic file (type png)
 <use img/time_acc_100.png>
 Package pdftex.def Info: img/time_acc_100.png  used on input line 86.
@@ -2323,13 +2329,13 @@ Package pdftex.def Info: img/time_acc_100.png  used on input line 86.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[67 <./img/resnet_101_acc_ep.png> <./img/vgg_19_acc_ep.png>]
-<img/epoch_train_loss.png, id=1257, 433.62pt x 289.08pt>
+[65 <./img/resnet_101_acc_ep.png> <./img/vgg_19_acc_ep.png>]
+<img/epoch_train_loss.png, id=1247, 433.62pt x 289.08pt>
 File: img/epoch_train_loss.png Graphic file (type png)
 <use img/epoch_train_loss.png>
 Package pdftex.def Info: img/epoch_train_loss.png  used on input line 120.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
-<img/epoch_valid_loss.png, id=1258, 433.62pt x 289.08pt>
+<img/epoch_valid_loss.png, id=1248, 433.62pt x 289.08pt>
 File: img/epoch_valid_loss.png Graphic file (type png)
 <use img/epoch_valid_loss.png>
 Package pdftex.def Info: img/epoch_valid_loss.png  used on input line 126.
@@ -2353,17 +2359,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--142
 
  []
 
-[68 <./img/acc_training_time_10.png>]
+[66 <./img/acc_training_time_10.png>]
 Underfull \vbox (badness 1406) has occurred while \output is active []
 
- [69 <./img/time_acc_100.png> <./img/epoch_train_loss.png> <./img/epoch_valid_l
+ [67 <./img/time_acc_100.png> <./img/epoch_train_loss.png> <./img/epoch_valid_l
 oss.png>]
-<img/inf_time_accuracy.png, id=1280, 874.26625pt x 499.8675pt>
+<img/inf_time_accuracy.png, id=1271, 874.26625pt x 499.8675pt>
 File: img/inf_time_accuracy.png Graphic file (type png)
 <use img/inf_time_accuracy.png>
 Package pdftex.def Info: img/inf_time_accuracy.png  used on input line 146.
 (pdftex.def)             Requested size: 227.62204pt x 130.14554pt.
-<img/inf_time_epoch.png, id=1281, 874.26625pt x 499.8675pt>
+<img/inf_time_epoch.png, id=1272, 874.26625pt x 499.8675pt>
 File: img/inf_time_epoch.png Graphic file (type png)
 <use img/inf_time_epoch.png>
 Package pdftex.def Info: img/inf_time_epoch.png  used on input line 152.
@@ -2378,12 +2384,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--156
 
  []
 
-<img/inf_acc_resnet18.png, id=1284, 876.27374pt x 499.8675pt>
+<img/inf_acc_resnet18.png, id=1275, 876.27374pt x 499.8675pt>
 File: img/inf_acc_resnet18.png Graphic file (type png)
 <use img/inf_acc_resnet18.png>
 Package pdftex.def Info: img/inf_acc_resnet18.png  used on input line 162.
 (pdftex.def)             Requested size: 227.62204pt x 129.84044pt.
-<img/inf_acc_alexnet.png, id=1285, 876.27374pt x 499.8675pt>
+<img/inf_acc_alexnet.png, id=1276, 876.27374pt x 499.8675pt>
 File: img/inf_acc_alexnet.png Graphic file (type png)
 <use img/inf_acc_alexnet.png>
 Package pdftex.def Info: img/inf_acc_alexnet.png  used on input line 169.
@@ -2398,20 +2404,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--174
 
  []
 
-[70 <./img/inf_time_accuracy.png> <./img/inf_time_epoch.png> <./img/inf_acc_res
+[68 <./img/inf_time_accuracy.png> <./img/inf_time_epoch.png> <./img/inf_acc_res
 net18.png> <./img/inf_acc_alexnet.png>]
-<img/size_inference_time_compared.png, id=1299, 891.33pt x 527.9725pt>
+<img/size_inference_time_compared.png, id=1290, 891.33pt x 527.9725pt>
 File: img/size_inference_time_compared.png Graphic file (type png)
 <use img/size_inference_time_compared.png>
 Package pdftex.def Info: img/size_inference_time_compared.png  used on input li
 ne 184.
 (pdftex.def)             Requested size: 398.33858pt x 235.95001pt.
-<img/resnet152_sl_f.png, id=1301, 1025.8325pt x 584.1825pt>
+<img/resnet152_sl_f.png, id=1292, 1025.8325pt x 584.1825pt>
 File: img/resnet152_sl_f.png Graphic file (type png)
 <use img/resnet152_sl_f.png>
 Package pdftex.def Info: img/resnet152_sl_f.png  used on input line 196.
 (pdftex.def)             Requested size: 227.62204pt x 129.61694pt.
-<img/vgg16_sl_f.png, id=1302, 1025.8325pt x 584.1825pt>
+<img/vgg16_sl_f.png, id=1293, 1025.8325pt x 584.1825pt>
 File: img/vgg16_sl_f.png Graphic file (type png)
 <use img/vgg16_sl_f.png>
 Package pdftex.def Info: img/vgg16_sl_f.png  used on input line 203.
@@ -2429,12 +2435,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--208
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/resnet18_sl_f.png, id=1308, 1025.8325pt x 584.1825pt>
+<img/resnet18_sl_f.png, id=1299, 1025.8325pt x 584.1825pt>
 File: img/resnet18_sl_f.png Graphic file (type png)
 <use img/resnet18_sl_f.png>
 Package pdftex.def Info: img/resnet18_sl_f.png  used on input line 216.
 (pdftex.def)             Requested size: 227.62204pt x 129.61694pt.
-<img/alexnet_sl_f.png, id=1309, 1025.8325pt x 584.1825pt>
+<img/alexnet_sl_f.png, id=1300, 1025.8325pt x 584.1825pt>
 File: img/alexnet_sl_f.png Graphic file (type png)
 <use img/alexnet_sl_f.png>
 Package pdftex.def Info: img/alexnet_sl_f.png  used on input line 223.
@@ -2449,16 +2455,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 215--228
 
  []
 
-[71 <./img/size_inference_time_compared.png>]
+[69 <./img/size_inference_time_compared.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 233--235
 
  []
 
-[72 <./img/resnet152_sl_f.png> <./img/vgg16_sl_f.png> <./img/resnet18_sl_f.png>
- <./img/alexnet_sl_f.png>])) [73]
+[70 <./img/resnet152_sl_f.png> <./img/vgg16_sl_f.png> <./img/resnet18_sl_f.png>
+ <./img/alexnet_sl_f.png>])) [71]
 \openout2 = `src/08_Conclusion.aux'.
 
- (./src/08_Conclusion.tex [74
+ (./src/08_Conclusion.tex [72
 
 
 
@@ -2468,27 +2474,27 @@ chapter 6.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75]
-[76] (./main.bbl [77
+ [73]
+[74] (./main.bbl [75
 
 
 
-] [78] [79] [80] [81] [82] [83] [84]) [85]
+] [76] [77] [78] [79] [80] [81] [82]) [83]
 \openout2 = `src/anhang.aux'.
 
 
-(./src/anhang.tex [86
+(./src/anhang.tex [84
 
 
 
 ]
 chapter A.
-<img/slowest_files_vgg.png, id=1401, 1344.222pt x 1062.369pt>
+<img/slowest_files_vgg.png, id=1391, 1344.222pt x 1062.369pt>
 File: img/slowest_files_vgg.png Graphic file (type png)
 <use img/slowest_files_vgg.png>
 Package pdftex.def Info: img/slowest_files_vgg.png  used on input line 6.
 (pdftex.def)             Requested size: 369.88582pt x 292.32259pt.
-<img/resnet_arch_full.png, id=1402, 574.145pt x 1318.9275pt>
+<img/resnet_arch_full.png, id=1392, 574.145pt x 1318.9275pt>
 File: img/resnet_arch_full.png Graphic file (type png)
 <use img/resnet_arch_full.png>
 Package pdftex.def Info: img/resnet_arch_full.png  used on input line 13.
@@ -2496,23 +2502,23 @@ Package pdftex.def Info: img/resnet_arch_full.png  used on input line 13.
 
 LaTeX Warning: Float too large for page by 29.46913pt on input line 16.
 
-<img/fastest_files.png, id=1405, 1371.6846pt x 2079.2079pt>
+<img/fastest_files.png, id=1395, 1371.6846pt x 2079.2079pt>
 File: img/fastest_files.png Graphic file (type png)
 <use img/fastest_files.png>
 Package pdftex.def Info: img/fastest_files.png  used on input line 19.
 (pdftex.def)             Requested size: 369.88582pt x 560.66394pt.
-<img/slowest_files.png, id=1406, 1288.5741pt x 2066.922pt>
+<img/slowest_files.png, id=1396, 1288.5741pt x 2066.922pt>
 File: img/slowest_files.png Graphic file (type png)
 <use img/slowest_files.png>
 Package pdftex.def Info: img/slowest_files.png  used on input line 26.
 (pdftex.def)             Requested size: 369.88582pt x 593.30508pt.
-<img/accuracy_inferencetime_seedlings.png, id=1407, 1389.7521pt x 2045.241pt>
+<img/accuracy_inferencetime_seedlings.png, id=1397, 1389.7521pt x 2045.241pt>
 File: img/accuracy_inferencetime_seedlings.png Graphic file (type png)
 <use img/accuracy_inferencetime_seedlings.png>
 Package pdftex.def Info: img/accuracy_inferencetime_seedlings.png  used on inpu
 t line 35.
 (pdftex.def)             Requested size: 426.79134pt x 628.08868pt.
-<img/accuracy_inferencetime_seedlings_grey_train.png, id=1408, 1390.4748pt x 20
+<img/accuracy_inferencetime_seedlings_grey_train.png, id=1398, 1390.4748pt x 20
 51.7453pt>
 File: img/accuracy_inferencetime_seedlings_grey_train.png Graphic file (type pn
 g)
@@ -2520,17 +2526,17 @@ g)
 Package pdftex.def Info: img/accuracy_inferencetime_seedlings_grey_train.png  u
 sed on input line 43.
 (pdftex.def)             Requested size: 426.79134pt x 629.74176pt.
-<img/accuracy_inferencetime_seeds_grey.png, id=1409, 1384.6932pt x 2040.9048pt>
+<img/accuracy_inferencetime_seeds_grey.png, id=1399, 1384.6932pt x 2040.9048pt>
 
 File: img/accuracy_inferencetime_seeds_grey.png Graphic file (type png)
 <use img/accuracy_inferencetime_seeds_grey.png>
 Package pdftex.def Info: img/accuracy_inferencetime_seeds_grey.png  used on inp
 ut line 50.
 (pdftex.def)             Requested size: 426.79134pt x 629.03038pt.
-) [87 <./img/slowest_files_vgg.png>] [88 <./img/resnet_arch_full.png>] [89 <./i
-mg/fastest_files.png>] [90 <./img/slowest_files.png>] [91 <./img/accuracy_infer
-encetime_seedlings.png>] [92 <./img/accuracy_inferencetime_seedlings_grey_train
-.png>] [93 <./img/accuracy_inferencetime_seeds_grey.png>]
+) [85 <./img/slowest_files_vgg.png>] [86 <./img/resnet_arch_full.png>] [87 <./i
+mg/fastest_files.png>] [88 <./img/slowest_files.png>] [89 <./img/accuracy_infer
+encetime_seedlings.png>] [90 <./img/accuracy_inferencetime_seedlings_grey_train
+.png>] [91 <./img/accuracy_inferencetime_seeds_grey.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
  (./main.aux
@@ -2545,10 +2551,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
  ) 
 Here is how much of TeX's memory you used:
- 35649 strings out of 492616
- 693100 string characters out of 6129480
- 1284049 words of memory out of 5000000
- 38068 multiletter control sequences out of 15000+600000
+ 35690 strings out of 492616
+ 693778 string characters out of 6129480
+ 1283858 words of memory out of 5000000
+ 38106 multiletter control sequences out of 15000+600000
  109805 words of font info for 185 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  66i,14n,83p,9212b,1444s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2586,8 +2592,8 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 xlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/tex
 mf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2019/texmf-dist/fo
 nts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips
-/lm/lm-mathex.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mat
-hsy.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
+/lm/lm-mathsy.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mat
+hex.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
 usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/
 texlive/2019/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/20
 19/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2019/texmf-d
@@ -2603,10 +2609,10 @@ public/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/
 lmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/loca
 l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (93 pages, 15880181 bytes).
+Output written on main.pdf (91 pages, 15879141 bytes).
 PDF statistics:
- 1723 PDF objects out of 1728 (max. 8388607)
+ 1720 PDF objects out of 1728 (max. 8388607)
  1444 compressed objects within 15 object streams
- 454 named destinations out of 1000 (max. 500000)
- 32431 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 453 named destinations out of 1000 (max. 500000)
+ 32447 words of extra memory for PDF output out of 35830 (max. 10000000)
 

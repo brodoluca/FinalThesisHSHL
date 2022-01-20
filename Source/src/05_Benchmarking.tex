@@ -174,33 +174,8 @@ done
 
 \section{Benchmarking Deep Neural Networks}\label{benchmarking_nn}
 Once we understood benchmarks and the characteristics they should possess, we can explore more deeply how we can benchmark Deep Neural Network(DNN).\\
-As expressed by \textit{Reddi et al. } in \cite{reddi2020mlperf}, ''Designing ML benchmarks is different from designing traditional non-ML benchmarks''. As a matter of fact, the spectrum of tasks NNs can perform is very broad, consequently there is a wide spectrum of requirements they need to fulfil, making the development of a reliable and relevant benchmark, which is at the same time universal, untreatable. In this paper, we are interested in measuring performances in images classification tasks in the settings of sugar beet recognition. Moreover, although, benchmarks are usually designed to compare performances, the scope of our investigation is to precisely measure the characteristics of Neural Networks and to find possible correlations among them. \\
-Both academic and industrial organizations have already developed numerous benchmark solutions to evaluate the behaviour of NNs under different workloads and on different devices. For example authors of \cite{luo2020comparison} and \cite{ignatov2019ai} have proposed benchmarks of NNs specifically for mobile devices. \textit{Hendrycks et al.} in  \cite{hendrycks2019benchmarking} developed a benchmark to assess the robustness of image classifiers under condition of perturbations. \\
-\textit{Reddi et al.} in  \cite{reddi2020mlperf}propose a benchmark, namely MLPerf, to evaluate inference of Machine Learning system under various workload. They divided workloads under high level tasks such as image classification and they provide a reference model for it. \\
-On the other hand, \textit{Zou et al. } in \cite{8573476}, among other contributions, proposed a benchmark suite to analyse NNs' training time of eight different state-of-the-art models under six different application domains. The metrics they collect during profiling are:
-\begin{description}
-  \item[\textbf{Throughput}] \hfill\\ Throughput is defined as the amount of input samples processed by the networks. This metric is relevant because, contrary to inference, is not latency sensitive.   
-  \item[\textbf{GPU utilization}] \hfill \\ They define the GPU utilization as the fraction of time in which the GPU is busy and it is calculated as follows:
-  \begin{equation}
-      GPU\;Utilization = \dfrac{GPU\;Active\;Time\times100}{total\;elapsed\;time}%
-  \end{equation}
-  
-  \item[\textbf{FP32 utilization}] \hfill \\ This metric refers to the percentage of floating operations done of the viable one during training, since typically training DNNs is performed using single precision floating point operations (FP32). This metrics measure how effectively the GPU resources are use. It is calculated as:
-  \begin{equation}
-      FP32\;Utilization = \dfrac{actual\;flop\;counting\;during\;T\times100}{FLOPS_{peak} \times T}%
-  \end{equation}
-  Where:
-  \begin{itemize}
-  \item $FLOPS_{peak}$ is the GPU theoretical peak analysis
-  \item $T$ is the period of time in seconds that the GPU is active
-  \end{itemize}
-  \item[\textbf{CPU utilization }] \hfill\\ This is calculated as the average utilization of each CPU core:
-  \begin{equation}
-      \dfrac{\sum_{c} total\;time\;of\;active\;core\;c \times 100}{CPU\;core\;count \times total\;elapsed\;time}%
-    \end{equation}   
-    \item[\textbf{Memory consumption }] \hfill\\ The memory consumed by the NNs during training
-\end{description}
-Although the aforementioned benchmarks have brought many advancements on the field, they are not meant to be used to study the characteristics of the NNs, but rather to compare and assess NNs performance under different condition and workloads. Therefore, in this section, we will explore techniques to measure NNs performance and determine their behaviour for our own specific goal and under our conditions.  
+As expressed by \textit{Reddi et al. } in \cite{reddi2020mlperf}, ''Designing ML benchmarks is different from designing traditional non-ML benchmarks''. As a matter of fact, the spectrum of tasks NNs can perform is very broad, consequently there is a wide spectrum of requirements they need to fulfil, making the development of a reliable and relevant benchmark, which is at the same time universal, untreatable. In this paper, we are interested in measuring performances in images classification tasks in the settings of sugar beet recognition. Moreover, although, benchmarks are usually designed to compare performances, the scope of our investigation is to precisely measure the characteristics of Neural Networks and to find possible correlations amongst them.
+
 
 
 \subsection{Benchmark Inference Time}\label{sec:ben_inf}

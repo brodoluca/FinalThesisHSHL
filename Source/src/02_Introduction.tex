@@ -10,12 +10,16 @@ One of cultivations which will benefit immensely by the adoption of smart farmin
 	\caption[Representation of a sugar beet plant]{Representation of a sugar beet plant \cite{masclef_sugar_1891} }{\centering}
 	\label{fig:sugar_beet}
 \end{figure}
+\section{Smart Farming in Sugar Beet Plantations}
 An approach based on smart farming could reduce the effect of weeds infestations on sugar beet plantations and  increment the yield and the sustainability of said plantation.\\
 As a matter of fact, even though tractors and hand labour are still vastly used for weed management, since the 50s, herbicides have been the most used method of weed management in sugar beets farms (\cite{cioni_weed_2010}) and, apart from the well known environmental damage, which the use herbicides leads to, another implication is the effect that they have on the sugar beet crops. Most of the selective herbicides have influence on sugar beet growth, with early symptoms showing on the leaves, and this can reduce the yield. \cite{petersen_review_2004}\\
 To optimize and remove the effects of pesticides, the new frontier for weed management is to automatize the more traditional mechanical techniques (\cite{raja_real-time_2020}, \cite{frasconi_design_2014},\cite{machleb_sensor-based_2021}).\\
 Mechanical techniques and even techniques which use selective spraying of herbicides, however, require that the sugar beet is localized before they can be applied to avoid ruining the plantation. In the research field,a lot of proposed solutions employ Convolutional Neural Networks (CNNs) in the recognition task (\cite{gao_deep_2020},\cite{suh_transfer_2018},\cite{ramirez_deep_2020}, \cite{milioto2017real},\cite{agriculture11111111}).\\
-Neural Networks,however, impose great challenges to the developers. For example, in real time applications, classification time is of the highest importance since it effects the ability to respect deadlines. Furthermore, the performances of CNNs is influenced by many factors, like for i.g. training time or the data-set used for training. Table \ref{tab:models_ex_comp} shows an example of different architectures trained to recognize weed in a sugar beet plantations and how their performances can vary. \\ 
-\begin{table}[th]
+Neural Networks,however, impose great challenges to the developers. For example, in real time applications, classification time is of the highest importance since it effects the ability to respect deadlines. Furthermore, the performances of CNNs is influenced by many factors, like for i.g. training time or the data-set used for training.\\ %Table \ref{tab:models_ex_comp} shows an example of different architectures trained to recognize weed in a sugar beet plantations and how their performances can vary. \\ 
+Being able to predict the performances of NNs before their deployment will allow engineers to precisely model the application to tailor them for the NN of their chose. \\
+In this paper, we are going to investigate whether it is possible to make those predictions by empirically studying some of the metrics which can influence NNs' performances and find correlations amongst them in order to be able to be precise, scalable and predictable in time. An the result of our investigation, we aim to develop a toolbox for the employment of NNs in sugar beet recognition.
+\begin{comment}
+\begin{table}[h]
 \centering
 \begin{tabular}{|c| ccc|}
   \hline
@@ -34,8 +38,8 @@ Inception-v3 &90.8\%& 88.7min &0.0088s \\
 \caption[Example of comparison between different Neural Networks]{Example of comparison between different Neural Networks \cite{suh_transfer_2018}}
  \label{tab:models_ex_comp}
 \end{table}
-Being able to predict the performances of NNs before their deployment will allow engineers to precisely model the application to tailor them for the NN of their chose. \\
-In this paper, we are going to investigate whether it is possible to make those predictions by empirically studying some of the metrics which can influence NNs' performances and find correlations amongst them in order to be able to be precise, scalable and predictable in time. An the result of our investigation, we aim to develop a toolbox for the employment of NNs in sugar beet recognition.\\
-In order to achieve this goal, we will first analyse the main characteristics of Neural Networks in chapter number \ref{char_nn}. This will allow us to pose the foundations for our further studies, since it is essential to have a proper knowledge of what can influence the recognition of sugar beets .\\
+\end{comment}
+\section{Organization of the Paper}
+In order to achieve the aforementioned goal, we will first analyse the main characteristics of Neural Networks in chapter number \ref{char_nn}. This will allow us to pose the foundations for our further studies, since it is essential to have a proper knowledge of what can influence the recognition of sugar beets .\\
 Subsequently, in chapter number \ref{ana_models}, we will study how we can benchmark neural networks to obtain the measurements we need to find the correlations. Benchmarking is a notoriously insidious task, however at the end of our study, we will be able to create a tool to measure performances and analyse Neural Networks in a precise and reproducible way.\\
 Finally, with the help of our tool, in chapter \ref{ana_char} we will profile Neural Networks with fairly different architectures to identify correlations between their metrics so that we will be able to optimize the recognition of sugar beets. 

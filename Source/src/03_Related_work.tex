@@ -1,2 +1,36 @@
 \chapter{Related Work}
-project\_work\cite{project_work}
+Both academic and industrial organizations have already developed numerous benchmark solutions to evaluate the behaviour of NNs under different workloads and on different devices. For example authors of \cite{luo2020comparison} and \cite{ignatov2019ai} have proposed benchmarks of NNs specifically for mobile devices. \textit{Hendrycks et al.} in  \cite{hendrycks2019benchmarking} developed a benchmark to assess the robustness of image classifiers under condition of perturbations. \\
+\textit{Reddi et al.} in  \cite{reddi2020mlperf} propose a benchmark, namely MLPerf, to evaluate inference of Machine Learning system under various workload. They divided workloads under high level tasks such as image classification and they provide a reference model for it. \\
+textit{Zou et al. } in \cite{8573476}, among other contributions, proposed a benchmark suite to analyse NNs' training time of eight different state-of-the-art models under six different application domains. The metrics they collect during profiling are:
+\begin{description}
+  \item[\textbf{Throughput}] \hfill\\ Throughput is defined as the amount of input samples processed by the networks. This metric is relevant because, contrary to inference, is not latency sensitive.   
+  \item[\textbf{GPU utilization}] \hfill \\ They define the GPU utilization as the fraction of time in which the GPU is busy and it is calculated as follows:
+  \begin{equation}
+      GPU\;Utilization = \dfrac{GPU\;Active\;Time\times100}{total\;elapsed\;time}%
+  \end{equation}
+  
+  \item[\textbf{FP32 utilization}] \hfill \\ This metric refers to the percentage of floating operations done of the viable one during training, since typically training DNNs is performed using single precision floating point operations (FP32). This metrics measure how effectively the GPU resources are use. It is calculated as:
+  \begin{equation}
+      FP32\;Utilization = \dfrac{actual\;flop\;counting\;during\;T\times100}{FLOPS_{peak} \times T}%
+  \end{equation}
+  Where:
+  \begin{itemize}
+  \item $FLOPS_{peak}$ is the GPU theoretical peak analysis
+  \item $T$ is the period of time in seconds that the GPU is active
+  \end{itemize}
+  \item[\textbf{CPU utilization }] \hfill\\ This is calculated as the average utilization of each CPU core:
+  \begin{equation}
+      \dfrac{\sum_{c} total\;time\;of\;active\;core\;c \times 100}{CPU\;core\;count \times total\;elapsed\;time}%
+    \end{equation}   
+    \item[\textbf{Memory consumption }] \hfill\\ The memory consumed by the NNs during training
+\end{description}
+Although the aforementioned benchmarks have brought many advancements on the field, they are not meant to be used to study the characteristics of the NNs, but rather to compare and assess NNs performance under different condition and workloads. Therefore, in this section, we will explore techniques to measure NNs performance and determine their behaviour for our own specific goal and under our conditions.  
+
+
+
+
+
+
+
+
+\cite{project_work}
