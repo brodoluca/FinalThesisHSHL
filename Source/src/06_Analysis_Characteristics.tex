@@ -1,12 +1,11 @@
 \chapter{Analysis of the characteristics}\label{ana_char}
-\section{Introduction}
 In this chapter, we will analyse and measure different characteristics from various neural network architecture with the purpose of finding useful correlations which we can use in a later stage. In order to achieve this goal, we will use our understandings from chapter \ref{char_nn} of each metric of Neural Network and the tool we developed in section \ref{sec:my_bench}. \\
 In challenges such as the ImageNet classification challenge (\cite{ILSVRC15}) the ultimate goal is to achieve the highest accuracy possible, neglecting other performance metrics like inference time. \cite{DBLP:journals/corr/CanzianiPC16}\\
 Although accuracy is of high importance, in practical applications other metrics are to be considered as well, depending on the different requirements. As pointed out by \textit{Canziani et al.} in \cite{DBLP:journals/corr/CanzianiPC16}, metrics like inference time, parameters and operations count are hard constraints
 for the deployment of Neural Networks in practical applications. Furthermore, training time is often a time consuming process which highly depends on factors like the complexity of the task, size of the network and training set(\cite{118273}). \\
 Finding relations between these metrics and other factors as well, like influence of a given input feature to the prediction of the model (\cite{hooker2019benchmark}), will allow us to optimize applications, saving time and resources in the process.
 
-\section{Environment use for the test}
+\section{Test Environment}
 All the experiments have been run on the same machine running Ubuntu 20.04.3 LTS (Focal Fossa). For the specific of the machine, please refer to table \ref{tab:gpu_info}
 
 
@@ -65,7 +64,7 @@ Even though the dataset is mainly focused on seedlings and it contains pictures 
 
 
 %\hfill
-\section{First experiment}
+\section{First Experiment}
 
 
 As mentioned in section \ref{sec:data_models}, this experiment has been carried out using a data-set which is rather far from the agricultural field. However, it already gives us some insights of what is to come. \\
