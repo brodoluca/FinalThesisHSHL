@@ -1,42 +1,43 @@
 \babel@toc {ngerman}{}
 \contentsline {chapter}{\numberline {1}Motivation}{13}{chapter.1}% 
-\contentsline {chapter}{\numberline {2}Characteristics of Neural Networks}{17}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Uncertainty in Deep Neural Networks}{17}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Learning Process and Training Time}{21}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Inference Time}{22}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Accuracy}{22}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Precision and Recall}{23}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Loss}{25}{section.2.6}% 
-\contentsline {section}{\numberline {2.7}Overfitting and Underfitting}{25}{section.2.7}% 
-\contentsline {section}{\numberline {2.8}Architecture}{28}{section.2.8}% 
-\contentsline {subsection}{\numberline {2.8.1}Alexnet}{28}{subsection.2.8.1}% 
-\contentsline {subsection}{\numberline {2.8.2}VGG Networks}{29}{subsection.2.8.2}% 
-\contentsline {subsection}{\numberline {2.8.3}Residual Neural Networks}{29}{subsection.2.8.3}% 
-\contentsline {chapter}{\numberline {3}Analysing the Models}{33}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Benchmarking}{33}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}Key Characteristics for a Correct Benchmark}{34}{subsection.3.1.1}% 
-\contentsline {subsubsection}{\numberline {3.1.1.1}Relevance}{34}{subsubsection.3.1.1.1}% 
-\contentsline {subsubsection}{\numberline {3.1.1.2}Reproducibility}{34}{subsubsection.3.1.1.2}% 
-\contentsline {subsubsection}{\numberline {3.1.1.3}Fairness}{34}{subsubsection.3.1.1.3}% 
-\contentsline {subsubsection}{\numberline {3.1.1.4}Verifiability}{35}{subsubsection.3.1.1.4}% 
-\contentsline {subsubsection}{\numberline {3.1.1.5}Usability}{35}{subsubsection.3.1.1.5}% 
-\contentsline {subsection}{\numberline {3.1.2}Benchmark Techniques and Methodologies}{35}{subsection.3.1.2}% 
-\contentsline {subsection}{\numberline {3.1.3}Common Practices in Benchmarking}{38}{subsection.3.1.3}% 
-\contentsline {section}{\numberline {3.2}Benchmarking Deep Neural Networks}{39}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Benchmark Inference Time}{41}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Benchmark Training Time}{45}{subsection.3.2.2}% 
-\contentsline {subsection}{\numberline {3.2.3}Measuring Accuracy}{45}{subsection.3.2.3}% 
-\contentsline {section}{\numberline {3.3}Benchmarking Tool for Neural Networks}{46}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Analysing the Training Process}{48}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}Analysing inference Time}{49}{subsection.3.3.2}% 
-\contentsline {subsection}{\numberline {3.3.3}Further Analysis}{51}{subsection.3.3.3}% 
-\contentsline {chapter}{\numberline {4}Analysis of the characteristics}{53}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Test Environment}{53}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Datasets and Training Methodology}{53}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}First Experiment}{54}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Second Experiment}{63}{section.4.4}% 
-\contentsline {chapter}{\numberline {5}Conclusion}{73}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Future Work}{73}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Conclusion}{74}{section.5.2}% 
-\contentsline {chapter}{References}{75}{section.5.2}% 
-\contentsline {chapter}{\numberline {A}Appendix}{83}{appendix.A}% 
+\contentsline {chapter}{\numberline {2}Related Work}{17}{chapter.2}% 
+\contentsline {chapter}{\numberline {3}Characteristics of Neural Networks}{19}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Deep Neural Networks and Uncertainty}{19}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Learning Process and Training Time}{23}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Inference Time}{24}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Accuracy}{24}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Precision and Recall}{25}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Loss}{27}{section.3.6}% 
+\contentsline {section}{\numberline {3.7}Overfitting and Underfitting}{27}{section.3.7}% 
+\contentsline {section}{\numberline {3.8}Architecture}{30}{section.3.8}% 
+\contentsline {subsection}{\numberline {3.8.1}Alexnet}{30}{subsection.3.8.1}% 
+\contentsline {subsection}{\numberline {3.8.2}VGG Networks}{31}{subsection.3.8.2}% 
+\contentsline {subsection}{\numberline {3.8.3}Residual Neural Networks}{31}{subsection.3.8.3}% 
+\contentsline {chapter}{\numberline {4}Analysing the Models}{35}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Benchmarking}{35}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Key Characteristics for a Correct Benchmark}{36}{subsection.4.1.1}% 
+\contentsline {subsubsection}{\numberline {4.1.1.1}Relevance}{36}{subsubsection.4.1.1.1}% 
+\contentsline {subsubsection}{\numberline {4.1.1.2}Reproducibility}{36}{subsubsection.4.1.1.2}% 
+\contentsline {subsubsection}{\numberline {4.1.1.3}Fairness}{36}{subsubsection.4.1.1.3}% 
+\contentsline {subsubsection}{\numberline {4.1.1.4}Verifiability}{37}{subsubsection.4.1.1.4}% 
+\contentsline {subsubsection}{\numberline {4.1.1.5}Usability}{37}{subsubsection.4.1.1.5}% 
+\contentsline {subsection}{\numberline {4.1.2}Benchmark Techniques and Methodologies}{37}{subsection.4.1.2}% 
+\contentsline {subsection}{\numberline {4.1.3}Common Practices in Benchmarking}{40}{subsection.4.1.3}% 
+\contentsline {section}{\numberline {4.2}Benchmarking Deep Neural Networks}{41}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Benchmark Inference Time}{43}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Benchmark Training Time}{47}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}Measuring Accuracy}{47}{subsection.4.2.3}% 
+\contentsline {section}{\numberline {4.3}Benchmarking Tool for Neural Networks}{48}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Analysing the Training Process}{50}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Analysing inference Time}{51}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Further Analysis}{53}{subsection.4.3.3}% 
+\contentsline {chapter}{\numberline {5}Analysis of the characteristics}{55}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Test Environment}{55}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Datasets and Training Methodology}{55}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}First Experiment}{56}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Second Experiment}{65}{section.5.4}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{75}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Future Work}{75}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Conclusion}{76}{section.6.2}% 
+\contentsline {chapter}{References}{77}{section.6.2}% 
+\contentsline {chapter}{\numberline {A}Appendix}{85}{appendix.A}% 
