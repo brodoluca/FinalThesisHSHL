@@ -79,20 +79,24 @@ Fur the purpose of this paper, we are not going to explore methodologies to redu
 Training time, as the name implies, is the time required to train a Neural Network, or any machine learning model to perform a specific task. \textit{Mitchell} in \cite{machine_learning} provides a general definition for the training, or learning, process : \textit{“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.”} This definition is quite broad (\cite{Goodfellow-et-al-2016}) and it is out of the scope of this paper to give a formal definition for the experience E, task T, and performance measure P.\\When it comes to Neural Networks, the process of training is the process of updating the weights of the network so that the network is able to achieve the desired goal. \cite{murphy2016overview} \\
 The network weights are updated during back propagation by the following equation(\cite{murphy2016overview}):
 \begin{equation}
-W_{new} = W - \eta \frac{dE}{dW}
+W = W_{old} - \eta \frac{dE}{dW_{old}}
+\label{eq:weigth_updates}
 \end{equation}
-The error, or ''scoring'', function is defined as the sum of squared differences between the network's output(equation n. \ref{eq:MSE}) and the correct output and it is applicable when the output is vector, matrix, or tensor of continuous real values (\cite{murphy2016overview}). 
+Equation \ref{eq:weigth_updates} implies that the new value for the weights $W$ is obtained by the difference between the old value $W_{old}$ and the gradient of $W$ of the error function $E$ multiplied by the learning rate $\eta$. The learning rate is a tuning parameter that determines the step size at each iteration while moving towards a minimum of the error function, as we are moving opposite to the gradient. 
+The error, or ''scoring'', function can be defined as the sum of squared differences between the network's output(equation n. \ref{eq:MSE}) and the correct output and it is applicable when the output is vector, matrix, or tensor of continuous real values (\cite{murphy2016overview}). 
 \begin{equation}
 E(W,b) = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{2} \vert \vert h_{W,b} (x^{(i)}) - y^{(i)} \vert \vert ^{2}
 \label{eq:MSE}
 \end{equation}
+Equation \ref{eq:MSE} refers to the Mean Squared Error (MSE), a type of error function usually applied to regression problems and it estimates the average squared difference between the actual values $y^{(i)}$ and the predicted values $h_{W,b} (x^{(i)})$. In other types of problems, different error functions are used. We will describe error functions later in the paper. \\
 The learning experience can be broadly categorized into two main categories: supervised and unsupervised learning. Roughly speaking, given a dataset $\mathcal{D}$ , an unsupervised learning algorithm aims to learn useful properties of this dataset. In the context of deep learning, we aim to learn the entire probability distribution $p(\mathcal{D})$ that generated the dataset or some useful properties of it. On the other hand, supervised learning implies the use of a dataset $\mathcal{D}$ and an associated value or label $\mathbb{Y}$ to teach the model to predict $\mathbb{Y}$ from $\mathbb{X} \subset \mathcal{D}$, usually by estimating $p(\mathbb{Y} \vert \mathbb{X})$(\cite{murphy2016overview})\\
 Usually the learning process proceeds in waves of mini-batches, which allow to avoid both over-fitting and under utilization of GPU’s compute parallelism.\cite{8573476}\\
 Finally, the learning process is a memory demanding task, as backward pass and weight updates, operations unique to training, need to save intermediate results in GPU memory (in some cases tens of gigabytes are required). \cite{rhu2016vdnn}\\
 Training time is often an overlooked metrics of Neural Network compared to inference(\ref{sec:inference_time_definition}) or accuracy (\ref{sec:accuracy},\cite{8573476}), however, due to the recent growth in applications of Deep Learning technologies in various fields (\cite{bojarski2016end}, \cite{huval2015empirical}, \cite{10.1145/2959100}, \cite{amodei2015deep}) training time is acquiring importance. \cite{8573476}\\
+
 \section{Inference Time}\label{sec:inference_time_definition}
 In Machine Learning, therefore in Deep Learning as well, the term \textbf{inference time} is used to indicate the time required for the trained model to make predictions, regardless of the correctness of those. \\
-Inference time has attracted a lot of attention in the research field, since execute already trained Neural Networks efficiently is inarguably a still open problem. \cite{8573476}\\
+Inference time has attracted a lot of attention in the research field, since execute already trained Neural Networks efficiently is inarguably a still open problem. (\cite{8573476}, \cite{molchanov2017pruning}, \cite{Duarte_2018}, \cite{7900006})\\
 Differently from Training Time (section \ref{sec:training_time}), the memory footprint for inference is in the order of Mega-Bytes(\cite{han2016eie}). As a matter of fact, inference is latency sensitive, but computationally less demanding. \cite{8573476}\\
 
 \section{Accuracy}\label{sec:accuracy}
@@ -109,7 +113,7 @@ Another definition which is often used for accuracy in Neural Networks in the co
 Accuracy = \dfrac{TP+TN}{TP+TN+FP+FN}
 \label{eq:bin_acc}    
 \end{equation}
-Where TP = True Positives, TN = True Negatives, FP = False Positives, and FN = False Negatives.\\
+Where TP = True Positives, TN = True Negatives, FP = False Positives, and FN = False Negatives. This equation defines accuracy as the proportion between correctly predicted values (true positives and true negatives) and the sum of all predictions, regardless of their correctness. \\
 Similarly to classification accuracy, however, this definition could be misleading as well.  For example, considering a model that classified 100 tumors as malignant (the positive class) or benign (the negative class) as shown in table \ref{tab:tumor}. 
 
 \begin{table}[h]
@@ -132,22 +136,20 @@ At first glance, this metric would show that the model is performing correctly (
 
 
 \section{Precision and Recall}
-As we already delineated in the previous section, sometimes analysing only at accuracy might be misleading, especially when we are dealing with class-imbalanced data-sets. Accuracy does not distinguish between the number of correct labels of different classes. \cite{metrics}\\
-In these cases, two other metrics we can observe are \textit{precision} and \textit{recall}. \\
+As we already delineated in the previous section, sometimes analysing only at accuracy might be misleading, especially when we are dealing with class-imbalanced data-sets. Accuracy does not distinguish between the number of correct labels of different classes. \cite{metrics} In these cases, two other metrics we can observe are \textit{precision} and \textit{recall}. \\
 Formally, \textit{precision} is defined as equation n. \ref{eq:pre} and it represents the number of detected anomalies that are actual real anomalies.\cite{tatbul2019precision}
-In other words, it expresses the proportion of positive identifications that was correct. 
+In other words, it expresses the proportion of positive identifications that was correct over the number of correct predictions. 
 \begin{equation}
 Precision = \dfrac{TP}{TP+FP}
 \label{eq:pre}    
 \end{equation}
-Where TP = True Positives and FP = False Positives\\
+Where TP = True Positives and FP = False Positives. \\
 On the other hand, \textit{recall} is defined as equation n. \ref{eq:rec} and it represents the number of real anomalies that have been detected.\cite{tatbul2019precision}
 \begin{equation}
 Recall = \dfrac{TP}{TP+FN}
 \label{eq:rec}    
 \end{equation}
-Where TP = True Positives and FN = False Negatives\\
-
+Where TP = True Positives and FN = False Negatives. It is calculated, therefore, as the proportion of positive predictions that were correct over the correct positive predictions and the incorrect negative identifications.  \\
 We can use the example in table \ref{tab:tumor} to calculate both precision and recall. 
 \begin{equation}
 \begin{aligned}
@@ -333,7 +335,7 @@ In plain convolutional networks, the output $\mathcal{H}(x)$ is obtained by:
 \mathcal{H}(x) &= \mathcal{F}(x)\\   
 \end{align*}
 with $w$ being the weights and $b$ being the bias\\
-With the introduction of residual blocks, the output function assumes the form showed in equation n. \ref{eq:residual_blocks}.
+With the introduction of residual blocks, the output function assumes the form showed in equation n. \ref{eq:residual_blocks}, with $x$ being the input.
 \begin{equation}
 \mathcal{H}(x) = \mathcal{F}(x) + x
 \label{eq:residual_blocks}   

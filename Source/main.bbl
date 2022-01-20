@@ -113,6 +113,13 @@ Leon Derczynski.
   Resources and Evaluation ({LREC}'16)}, pages 261--266, Portoro{\v{z}},
   Slovenia, May 2016. European Language Resources Association (ELRA).
 
+\bibitem[DHH{\etalchar{+}}18]{Duarte_2018}
+J.~Duarte, S.~Han, P.~Harris, S.~Jindariani, E.~Kreinar, B.~Kreis, J.~Ngadiuba,
+  M.~Pierini, R.~Rivera, N.~Tran, and Z.~Wu.
+\newblock Fast inference of deep neural networks in {FPGAs} for particle
+  physics.
+\newblock {\em Journal of Instrumentation}, 13(07):P07027--P07027, jul 2018.
+
 \bibitem[Die95]{dietterich1995overfitting}
 Tom Dietterich.
 \newblock Overfitting and undercomputing in machine learning.
@@ -385,6 +392,11 @@ Jannis Machleb, Gerassimos~G. Peteinatos, Markus Sökefeld, and Roland
   {Beets} with {Motorized} {Finger} {Weeders}.
 \newblock {\em Agronomy}, 11(8):1517, July 2021.
 
+\bibitem[MTK{\etalchar{+}}17]{molchanov2017pruning}
+Pavlo Molchanov, Stephen Tyree, Tero Karras, Timo Aila, and Jan Kautz.
+\newblock Pruning convolutional neural networks for resource efficient
+  inference, 2017.
+
 \bibitem[Mur16]{murphy2016overview}
 John Murphy.
 \newblock An overview of convolutional neural network architectures for deep
@@ -566,6 +578,13 @@ Karen Simonyan and Andrew Zisserman.
 \bibitem[TLZ{\etalchar{+}}19]{tatbul2019precision}
 Nesime Tatbul, Tae~Jun Lee, Stan Zdonik, Mejbah Alam, and Justin Gottschlich.
 \newblock Precision and recall for time series, 2019.
+
+\bibitem[TMK16]{7900006}
+Surat Teerapittayanon, Bradley McDanel, and H.T. Kung.
+\newblock Branchynet: Fast inference via early exiting from deep neural
+  networks.
+\newblock In {\em 2016 23rd International Conference on Pattern Recognition
+  (ICPR)}, pages 2464--2469, 2016.
 
 \bibitem[UKG{\etalchar{+}}20]{Unterthiner2020PredictingNN}
 Thomas Unterthiner, Daniel Keysers, Sylvain Gelly, Olivier Bousquet, and

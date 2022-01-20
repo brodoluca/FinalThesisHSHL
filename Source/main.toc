@@ -6,9 +6,9 @@
 \contentsline {section}{\numberline {3.2}Learning Process and Training Time}{23}{section.3.2}% 
 \contentsline {section}{\numberline {3.3}Inference Time}{24}{section.3.3}% 
 \contentsline {section}{\numberline {3.4}Accuracy}{24}{section.3.4}% 
-\contentsline {section}{\numberline {3.5}Precision and Recall}{25}{section.3.5}% 
+\contentsline {section}{\numberline {3.5}Precision and Recall}{26}{section.3.5}% 
 \contentsline {section}{\numberline {3.6}Loss}{27}{section.3.6}% 
-\contentsline {section}{\numberline {3.7}Overfitting and Underfitting}{27}{section.3.7}% 
+\contentsline {section}{\numberline {3.7}Overfitting and Underfitting}{28}{section.3.7}% 
 \contentsline {section}{\numberline {3.8}Architecture}{30}{section.3.8}% 
 \contentsline {subsection}{\numberline {3.8.1}Alexnet}{30}{subsection.3.8.1}% 
 \contentsline {subsection}{\numberline {3.8.2}VGG Networks}{31}{subsection.3.8.2}% 
@@ -40,4 +40,4 @@
 \contentsline {section}{\numberline {6.1}Future Work}{75}{section.6.1}% 
 \contentsline {section}{\numberline {6.2}Conclusion}{76}{section.6.2}% 
 \contentsline {chapter}{References}{77}{section.6.2}% 
-\contentsline {chapter}{\numberline {A}Appendix}{85}{appendix.A}% 
+\contentsline {chapter}{\numberline {A}Appendix}{87}{appendix.A}% 

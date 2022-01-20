@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2019)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
-A level-1 auxiliary file: latex/01_titel.aux
+A level-1 auxiliary file: latex/titel.aux
 A level-1 auxiliary file: src/02_Introduction.aux
 A level-1 auxiliary file: src/03_Related_work.aux
 A level-1 auxiliary file: src/04_Characteristics_of_the_model.aux
@@ -30,45 +30,45 @@ Warning--empty booktitle in metrics
 Warning--empty booktitle in Stewart2001MeasuringET
 Warning--empty school in phdthesis
 Warning--empty booktitle in how_to_bench
-You've used 99 entries,
+You've used 102 entries,
             2543 wiz_defined-function locations,
-            1071 strings with 25644 characters,
-and the built_in function-call counts, 46348 in all, are:
-= -- 4250
-> -- 3328
-< -- 36
-+ -- 1239
-- -- 1220
-* -- 3677
-:= -- 7894
-add.period$ -- 283
-call.type$ -- 99
-change.case$ -- 880
-chr.to.int$ -- 97
-cite$ -- 113
-duplicate$ -- 1477
-empty$ -- 2742
-format.name$ -- 1306
-if$ -- 9138
+            1087 strings with 26313 characters,
+and the built_in function-call counts, 48118 in all, are:
+= -- 4414
+> -- 3453
+< -- 37
++ -- 1286
+- -- 1267
+* -- 3827
+:= -- 8181
+add.period$ -- 291
+call.type$ -- 102
+change.case$ -- 911
+chr.to.int$ -- 100
+cite$ -- 116
+duplicate$ -- 1529
+empty$ -- 2850
+format.name$ -- 1354
+if$ -- 9495
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 75
-newline$ -- 478
-num.names$ -- 300
-pop$ -- 941
+missing$ -- 77
+newline$ -- 492
+num.names$ -- 309
+pop$ -- 975
 preamble$ -- 1
-purify$ -- 984
+purify$ -- 1018
 quote$ -- 0
-skip$ -- 1393
+skip$ -- 1444
 stack$ -- 0
-substring$ -- 1643
-swap$ -- 256
-text.length$ -- 36
+substring$ -- 1743
+swap$ -- 271
+text.length$ -- 37
 text.prefix$ -- 17
 top$ -- 0
-type$ -- 770
+type$ -- 794
 warning$ -- 13
-while$ -- 345
-width$ -- 104
-write$ -- 1210
+while$ -- 358
+width$ -- 107
+write$ -- 1246
 (There were 16 warnings)

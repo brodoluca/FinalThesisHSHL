@@ -8,10 +8,10 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Illustrating the difference between aleatoric and epistemic uncertainty}}{22}{figure.caption.9}% 
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Validation and training loss curve}}{28}{figure.caption.11}% 
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Real Example of the Validation and training loss curve}}{29}{figure.caption.12}% 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Real Example of the Validation and training loss curve}}{29}{figure.caption.13}% 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Overview of the architecture of Alexnet}}{30}{figure.caption.14}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Real Example of the Validation and training loss curve}}{30}{figure.caption.13}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Overview of the architecture of Alexnet}}{31}{figure.caption.14}% 
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Overview of the various architecture for VGG}}{32}{figure.caption.15}% 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Residual learning: a building block}}{33}{figure.caption.16}% 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Residual learning: a building block}}{32}{figure.caption.16}% 
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Overview of the Resnet Architecture}}{33}{figure.caption.17}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Example of use for the function \textit {clock()}\relax }}{38}{figure.caption.18}% 
@@ -56,10 +56,10 @@
 \contentsline {figure}{\numberline {5.22}{\ignorespaces Inference time of each model trained with grey images as well}}{73}{figure.caption.66}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the slowest files in common amongst all models\relax }}{85}{figure.caption.68}% 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Example of the architecture of residual networks}}{86}{figure.caption.69}% 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of the fastest files of Resnet 152\relax }}{87}{figure.caption.70}% 
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Histogram of the slowest files of Resnet152\relax }}{88}{figure.caption.71}% 
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Complete result of the test for inference time in the seedlings dataset\relax }}{89}{figure.caption.72}% 
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Complete result of the test for inference time in the seedlings dataset with grey images\relax }}{90}{figure.caption.73}% 
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Complete result of the test for inference time in the seedlings dataset with grey images. The inference here is calculated by feeding grey scale images to the models\relax }}{91}{figure.caption.74}% 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the slowest files in common amongst all models\relax }}{87}{figure.caption.68}% 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Example of the architecture of residual networks}}{88}{figure.caption.69}% 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of the fastest files of Resnet 152\relax }}{89}{figure.caption.70}% 
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Histogram of the slowest files of Resnet152\relax }}{90}{figure.caption.71}% 
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Complete result of the test for inference time in the seedlings dataset\relax }}{91}{figure.caption.72}% 
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Complete result of the test for inference time in the seedlings dataset with grey images\relax }}{92}{figure.caption.73}% 
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Complete result of the test for inference time in the seedlings dataset with grey images. The inference here is calculated by feeding grey scale images to the models\relax }}{93}{figure.caption.74}% 
