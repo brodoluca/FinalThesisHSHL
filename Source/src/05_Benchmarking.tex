@@ -260,9 +260,8 @@ def measure(model, x):
 \label{fig:corr_inf}
 \end{figure}
 
-
-In case the model needs to be run on a mobile device, Tensorflow Lite provide benchmarking tools to measure inference time both in warming up and steady state.\cite{tensorflow2015-whitepaper}\\ 
-In case of an Android device, the benchmark can be run the command show in Fig. \ref{fig:bench_ten_lite_an}.\\
+For the purpose of this paper, we are going to purposely explore mainly techniques which can be applied to Unix-like operating systems. However, there also techniques which can be applied to other type of devices. For example, in case the models need to be run on a mobile device, Tensorflow Lite provide benchmarking tools to measure inference time both in warming up and steady state.\cite{tensorflow2015-whitepaper}\\ 
+For Android device, the benchmark can be run the command show in Fig. \ref{fig:bench_ten_lite_an}.\\
 \begin{figure}[h]
 \begin{lstlisting}[language=bash]
 adb shell am start -S \
@@ -284,7 +283,7 @@ adb logcat | grep "Average inference"
 
 
 
-Finally, since this paper is mainly focused on detection of weed and sugar beet plants from images, and since object detection is usually done with Convolutional Neural Networks (CNN) (Add references), it is also worth mentioning that inference time for these Neural Networks can be calculated manually knowing the architecture of the model. Inference time is the time the model needs to forward propagating the image through each layer, therefore is the amount of computations needed to be performed at each steps. These operations are defined as Floating Point Operation, or FLOP. The amount of FLOPs is different for each layer and require different information to be computed. \\
+Finally, since this paper is mainly focused on detection sugar beet plants from images, and since Convolutional Neural Networks (CNNs) became dominant for image recognition tasks (\cite{articleCNN}), it is also worth mentioning that inference time for this class of Neural Networks can be calculated manually knowing the architecture of the model. Inference time is the time the model needs to forward propagating the image through each layer, therefore is the amount of computations needed to be performed at each steps. These operations are defined as Floating Point Operation, or FLOP. The amount of FLOPs is different for each layer and require different information to be computed. \\
 In case of the convolutions layers, the number of flops is calculated with the following equation:
 \begin{equation}
 C\_FLOPs = 2\times Nk \times Ks \times Os

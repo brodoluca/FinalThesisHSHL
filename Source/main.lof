@@ -32,28 +32,28 @@
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Example of the graphs produced by the tool when analysing inference time\relax }}{51}{figure.caption.35}% 
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Overview of the process to test inference\relax }}{52}{figure.caption.36}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Comparison between epoch/accuracy for each model}}{57}{figure.caption.39}% 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Comparison between training time/accuracy for each model}}{58}{figure.caption.40}% 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Accuracy of Alexnet and Resnet152 against training time in seconds\relax }}{58}{figure.caption.41}% 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Accuracy of Resnet101 and VGG9 against training time in seconds\relax }}{59}{figure.caption.42}% 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Breaking point of Resnet101 and VGG19\relax }}{59}{figure.caption.43}% 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Comparison between training time and accuracy for each model for 10 epochs}}{60}{figure.caption.44}% 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Comparison between training time and accuracy for each model for 100 epochs}}{61}{figure.caption.45}% 
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Training loss and validity loss of all models calculated over 100 epochs\relax }}{61}{figure.caption.47}% 
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Inference time measured for each model}}{62}{figure.caption.48}% 
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{62}{figure.caption.49}% 
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Size of the images over inference time}}{63}{figure.caption.50}% 
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{64}{figure.caption.51}% 
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{64}{figure.caption.52}% 
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Accuracy achieved when training for 100 epochs}}{66}{figure.caption.55}% 
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Accuracy achieved when training for 100 epochs in relation with training time}}{67}{figure.caption.56}% 
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Training loss and validation loss of all models calculated over 100 epochs\relax }}{67}{figure.caption.57}% 
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs\relax }}{68}{figure.caption.59}% 
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Inference time measured for each model}}{69}{figure.caption.60}% 
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Inference time measured for Resnet101 and Resnet152}}{69}{figure.caption.61}% 
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Size of the images over inference time for the seedlings dataset}}{70}{figure.caption.62}% 
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs on the 'plant\_seedlings\_v2' dataset and the gray-scale pictures\relax }}{72}{figure.caption.65}% 
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Inference time of each model trained with grey images as well}}{73}{figure.caption.66}% 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Accuracy achieved when training for 100 epochs}}{57}{figure.caption.39}% 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Accuracy achieved when training for 100 epochs in relation with training time}}{58}{figure.caption.41}% 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Training loss and validation loss of all models calculated over 100 epochs\relax }}{58}{figure.caption.42}% 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs\relax }}{59}{figure.caption.44}% 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Inference time measured for each model}}{60}{figure.caption.45}% 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Inference time measured for Resnet101 and Resnet152}}{61}{figure.caption.46}% 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Size of the images over inference time for the seedlings dataset}}{62}{figure.caption.47}% 
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs on the 'plant\_seedlings\_v2' dataset and the gray-scale pictures\relax }}{63}{figure.caption.50}% 
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Inference time of each model trained with grey images as well}}{64}{figure.caption.51}% 
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Comparison between epoch/accuracy for each model}}{65}{figure.caption.52}% 
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Comparison between training time/accuracy for each model}}{65}{figure.caption.53}% 
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Accuracy of Alexnet and Resnet152 against training time in seconds\relax }}{66}{figure.caption.54}% 
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Accuracy of Resnet101 and VGG9 against training time in seconds\relax }}{66}{figure.caption.55}% 
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Breaking point of Resnet101 and VGG19\relax }}{67}{figure.caption.56}% 
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Comparison between training time and accuracy for each model for 10 epochs}}{68}{figure.caption.57}% 
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Comparison between training time and accuracy for each model for 100 epochs}}{69}{figure.caption.58}% 
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Training loss and validity loss of all models calculated over 100 epochs\relax }}{69}{figure.caption.60}% 
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Inference time measured for each model}}{70}{figure.caption.61}% 
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{70}{figure.caption.62}% 
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Size of the images over inference time}}{71}{figure.caption.63}% 
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{72}{figure.caption.64}% 
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Inference time measured for model Resnet18 and Alexnet\relax }}{72}{figure.caption.65}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Histogram of the slowest files in common amongst all models\relax }}{87}{figure.caption.68}% 

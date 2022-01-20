@@ -33,9 +33,8 @@
 \contentsline {subsection}{\numberline {4.3.3}Further Analysis}{53}{subsection.4.3.3}% 
 \contentsline {chapter}{\numberline {5}Analysis of the characteristics}{55}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}Test Environment}{55}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Datasets and Training Methodology}{55}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}First Experiment}{56}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Second Experiment}{65}{section.5.4}% 
+\contentsline {section}{\numberline {5.2}Fist Experiment}{56}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Second Experiment}{64}{section.5.3}% 
 \contentsline {chapter}{\numberline {6}Conclusion}{75}{chapter.6}% 
 \contentsline {section}{\numberline {6.1}Future Work}{75}{section.6.1}% 
 \contentsline {section}{\numberline {6.2}Conclusion}{76}{section.6.2}% 

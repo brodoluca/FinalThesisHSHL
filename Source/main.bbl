@@ -356,6 +356,11 @@ Chunjie Luo, Xiwen He, Jianfeng Zhan, Lei Wang, Wanling Gao, and Jiahui Dai.
 \newblock Comparison and benchmarking of ai models and frameworks on mobile
   devices, 2020.
 
+\bibitem[Luc22]{project_work}
+Brodo Luca.
+\newblock Weed management in sugar beet farms: Quo vadis?
+\newblock unpublished, 2022.
+
 \bibitem[LY20]{lu_survey_2020}
 Yuzhen Lu and Sierra Young.
 \newblock A survey of public datasets for computer vision tasks in precision
@@ -621,6 +626,12 @@ Jinhui Yi, Lukas Krusenbaum, Paula Unger, Hubert Hüging, Sabine~J. Seidel,
 \newblock Deep learning for non-invasive diagnosis of nutrient deficiencies in
   sugar beet using rgb images.
 \newblock {\em Sensors}, 20(20), 2020.
+
+\bibitem[YNDT18]{articleCNN}
+Rikiya Yamashita, Mizuho Nishio, Richard Do, and Kaori Togashi.
+\newblock Convolutional neural networks: an overview and application in
+  radiology.
+\newblock {\em Insights into Imaging}, 9, 06 2018.
 
 \bibitem[ZAZ{\etalchar{+}}18]{8573476}
 Hongyu Zhu, Mohamed Akrout, Bojian Zheng, Andrew Pelegris, Anand Jayarajan,
