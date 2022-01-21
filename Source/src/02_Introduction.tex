@@ -18,27 +18,7 @@ Mechanical techniques and even techniques which use selective spraying of herbic
 Neural Networks,however, impose great challenges to the developers. For example, in real time applications, classification time is of the highest importance since it effects the ability to respect deadlines. Furthermore, the performances of CNNs is influenced by many factors, like for i.g. training time or the data-set used for training.\\ %Table \ref{tab:models_ex_comp} shows an example of different architectures trained to recognize weed in a sugar beet plantations and how their performances can vary. \\ 
 Being able to predict the performances of NNs before their deployment will allow engineers to precisely model the application to tailor them for the NN of their chose. \\
 In this paper, we are going to investigate whether it is possible to make those predictions by empirically studying some of the metrics which can influence NNs' performances and find correlations amongst them in order to be able to be precise, scalable and predictable in time. An the result of our investigation, we aim to develop a toolbox for the employment of NNs in sugar beet recognition.
-\begin{comment}
-\begin{table}[h]
-\centering
-\begin{tabular}{|c| ccc|}
-  \hline
- Network &Accuracy& Training time   &Classification time   \\
- \hline
- &\multicolumn{3}{c|}{20 Epoch}\\
- \hline
-AlexNet &97.9\%& 9.0min   &0.0038s    \\
-VGG-19 &98.4\%& 37.4min   &0.0130s  \\
-GoogLeNet &97.0\%& 23.8min  &0.0033s \\
-ResNet-50 &96.2\%& 40.3min  &0.0072s\\
-ResNet-101 &97.5\%& 106.6min   &0.0118s \\
-Inception-v3 &90.8\%& 88.7min &0.0088s \\
-\hline
-\end{tabular}
-\caption[Example of comparison between different Neural Networks]{Example of comparison between different Neural Networks \cite{suh_transfer_2018}}
- \label{tab:models_ex_comp}
-\end{table}
-\end{comment}
+
 \section{Organization of the Paper}
 In order to achieve the aforementioned goal, we will first analyse the main characteristics of Neural Networks in chapter number \ref{char_nn}. This will allow us to pose the foundations for our further studies, since it is essential to have a proper knowledge of what can influence the recognition of sugar beets .\\
 Subsequently, in chapter number \ref{ana_models}, we will study how we can benchmark neural networks to obtain the measurements we need to find the correlations. Benchmarking is a notoriously insidious task, however at the end of our study, we will be able to create a tool to measure performances and analyse Neural Networks in a precise and reproducible way.\\

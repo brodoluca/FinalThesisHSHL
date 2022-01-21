@@ -1,19 +1,21 @@
 \babel@toc {ngerman}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Comparison between the 3 different approaches using AlexNet}}{17}{table.caption.6}% 
+\contentsline {table}{\numberline {2.2}{\ignorespaces Example of comparison between different Neural Networks}}{18}{table.caption.7}% 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Example for binary classification\relax }}{25}{table.caption.9}% 
+\contentsline {table}{\numberline {3.1}{\ignorespaces Example for binary classification\relax }}{27}{table.caption.11}% 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Metrics from fast.ai fit\_one\_cycle() function}}{46}{table.caption.28}% 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Example of training time results}}{49}{table.caption.32}% 
+\contentsline {table}{\numberline {4.1}{\ignorespaces Metrics from fast.ai fit\_one\_cycle() function}}{48}{table.caption.30}% 
+\contentsline {table}{\numberline {4.2}{\ignorespaces Example of training time results}}{51}{table.caption.34}% 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Specifics of the machine which run the experiments\relax }}{53}{table.caption.36}% 
-\contentsline {table}{\numberline {5.2}{\ignorespaces Categories of the \IeC {\textquoteleft }plant\_seedlings\_v2\IeC {\textquoteright } dataset}}{54}{table.caption.37}% 
-\contentsline {table}{\numberline {5.3}{\ignorespaces Performances of the models trained with the 'plant\_seedlings\_v2' dataset for 100 epochs\relax }}{55}{table.caption.39}% 
-\contentsline {table}{\numberline {5.4}{\ignorespaces Difference between validation loss and train loss after 100 epochs \relax }}{57}{table.caption.42}% 
-\contentsline {table}{\numberline {5.5}{\ignorespaces Performances of the models trained for 100 epochs on the 'plant\_seedlings\_v2' dataset and the gray-scale pictures\relax }}{60}{table.caption.47}% 
-\contentsline {table}{\numberline {5.6}{\ignorespaces Difference between validation loss and train loss after 100 epochs \relax }}{61}{table.caption.48}% 
-\contentsline {table}{\numberline {5.7}{\ignorespaces Average time for each epoch\relax }}{66}{table.caption.58}% 
-\contentsline {table}{\numberline {5.8}{\ignorespaces Information collected from the slowest pictures\relax }}{71}{table.caption.65}% 
+\contentsline {table}{\numberline {5.1}{\ignorespaces Specifics of the machine which run the experiments\relax }}{55}{table.caption.38}% 
+\contentsline {table}{\numberline {5.2}{\ignorespaces Categories of the \IeC {\textquoteleft }plant\_seedlings\_v2\IeC {\textquoteright } dataset}}{56}{table.caption.39}% 
+\contentsline {table}{\numberline {5.3}{\ignorespaces Performances of the models trained with the 'plant\_seedlings\_v2' dataset for 100 epochs\relax }}{57}{table.caption.41}% 
+\contentsline {table}{\numberline {5.4}{\ignorespaces Difference between validation loss and train loss after 100 epochs \relax }}{59}{table.caption.44}% 
+\contentsline {table}{\numberline {5.5}{\ignorespaces Performances of the models trained for 100 epochs on the 'plant\_seedlings\_v2' dataset and the gray-scale pictures\relax }}{62}{table.caption.49}% 
+\contentsline {table}{\numberline {5.6}{\ignorespaces Difference between validation loss and train loss after 100 epochs \relax }}{63}{table.caption.50}% 
+\contentsline {table}{\numberline {5.7}{\ignorespaces Average time for each epoch\relax }}{68}{table.caption.60}% 
+\contentsline {table}{\numberline {5.8}{\ignorespaces Information collected from the slowest pictures\relax }}{73}{table.caption.67}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }

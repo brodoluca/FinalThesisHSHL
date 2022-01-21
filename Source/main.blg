@@ -30,45 +30,45 @@ Warning--empty booktitle in metrics
 Warning--empty booktitle in Stewart2001MeasuringET
 Warning--empty school in phdthesis
 Warning--empty booktitle in how_to_bench
-You've used 104 entries,
+You've used 105 entries,
             2543 wiz_defined-function locations,
-            1096 strings with 26569 characters,
-and the built_in function-call counts, 48760 in all, are:
-= -- 4478
-> -- 3492
-< -- 38
-+ -- 1300
-- -- 1281
-* -- 3871
-:= -- 8302
-add.period$ -- 297
-call.type$ -- 104
-change.case$ -- 924
-chr.to.int$ -- 102
-cite$ -- 118
-duplicate$ -- 1552
-empty$ -- 2884
-format.name$ -- 1371
-if$ -- 9615
+            1101 strings with 26801 characters,
+and the built_in function-call counts, 49322 in all, are:
+= -- 4534
+> -- 3517
+< -- 39
++ -- 1309
+- -- 1290
+* -- 3907
+:= -- 8383
+add.period$ -- 300
+call.type$ -- 105
+change.case$ -- 931
+chr.to.int$ -- 103
+cite$ -- 119
+duplicate$ -- 1578
+empty$ -- 2928
+format.name$ -- 1381
+if$ -- 9742
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 78
-newline$ -- 502
-num.names$ -- 315
-pop$ -- 982
+missing$ -- 79
+newline$ -- 507
+num.names$ -- 318
+pop$ -- 991
 preamble$ -- 1
-purify$ -- 1033
+purify$ -- 1041
 quote$ -- 0
-skip$ -- 1465
+skip$ -- 1490
 stack$ -- 0
-substring$ -- 1757
-swap$ -- 272
-text.length$ -- 38
+substring$ -- 1792
+swap$ -- 283
+text.length$ -- 39
 text.prefix$ -- 18
 top$ -- 0
-type$ -- 810
+type$ -- 818
 warning$ -- 13
-while$ -- 363
-width$ -- 110
-write$ -- 1271
+while$ -- 368
+width$ -- 111
+write$ -- 1284
 (There were 16 warnings)
