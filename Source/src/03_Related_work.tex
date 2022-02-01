@@ -1,8 +1,8 @@
 \chapter{Related Work}
-Multiple proposed solutions in the academia for sugar beet recognition use convolutional neural networks to recognize both weed and sugar beets in a plantation. The solutions we are going to consider has been studied more thoroughly in \cite{project_work}. \\
-\textit{Gao et al. } in \cite{gao_deep_2020} developed a CNN based on the on the popular tiny YOLOv3 framework (\cite{9074315}), but with modifications for increased performances. They added two more layers for better feature fusion and reduced the number of detection to two, rather than the standard 3 for YOLO, since the images of sugar beets they collected were generally similar in size.\\
+Multiple proposed solutions in the academia for sugar beet recognition use Convolutional Neural Networks to recognize both weed and sugar beets in a plantation. The solutions we are going to consider have been studied more thoroughly in \cite{project_work}. \\
+\textit{Gao et al. } in \cite{gao_deep_2020} developed a CNN based on the popular tiny YOLOv3 framework (\cite{9074315}), but with modifications for increased performances. They added two more layers for better feature fusion and reduced the number of detection to two, rather than the standard 3 for YOLO, since the images of sugar beets they collected were generally similar in size.\\
 Instead of using only images collected from the field, the authors developed a tool to synthetically generate over 2000 images of sugar beets, which, according to them, allowed to save time and resources. The model they developed has an accuracy of \textasciitilde83\% with an average inference time of 6.48ms.\\
-\textit{Suh et al.} in \cite{suh_transfer_2018} focused their study on the Alexnet architecture (section \ref{sec:Alexnet}) considering three approaches: AlexNet as a fixed feature extractor, Modified and fine-tuned AlexNet as a binary classifier, Modified and fine-tuned AlexNet as a fixed feature extractor. An overview of the three approaches can be seen in table \ref{tab:alexnet_comparison}. 
+\textit{Suh et al.} in \cite{suh_transfer_2018} focused their study on the Alexnet architecture (section \ref{sec:Alexnet}) considering three approaches: AlexNet as a fixed feature extractor, modified and fine-tuned AlexNet as a binary classifier, modified and fine-tuned AlexNet as a fixed feature extractor. An overview of the three approaches can be seen in table \ref{tab:alexnet_comparison}. 
 \begin{table}[h]
 \begin{tabular}[h]{ c c  c c c}
 \hline
@@ -20,7 +20,7 @@ Approach & Highest accuracy & Training time (s) & Classification time (s) &\# of
 \end{table}
 
 Authors of \cite{suh_transfer_2018} also provide a comparison between six fine-tuned deep networks, namely AlexNet, VGG-19, GoogLeNet, ResNet-50, ResNet-101 and Inception-v3, summarized in table \ref{tab:models_ex_comp}.\\
-Both table \ref{tab:alexnet_comparison} and \ref{tab:models_ex_comp} show how differently NNs perform in similar setting when some metrics are changed. For example, in table \ref{tab:models_ex_comp}, we can see that both Resnet50 and Resnet101 achieve different inference inference time when trained for different numbers of epochs, i.e. with different training time.\\
+Both table \ref{tab:alexnet_comparison} and \ref{tab:models_ex_comp} show how differently NNs perform in similar settings when some metrics are changed. For example, in table \ref{tab:models_ex_comp}, we can see that both Resnet50 and Resnet101 achieve different inference time when trained for different numbers of epochs, i.e. with different training time.\\
 \begin{table}[h]
 \centering
 \begin{tabular}{|c| ccc|}
@@ -49,17 +49,17 @@ Inception-v3 & 94.8\% &133.0min   & 0.0086s  \\
 \caption[Example of comparison between different Neural Networks]{Example of comparison between different Neural Networks \cite{suh_transfer_2018}}
  \label{tab:models_ex_comp}
 \end{table}
-Regarding the study of neural network performances, both academic and industrial organizations have already developed numerous benchmark solutions to evaluate the behaviour of NNs under different workloads and on different devices. For example authors of \cite{luo2020comparison} and \cite{ignatov2019ai} have proposed benchmarks of NNs specifically for mobile devices. \textit{Hendrycks et al.} in  \cite{hendrycks2019benchmarking} developed a benchmark to assess the robustness of image classifiers under condition of perturbations. \\
-\textit{Reddi et al.} in  \cite{reddi2020mlperf} propose a benchmark, namely MLPerf, to evaluate inference of Machine Learning system under various workload. They divided workloads under high level tasks such as image classification and they provide a reference model for it. \\
-textit{Zou et al. } in \cite{8573476}, among other contributions, proposed a benchmark suite to analyse NNs' training time of eight different state-of-the-art models under six different application domains. The metrics they collect during profiling are:
+Regarding the study of Neural Network performances, both academic and industrial organizations have already developed numerous benchmark solutions to evaluate the behaviour of NNs under different workloads and on different devices. For example, authors of \cite{luo2020comparison} and \cite{ignatov2019ai} have proposed benchmarks of NNs specifically for mobile devices. \textit{Hendrycks et al.} in  \cite{hendrycks2019benchmarking} developed a benchmark to assess the robustness of image classifiers under condition of perturbations. \\
+\textit{Reddi et al.} in  \cite{reddi2020mlperf} propose a benchmark, namely MLPerf, to evaluate inference of Machine Learning system under various workloads. They divided workloads under high level tasks, such as image classification, and they provide a reference model for it. \\
+\textit{Zou et al. } in \cite{8573476}, among other contributions, proposed a benchmark suite to analyse NNs' training time of eight different state-of-the-art models under six different application domains. The metrics they collect during profiling are:
 \begin{description}
-  \item[\textbf{Throughput}] \hfill\\ Throughput is defined as the amount of input samples processed by the networks. This metric is relevant because, contrary to inference, is not latency sensitive.   
-  \item[\textbf{GPU utilization}] \hfill \\ They define the GPU utilization as the fraction of time in which the GPU is busy and it is calculated as follows:
+  \item[\textbf{Throughput}] \hfill\\ Throughput is defined as the amount of input samples processed by the networks. This metric is relevant because, contrary to inference, it is not latency sensitive.   
+  \item[\textbf{GPU utilization}] \hfill \\ They define the GPU utilization as the fraction of time in which the GPU is busy, it is calculated as follows:
   \begin{equation}
       GPU\;Utilization = \dfrac{GPU\;Active\;Time\times100}{total\;elapsed\;time}%
   \end{equation}
   
-  \item[\textbf{FP32 utilization}] \hfill \\ This metric refers to the percentage of floating operations done of the viable one during training, since typically training DNNs is performed using single precision floating point operations (FP32). This metrics measure how effectively the GPU resources are use. It is calculated as:
+  \item[\textbf{FP32 utilization}] \hfill \\ This metric refers to the percentage of floating operations done during training, since typically training DNNs is performed using single precision floating point operations (FP32). This metric measures how effectively the GPU resources are used. It is calculated as:
   \begin{equation}
       FP32\;Utilization = \dfrac{actual\;flop\;counting\;during\;T\times100}{FLOPS_{peak} \times T}%
   \end{equation}

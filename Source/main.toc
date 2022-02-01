@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {3.1}Deep Neural Networks and Uncertainty}{21}{section.3.1}% 
 \contentsline {section}{\numberline {3.2}Learning Process and Training Time}{25}{section.3.2}% 
 \contentsline {section}{\numberline {3.3}Inference Time}{26}{section.3.3}% 
-\contentsline {section}{\numberline {3.4}Accuracy}{26}{section.3.4}% 
+\contentsline {section}{\numberline {3.4}Accuracy}{27}{section.3.4}% 
 \contentsline {section}{\numberline {3.5}Precision and Recall}{28}{section.3.5}% 
 \contentsline {section}{\numberline {3.6}Loss}{29}{section.3.6}% 
 \contentsline {section}{\numberline {3.7}Overfitting and Underfitting}{30}{section.3.7}% 
@@ -38,7 +38,5 @@
 \contentsline {section}{\numberline {5.2}Fist Experiment}{56}{section.5.2}% 
 \contentsline {section}{\numberline {5.3}Second Experiment}{64}{section.5.3}% 
 \contentsline {chapter}{\numberline {6}Conclusion and Overview}{75}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Summary}{75}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}Future Work}{75}{section.6.2}% 
-\contentsline {chapter}{References}{77}{section.6.2}% 
+\contentsline {chapter}{References}{77}{chapter.6}% 
 \contentsline {chapter}{\numberline {A}Appendix}{87}{appendix.A}% 
