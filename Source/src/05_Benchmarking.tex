@@ -72,7 +72,7 @@ A method along the lines of the one described above is by using functions like \
     printf("Total = %f\n",total);
     
 \end{lstlisting}
-\caption{Example of use for the function \textit{clock()}}
+\caption{This snippet of code shows an example of use of the function \textit{clock()}}
 \label{fig:code}
 \end{figure}
 In addition, such functions present two other problems. Since the function does not have a standardized implementation, the result may vary from device to device, which makes reproducibility impossible. 
@@ -141,7 +141,7 @@ echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo
 # AMD
 echo 0 > /sys/devices/system/cpu/cpufreq/boost
 \end{lstlisting}
-\caption{Disable turbo boost in both AMD and Intel devices}
+\caption{Command to disable turbo boost in both AMD and Intel devices}
 \label{fig:no_boos}
 \end{figure}
 
@@ -154,7 +154,7 @@ echo 0 > /sys/devices/system/cpu/cpuX/online
 # To check the pair of CPU x
 /sys/devices/system/cpu/cpuX/topology/thread_siblings_list
 \end{lstlisting}
-\caption{Disable Hyper-Threading}
+\caption{Command to disable Hyper-Threading}
 \label{fig:no_ht}
 \end{figure}
 
@@ -168,7 +168,7 @@ do
   echo performance > $i
 done
 \end{lstlisting}
-\caption{Set the scaling governor policy to be \textit{performance} for every cpu}
+\caption{Command to set the scaling governor policy to be \textit{performance} for every CPU}
 \label{fig:per_sca}
 \end{figure}
 
@@ -198,7 +198,7 @@ def measure(model, x):
 	return elapsed_fp
 
 \end{lstlisting}
-\caption[Wrong benchmark for inference time]{Wrong benchmark for inference time \cite{bianco2018dnnsbench}}
+\caption[Imprecise way to benchmark for inference time]{Imprecise way to benchmark for inference time \cite{bianco2018dnnsbench}}
 \label{fig:wrong_inf}
 \end{figure}
 
@@ -233,12 +233,14 @@ def measure(model, x):
     print(mean_syn)
 
 \end{lstlisting}
-\caption{Correct way to measure inference}
+\caption{More precise way to measure inference time}
 \label{fig:corr_inf}
 \end{figure}
 
-For the purpose of this paper, we are going to purposely explore mainly techniques which can be applied to Unix-like operating systems. However, there are also techniques which can be applied to other types of devices. For example, in case the models need to be run on a mobile device, Tensorflow Lite provide benchmarking tools to measure inference time both in warming up and steady state. \cite{tensorflow2015-whitepaper}\\ 
+In the context of this paper, we are going to purposely explore mainly techniques which can be applied to Unix-like operating systems. However, there are also techniques which can be applied to other types of devices. For example, in case the models need to be run on a mobile device, Tensorflow Lite provide benchmarking tools to measure inference time both in warming up and steady state. \cite{tensorflow2015-whitepaper}\\ 
 For Android device, the benchmark can be run the command shown in Fig. \ref{fig:bench_ten_lite_an}.\\
+
+
 \begin{figure}[h]
 \begin{lstlisting}[language=bash]
 adb shell am start -S \
@@ -246,7 +248,7 @@ adb shell am start -S \
   --es args '"--graph=/data/local/tmp/your_model.tflite \
               --num_threads=4"'
 \end{lstlisting}
-\caption[Run benchmark on android with Tensorflow Lite]{Run benchmark on android with Tensorflow Lite \cite{tensorflow2015-whitepaper}}
+\caption[Method to benchmark on Android with Tensorflow Lite]{Method to benchmark on Android with Tensorflow Lite \cite{tensorflow2015-whitepaper}}
 \label{fig:bench_ten_lite_an}
 \end{figure}
 The result of this command is a log file which can be accessed by the command shown in Fig.\ref{fig:inf_ten}.\\
@@ -254,7 +256,7 @@ The result of this command is a log file which can be accessed by the command sh
 \begin{lstlisting}[language=bash]
 adb logcat | grep "Average inference"
 \end{lstlisting}
-\caption[Command to access the inference in Tensorflow Lite]{Command to access the inference in Tensorflow Lite\cite{tensorflow2015-whitepaper}}
+\caption[Command to access the measured inference time in Tensorflow-Lite]{Command to access the measured inference time in Tensorflow-Lite \cite{tensorflow2015-whitepaper}}
 \label{fig:inf_ten}
 \end{figure}
 
@@ -401,7 +403,7 @@ Some libraries already provide tools which measure training time, like for examp
 
  \hline
 \end{tabular}
-\caption[Metrics from fast.ai fit\_one\_cycle() function]{Metrics from fast.ai fit\_one\_cycle() function. The time is in minutes}
+\caption[Metrics obtained from the fast.ai \textit{fit\_one\_cycle()} function]{Metrics obtained from the fast.ai \textit{fit\_one\_cycle()} function. The time is in minutes}
 \label{tab:m_fast}
 \end{table}
 
@@ -420,7 +422,7 @@ However, if more precision or more control is needed, training time can also be 
          print ('training time elapsed {}ms'.format(time_elapsed[epoch]))
     print ('training time elapsed '+ str(sum(time_elapsed)) + 'ms')
 \end{lstlisting}
-\caption{Benchmark for training time}
+\caption{Benchmark for training time using the watchdog approach}
 \label{fig:ben_tra}
 \end{figure}
 
@@ -437,7 +439,7 @@ def accuracy(inp, targ, axis=-1):
     pred,targ = flatten_check(inp.argmax(dim=axis), targ)
     return (pred == targ).float().mean()
 \end{lstlisting}
-\caption{Fastai calculation for accuracy \cite{fastaidocs}}
+\caption[Function in fast.ai that calculates the accuracy]{Function in fast.ai that calculates the accuracy \cite{fastaidocs}}
 \label{fig:fast_acc}
 \end{figure}
 

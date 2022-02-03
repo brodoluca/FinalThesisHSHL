@@ -35,7 +35,7 @@ Alexnet is the model that achieved the lowest accuracy overall reaching \textasc
 \begin{figure}[h]
        \centering 
 	    \includegraphics[width = 11 cm]{seedlings_100.png}
-        \caption[Accuracy achieved when training for 100 epochs]{Accuracy achieved when training for 100 epochs. The x axis is the number of epochs, while the y axis is the accuracy achieved}
+        \caption[Accuracy achieved by the models after being trained for 100 epochs]{Accuracy achieved by the models after being trained for 100 epochs. The x axis is the number of epochs, while the y axis is the accuracy achieved}
          \label{fig:seedlings_100_epoch_accuracy}
 \end{figure}
 
@@ -75,12 +75,12 @@ Fig. \ref{fig:seedlings_100_acc}, on the other hand, depicts the accuracy graphe
 \begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{epoch_train_loss_seeds_100.png}
-	    \caption{Training Loss calculated over 100 epochs}
+	    \caption{Training loss calculated over 100 epochs}
         \label{fig:train_loss_seeds_100}
      \end{subfigure} \hfill
      \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{epoch_valid_loss_seeds_100.png}
-	    \caption{Validation Loss calculated over 100 epochs}
+	    \caption{Validation loss calculated over 100 epochs}
          \label{fig:valid_loss_seeds_100}
      \end{subfigure}
      
@@ -117,12 +117,12 @@ We can observe in the response of Resnet152 (Fig. \ref{fig:epoch_valid_loss_resn
 \begin{subfigure}{0.5\textwidth}
      \centering
 	    \includegraphics[width = \gws cm]{epoch_valid_loss_resnet101.png}
-\caption{Validation loss and training loss for Resnet101 over 100 epochs}\label{fig:epoch_valid_loss_resnet101}
+\caption{Resnet101}\label{fig:epoch_valid_loss_resnet101}
      \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
      \centering
 	    \includegraphics[width = \gws cm]{epoch_valid_loss_resnet152.png}
-\caption{Validation loss and training loss for Resnet152 over 100 epochs}\label{fig:epoch_valid_loss_resnet152}
+\caption{Resnet152}\label{fig:epoch_valid_loss_resnet152}
      \end{subfigure}  
      \caption{Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs}
         \label{fig:tran_valid_loss_seeds_res_100}
@@ -142,7 +142,7 @@ From Fig. \ref{fig:inf_acc_models_seeds} we can start to observe some rather int
      \hfill
      \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{inf_epoch_models_seeds.png}
-	    \caption{Based on the epoch}
+	    \caption{Based on the number of epochs}
         \label{fig:inf_epoch_models_seeds}
      \end{subfigure}\\
      \caption[Inference time measured for each model]{Inference time measured for each model using the dataset discussed previously. The inference time is in milliseconds, while the accuracy for Fig. \ref{fig:inf_time_accuracy}is the percentage of correct predictions.}
@@ -206,7 +206,7 @@ VGG16&97.27&93&29.87&2987\\
 VGG19&96.77&64&33.74&3374\\
  \hline
 \end{tabular}
-\caption{Performances of the models trained for 100 epochs on the 'plant\_seedlings\_v2' dataset and the grey-scale pictures}
+\caption{Performance of the models trained for 100 epochs on the 'plant\_seedlings\_v2' dataset including the grey-scale variant of the pictures}
 \label{tab:performances_seeds_gray}
 \end{table}
 
@@ -227,7 +227,7 @@ Alexnet&0.20\\
 VGG16&0.12\\
 VGG19&0.14\\
                     \end{tabular}
-                    \caption{Difference between validation loss and train loss after 100 epochs }                   
+                    \caption{Difference between validation loss and train loss after 100 epochs using the gray-scale variants of the pictures}                   
                      \label{tab:difference_val_tra_loss_2}
      \end{table} 
      
@@ -236,14 +236,14 @@ VGG19&0.14\\
 \begin{subfigure}{0.5\textwidth}
      \centering
 	    \includegraphics[width = \gws cm]{epoch_valid_loss_resnet101_2.png}
-\caption{Validation loss and training loss for Resnet101 over 100 epochs}\label{fig:epoch_valid_loss_resnet101_2}
+\caption{Resnet101}\label{fig:epoch_valid_loss_resnet101_2}
      \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
      \centering
 	    \includegraphics[width = \gws cm]{epoch_valid_loss_resnet152_2.png}
-\caption{Validation loss and training loss for Resnet152 over 100 epochs}\label{fig:epoch_valid_loss_resnet152_2}
+\caption{Resnet152}\label{fig:epoch_valid_loss_resnet152_2}
      \end{subfigure}  
-     \caption{Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs on the  'plant\_seedlings\_v2' dataset and the grey-scale pictures}
+     \caption{Training loss and validation loss of Resnet101 and Resnet152 over 100 epochs on the  'plant\_seedlings\_v2' dataset and the grey-scale variant of the pictures}
         \label{fig:tran_valid_loss_seeds_res_100_2}
 \end{figure}
 From the information acquired so far, we would expect the models to perform better during the inference time test. Fig. \ref{fig:inf_seeds_with_grey} shows the results of the tests. In Fig. \ref{fig:inf_seeds_grey_no_grey}, the performance of the models has been tested using the same inference dataset we used for the results in Fig. \ref{fig:inf_acc_models_seeds}. Comparing the two graphs we can observe that the accuracy dropped significantly. As a matter of fact, without the grey images for training, the lowest accuracy achieved was around \textasciitilde75\%, while in this run we calculated accuracies at around \textasciitilde69\%. Furthermore, the highest accuracy calculated in this run is around \textasciitilde88\%,

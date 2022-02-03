@@ -11,13 +11,13 @@ The one scenario which yielded more promising results and the one we are going t
 \begin{figure}[h]
        \centering 
 	    \includegraphics[width = 12 cm]{epoch-accuracy_comparison.png}
-        \caption[Comparison between epoch/accuracy for each model]{Comparison between epoch/accuracy for each model. The x axis is the number of epoch, while the y axis is the accuracy achieved}
+        \caption[Accuracy achieved by the models over 50 epochs]{Accuracy achieved by the models over 50 epochs. The x axis is the number of epoch, while the y axis is the accuracy achieved}
          \label{fig:com_ep_ac_models}
      \end{figure}
 \begin{figure}[h]
 \centering 
 	    \includegraphics[width = 12 cm]{time-accuracy_comparison.png}
-        \caption[Comparison between training time/accuracy for each model]{Comparison between training time/accuracy for each model. The x axis is the training time in seconds, while the y axis is the accuracy achieved}
+        \caption[Accuracy achieved by the models during the training phase plot over training time]{Accuracy achieved by the models during the training phase plot over training time. The x axis is the training time in seconds, while the y axis is the accuracy achieved}
         \label{fig:com_ti_ac_models}
 \end{figure}
 
@@ -76,7 +76,7 @@ Models from different architectures do not follow this trend. Alexnet, as we alr
 \begin{figure}[h]
        \centering 
 	    \includegraphics[width = 12 cm]{acc_training_time_10.png}
-        \caption[Comparison between training time and accuracy for each model for 10 epochs]{Comparison between training time and accuracy for each model for 10 epochs. The x axis is the training time in seconds, while the y axis is the accuracy achieved}
+        \caption[Accuracy achieved by the models over 10 epochs]{Accuracy achieved by the models over 10 epochs. The x axis is the training time in seconds, while the y axis is the accuracy achieved}
          \label{fig:acc_training_10}
 \end{figure}
 
@@ -84,7 +84,7 @@ Models from different architectures do not follow this trend. Alexnet, as we alr
 \begin{figure}[h]
        \centering 
 	    \includegraphics[width = 12 cm]{time_acc_100.png}
-        \caption[Comparison between training time and accuracy for each model for 100 epochs]{Comparison between training time and accuracy for each model trained for 100 epochs. The x axis is the training time in seconds, while the y axis is the accuracy achieved}
+        \caption[Accuracy achieved by the models over 100 epochs]{Accuracy achieved by the models over 100 epochs. The x axis is the training time in seconds, while the y axis is the accuracy achieved}
          \label{fig:time_acc_100}
 \end{figure}
 
@@ -118,19 +118,19 @@ Training for 100 epochs gives us also more complete insights regarding the futur
 \begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{epoch_train_loss.png}
-	    \caption{Training Loss calculated over 100 epochs}
+	    \caption{Training loss}
         \label{fig:train_loss}
         
      \end{subfigure} \hfill
      \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{epoch_valid_loss.png}
-	    \caption{Validity Loss calculated over 100 epochs}
+	    \caption{Validation loss}
          \label{fig:valid_loss}
          
      \end{subfigure}
     
      
-     \caption{ Training loss and validity loss of all models calculated over 100 epochs}
+     \caption{ Training loss and validation loss of all models calculated over 100 epochs}
         \label{fig:tran_valid_loss}
 \end{figure}
 
@@ -144,16 +144,16 @@ To measure inference time, we need to collect a dataset of related pictures whic
 \begin{figure}[h]
      \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{inf_time_accuracy.png}
-	    \caption{}
+	    \caption{Inference time over accuracy}
          \label{fig:inf_time_accuracy}
      \end{subfigure}
      \hfill
      \begin{subfigure}{0.5\textwidth}
 	    \includegraphics[width = \gws cm]{inf_time_epoch.png}
-	    \caption{}
+	    \caption{Inference time per number of epochs used to train}
         \label{fig:inf_time_epoch}
      \end{subfigure}\\
-     \caption[Inference time measured for each model]{Inference time measured for each model using the 200 pictures dataset discussed previously. The inference time is in milliseconds, while the accuracy for Fig. \ref{fig:inf_time_accuracy}is the percentage of correct predictions.}
+     \caption[Inference time measured for each model]{Inference time measured for each model using the 200 pictures dataset discussed previously. The inference time is in milliseconds, while the accuracy for Fig. \ref{fig:inf_time_accuracy} is calculated the percentage of correct predictions over the overall predictions.}
         \label{fig:inf_time_epoch_c}
 \end{figure}
 
@@ -171,7 +171,7 @@ To measure inference time, we need to collect a dataset of related pictures whic
         \label{fig:inf_acc_alexnet}
         
      \end{subfigure}\\
-     \caption{Inference time measured for model Resnet18 and Alexnet}
+     \caption{Inference time measured for models Resnet18 and Alexnet}
         \label{fig:inf_acc_c}
 \end{figure}
 When we compare models individually like in Fig. \ref{fig:inf_acc_c}, other similarities appear. As a matter of fact, when we analyse each model, we can observe that some pictures require considerably more time than others. For example, Fig. \ref{fig:inf_acc_c} shows the measurements obtained by model Resnet18 (\ref{fig:inf_acc_resnet18}) and Alexnet (\ref{fig:inf_acc_alexnet}) and from their response it appears that, at each epoch, there is a constant number of images which takes more time to be processed. \\
@@ -205,7 +205,7 @@ For deeper networks the situation is similar to the discussion we made. As shown
         \label{fig:vgg16_sl_f}
         
      \end{subfigure}\\
-     \caption{Inference time measured for model Resnet18 and Alexnet}
+     \caption{Inference time of the slowest images for models VGG16 and Resnet152}
         \label{fig:sl_f_deep}
 \end{figure}
 
@@ -225,7 +225,7 @@ The best trade off between fast inference time and accuracy is achieved when bot
         \label{fig:alexnet_sl_f}
         
      \end{subfigure}\\
-     \caption{Inference time measured for model Resnet18 and Alexnet}
+     \caption{Inference time of the slowest images for models Resnet18 and Alexnet}
         \label{fig:sl_f_shallow}
 \end{figure}
 
