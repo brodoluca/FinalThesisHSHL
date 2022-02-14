@@ -17,13 +17,13 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces This snippet of code shows an example of use of the function \textit {clock()}\relax }}{40}{figure.caption.19}% 
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Synopsis of the command \textit {time}\relax }}{40}{figure.caption.20}% 
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Program used to test the command \textit {time}\relax }}{41}{figure.caption.21}% 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Command to disable turbo boost in both AMD and Intel devices\relax }}{43}{figure.caption.22}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Command to disable turbo boost in both AMD and Intel devices\relax }}{42}{figure.caption.22}% 
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Command to disable Hyper-Threading\relax }}{43}{figure.caption.23}% 
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Command to set the scaling governor policy to be \textit {performance} for every CPU\relax }}{43}{figure.caption.24}% 
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Imprecise way to benchmark for inference time}}{44}{figure.caption.25}% 
 \contentsline {figure}{\numberline {4.8}{\ignorespaces More precise way to measure inference time\relax }}{45}{figure.caption.26}% 
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Method to benchmark on Android with Tensorflow Lite}}{45}{figure.caption.27}% 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Command to access the measured inference time in Tensorflow-Lite}}{46}{figure.caption.28}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Command to access the measured inference time in Tensorflow-Lite}}{45}{figure.caption.28}% 
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Architecture of the convolutional neural network used as an example to calculate inference time}}{47}{figure.caption.29}% 
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Benchmark for training time using the watchdog approach\relax }}{49}{figure.caption.31}% 
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Function in fast.ai that calculates the accuracy}}{49}{figure.caption.32}% 

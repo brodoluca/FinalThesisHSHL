@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.23)  6 FEB 2022 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.23)  14 FEB 2022 23:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1915,17 +1915,16 @@ Overfull \hbox (16.01537pt too wide) in paragraph at lines 354--355
 ]
 chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
+Underfull \vbox (badness 4416) has occurred while \output is active []
 
- []
-
-[37] [38] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+ [37]
+[38] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 54--78
 
  []
 
@@ -1935,11 +1934,11 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 ) [40]
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 123.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 121.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1948,31 +1947,33 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [41]
+ [41] [42] [43]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[42] [43] [44]
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
  []
 
+[44]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 251.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[45]
+(Font)              <10.95> on input line 249.
+ [45]
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathreplacing.code.tex
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathreplacing.code.tex))
-Overfull \hbox (48.27005pt too wide) in paragraph at lines 360--361
+Overfull \hbox (48.27005pt too wide) in paragraph at lines 358--359
  [][] 
  []
 
-[46] [47]
-Overfull \hbox (0.66106pt too wide) in paragraph at lines 399--399
+
+Underfull \vbox (badness 8038) has occurred while \output is active []
+
+ [46]
+[47]
+Overfull \hbox (0.66106pt too wide) in paragraph at lines 397--397
 []\T1/lmr/m/n/12 (-20) epoch| 
  []
 
@@ -1983,41 +1984,41 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [48] [49]
-Underfull \hbox (badness 10000) in paragraph at lines 523--525
+Underfull \hbox (badness 10000) in paragraph at lines 521--523
 
  []
 
 [50]
-Overfull \hbox (1.49144pt too wide) in paragraph at lines 546--560
+Overfull \hbox (1.49144pt too wide) in paragraph at lines 544--558
 []\T1/lmr/m/n/12 (-20) 54.769957065582275| 
  []
 
 [51]
-<img/resnet18_epoch-accuracy.png, id=1052, 462.528pt x 346.896pt>
+<img/resnet18_epoch-accuracy.png, id=1050, 462.528pt x 346.896pt>
 File: img/resnet18_epoch-accuracy.png Graphic file (type png)
 <use img/resnet18_epoch-accuracy.png>
 Package pdftex.def Info: img/resnet18_epoch-accuracy.png  used on input line 58
-2.
+0.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
-<img/resnet18_time-accuracy.png, id=1053, 462.528pt x 346.896pt>
+<img/resnet18_time-accuracy.png, id=1051, 462.528pt x 346.896pt>
 File: img/resnet18_time-accuracy.png Graphic file (type png)
 <use img/resnet18_time-accuracy.png>
-Package pdftex.def Info: img/resnet18_time-accuracy.png  used on input line 587
+Package pdftex.def Info: img/resnet18_time-accuracy.png  used on input line 585
 .
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 581--591
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 579--589
 [][] [] 
  []
 
-<img/epoch_inferencetime.png, id=1058, 642.4803pt x 388.0899pt>
+<img/epoch_inferencetime.png, id=1056, 642.4803pt x 388.0899pt>
 File: img/epoch_inferencetime.png Graphic file (type png)
 <use img/epoch_inferencetime.png>
-Package pdftex.def Info: img/epoch_inferencetime.png  used on input line 606.
+Package pdftex.def Info: img/epoch_inferencetime.png  used on input line 604.
 (pdftex.def)             Requested size: 227.62204pt x 137.4916pt.
 [52 <./img/resnet18_epoch-accuracy.png> <./img/resnet18_time-accuracy.png> <./i
 mg/epoch_inferencetime.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 617--619
+Underfull \hbox (badness 10000) in paragraph at lines 615--617
 
  []
 
@@ -2031,7 +2032,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  (./src/06_Analysis_Characteristics.tex
 chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
@@ -2041,7 +2042,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 
 ] [56]
-<img/seedlings_100.png, id=1116, 830.10126pt x 480.79625pt>
+<img/seedlings_100.png, id=1114, 830.10126pt x 480.79625pt>
 File: img/seedlings_100.png Graphic file (type png)
 <use img/seedlings_100.png>
 Package pdftex.def Info: img/seedlings_100.png  used on input line 37.
@@ -2051,19 +2052,19 @@ Overfull \hbox (3.09444pt too wide) in paragraph at lines 45--58
  [][] 
  []
 
-<img/seedlings_100_acc.png, id=1119, 1214.5375pt x 699.61375pt>
+<img/seedlings_100_acc.png, id=1117, 1214.5375pt x 699.61375pt>
 File: img/seedlings_100_acc.png Graphic file (type png)
 <use img/seedlings_100_acc.png>
 Package pdftex.def Info: img/seedlings_100_acc.png  used on input line 70.
 (pdftex.def)             Requested size: 341.43306pt x 196.6698pt.
 [57 <./img/seedlings_100.png>]
-<img/epoch_train_loss_seeds_100.png, id=1125, 433.62pt x 289.08pt>
+<img/epoch_train_loss_seeds_100.png, id=1123, 433.62pt x 289.08pt>
 File: img/epoch_train_loss_seeds_100.png Graphic file (type png)
 <use img/epoch_train_loss_seeds_100.png>
 Package pdftex.def Info: img/epoch_train_loss_seeds_100.png  used on input line
  77.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
-<img/epoch_valid_loss_seeds_100.png, id=1126, 433.62pt x 289.08pt>
+<img/epoch_valid_loss_seeds_100.png, id=1124, 433.62pt x 289.08pt>
 File: img/epoch_valid_loss_seeds_100.png Graphic file (type png)
 <use img/epoch_valid_loss_seeds_100.png>
 Package pdftex.def Info: img/epoch_valid_loss_seeds_100.png  used on input line
@@ -2077,65 +2078,65 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 76--86
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/epoch_valid_loss_resnet101.png, id=1134, 433.62pt x 289.08pt>
+<img/epoch_valid_loss_resnet101.png, id=1132, 433.62pt x 289.08pt>
 File: img/epoch_valid_loss_resnet101.png Graphic file (type png)
 <use img/epoch_valid_loss_resnet101.png>
 Package pdftex.def Info: img/epoch_valid_loss_resnet101.png  used on input line
- 119.
+ 118.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
-<img/epoch_valid_loss_resnet152.png, id=1135, 433.62pt x 289.08pt>
+<img/epoch_valid_loss_resnet152.png, id=1133, 433.62pt x 289.08pt>
 File: img/epoch_valid_loss_resnet152.png Graphic file (type png)
 <use img/epoch_valid_loss_resnet152.png>
 Package pdftex.def Info: img/epoch_valid_loss_resnet152.png  used on input line
- 124.
+ 123.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 117--127
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 116--126
 []$[]$ $[]$ 
  []
 
 [58 <./img/seedlings_100_acc.png> <./img/epoch_train_loss_seeds_100.png> <./img
 /epoch_valid_loss_seeds_100.png>]
-<img/inf_acc_models_seeds.png, id=1150, 868.24374pt x 499.8675pt>
+<img/inf_acc_models_seeds.png, id=1148, 868.24374pt x 499.8675pt>
 File: img/inf_acc_models_seeds.png Graphic file (type png)
 <use img/inf_acc_models_seeds.png>
-Package pdftex.def Info: img/inf_acc_models_seeds.png  used on input line 138.
+Package pdftex.def Info: img/inf_acc_models_seeds.png  used on input line 137.
 (pdftex.def)             Requested size: 227.62204pt x 131.04556pt.
-<img/inf_epoch_models_seeds.png, id=1151, 868.24374pt x 499.8675pt>
+<img/inf_epoch_models_seeds.png, id=1149, 868.24374pt x 499.8675pt>
 File: img/inf_epoch_models_seeds.png Graphic file (type png)
 <use img/inf_epoch_models_seeds.png>
-Package pdftex.def Info: img/inf_epoch_models_seeds.png  used on input line 144
+Package pdftex.def Info: img/inf_epoch_models_seeds.png  used on input line 143
 .
 (pdftex.def)             Requested size: 227.62204pt x 131.04556pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 137--148
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 136--147
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--148
+Underfull \hbox (badness 10000) in paragraph at lines 136--147
 
  []
 
 [59 <./img/epoch_valid_loss_resnet101.png> <./img/epoch_valid_loss_resnet152.pn
 g>]
-<img/inf_resnet101_seeds.png, id=1162, 889.3225pt x 499.8675pt>
+<img/inf_resnet101_seeds.png, id=1160, 889.3225pt x 499.8675pt>
 File: img/inf_resnet101_seeds.png Graphic file (type png)
 <use img/inf_resnet101_seeds.png>
-Package pdftex.def Info: img/inf_resnet101_seeds.png  used on input line 157.
+Package pdftex.def Info: img/inf_resnet101_seeds.png  used on input line 156.
 (pdftex.def)             Requested size: 227.62204pt x 127.94122pt.
-<img/inf_acc_152_seeds.png, id=1163, 889.3225pt x 499.8675pt>
+<img/inf_acc_152_seeds.png, id=1161, 889.3225pt x 499.8675pt>
 File: img/inf_acc_152_seeds.png Graphic file (type png)
 <use img/inf_acc_152_seeds.png>
-Package pdftex.def Info: img/inf_acc_152_seeds.png  used on input line 163.
+Package pdftex.def Info: img/inf_acc_152_seeds.png  used on input line 162.
 (pdftex.def)             Requested size: 227.62204pt x 127.94122pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--167
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 155--166
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--167
+Underfull \hbox (badness 10000) in paragraph at lines 155--166
 
  []
 
@@ -2143,74 +2144,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--167
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--178
+Underfull \hbox (badness 10000) in paragraph at lines 172--177
 
  []
 
 [60 <./img/inf_acc_models_seeds.png> <./img/inf_epoch_models_seeds.png>]
-<img/inf_size_seeds.png, id=1173, 889.3225pt x 502.87875pt>
+<img/inf_size_seeds.png, id=1171, 889.3225pt x 502.87875pt>
 File: img/inf_size_seeds.png Graphic file (type png)
 <use img/inf_size_seeds.png>
-Package pdftex.def Info: img/inf_size_seeds.png  used on input line 181.
+Package pdftex.def Info: img/inf_size_seeds.png  used on input line 180.
 (pdftex.def)             Requested size: 398.33858pt x 225.2421pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (3.09444pt too wide) in paragraph at lines 196--209
+Overfull \hbox (3.09444pt too wide) in paragraph at lines 194--207
  [][] 
  []
 
 [61 <./img/inf_resnet101_seeds.png> <./img/inf_acc_152_seeds.png>] [62 <./img/i
 nf_size_seeds.png>]
-<epoch_valid_loss_resnet101_2.png, id=1192, 433.62pt x 289.08pt>
+<epoch_valid_loss_resnet101_2.png, id=1190, 433.62pt x 289.08pt>
 File: epoch_valid_loss_resnet101_2.png Graphic file (type png)
 <use epoch_valid_loss_resnet101_2.png>
 Package pdftex.def Info: epoch_valid_loss_resnet101_2.png  used on input line 2
-38.
+37.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
-<epoch_valid_loss_resnet152_2.png, id=1193, 433.62pt x 289.08pt>
+<epoch_valid_loss_resnet152_2.png, id=1191, 433.62pt x 289.08pt>
 File: epoch_valid_loss_resnet152_2.png Graphic file (type png)
 <use epoch_valid_loss_resnet152_2.png>
 Package pdftex.def Info: epoch_valid_loss_resnet152_2.png  used on input line 2
-43.
+42.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 236--246
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 235--245
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--251
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
 [63 <./epoch_valid_loss_resnet101_2.png> <./epoch_valid_loss_resnet152_2.png>]
-<img/inf_seeds_grey_no_grey.png, id=1205, 877.2775pt x 502.87875pt>
+<img/inf_seeds_grey_no_grey.png, id=1203, 877.2775pt x 502.87875pt>
 File: img/inf_seeds_grey_no_grey.png Graphic file (type png)
 <use img/inf_seeds_grey_no_grey.png>
-Package pdftex.def Info: img/inf_seeds_grey_no_grey.png  used on input line 255
+Package pdftex.def Info: img/inf_seeds_grey_no_grey.png  used on input line 253
 .
 (pdftex.def)             Requested size: 227.62204pt x 130.47682pt.
-<img/inf_acc_seeds_grey_img.png, id=1206, 881.2925pt x 502.87875pt>
+<img/inf_acc_seeds_grey_img.png, id=1204, 881.2925pt x 502.87875pt>
 File: img/inf_acc_seeds_grey_img.png Graphic file (type png)
 <use img/inf_acc_seeds_grey_img.png>
-Package pdftex.def Info: img/inf_acc_seeds_grey_img.png  used on input line 261
+Package pdftex.def Info: img/inf_acc_seeds_grey_img.png  used on input line 259
 .
 (pdftex.def)             Requested size: 227.62204pt x 129.8783pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 254--265
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 252--263
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--265
+Underfull \hbox (badness 10000) in paragraph at lines 252--263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
@@ -2220,146 +2221,146 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--7
  []
 
 [64 <./img/inf_seeds_grey_no_grey.png> <./img/inf_acc_seeds_grey_img.png>]
-<img/epoch-accuracy_comparison.png, id=1228, 628.0263pt x 374.3586pt>
+<img/epoch-accuracy_comparison.png, id=1226, 628.0263pt x 374.3586pt>
 File: img/epoch-accuracy_comparison.png Graphic file (type png)
 <use img/epoch-accuracy_comparison.png>
 Package pdftex.def Info: img/epoch-accuracy_comparison.png  used on input line 
-13.
+12.
 (pdftex.def)             Requested size: 341.43306pt x 203.52728pt.
-<img/time-accuracy_comparison.png, id=1229, 625.1355pt x 377.2494pt>
+<img/time-accuracy_comparison.png, id=1227, 625.1355pt x 377.2494pt>
 File: img/time-accuracy_comparison.png Graphic file (type png)
 <use img/time-accuracy_comparison.png>
 Package pdftex.def Info: img/time-accuracy_comparison.png  used on input line 1
-9.
+8.
 (pdftex.def)             Requested size: 341.43306pt x 206.04295pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--29
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
 
  []
 
 [65 <./img/epoch-accuracy_comparison.png> <./img/time-accuracy_comparison.png>]
-<img/alexnet_acc_train.png, id=1239, 891.33pt x 527.9725pt>
+<img/alexnet_acc_train.png, id=1237, 891.33pt x 527.9725pt>
 File: img/alexnet_acc_train.png Graphic file (type png)
 <use img/alexnet_acc_train.png>
-Package pdftex.def Info: img/alexnet_acc_train.png  used on input line 32.
+Package pdftex.def Info: img/alexnet_acc_train.png  used on input line 31.
 (pdftex.def)             Requested size: 227.62204pt x 134.82858pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
 [][]
  []
 
-<img/resnet_152_acc_train.png, id=1240, 891.33pt x 527.9725pt>
+<img/resnet_152_acc_train.png, id=1238, 891.33pt x 527.9725pt>
 File: img/resnet_152_acc_train.png Graphic file (type png)
 <use img/resnet_152_acc_train.png>
-Package pdftex.def Info: img/resnet_152_acc_train.png  used on input line 37.
+Package pdftex.def Info: img/resnet_152_acc_train.png  used on input line 36.
 (pdftex.def)             Requested size: 227.62204pt x 134.82858pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
 [][]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 31--40
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 30--39
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--40
+Underfull \hbox (badness 10000) in paragraph at lines 30--39
 
  []
 
-<img/resnet_101_acc_train.png, id=1241, 891.33pt x 527.9725pt>
+<img/resnet_101_acc_train.png, id=1239, 891.33pt x 527.9725pt>
 File: img/resnet_101_acc_train.png Graphic file (type png)
 <use img/resnet_101_acc_train.png>
-Package pdftex.def Info: img/resnet_101_acc_train.png  used on input line 45.
+Package pdftex.def Info: img/resnet_101_acc_train.png  used on input line 44.
 (pdftex.def)             Requested size: 227.62204pt x 134.82858pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
 [][]
  []
 
-<img/vgg_19_acc_train.png, id=1242, 891.33pt x 527.9725pt>
+<img/vgg_19_acc_train.png, id=1240, 891.33pt x 527.9725pt>
 File: img/vgg_19_acc_train.png Graphic file (type png)
 <use img/vgg_19_acc_train.png>
-Package pdftex.def Info: img/vgg_19_acc_train.png  used on input line 49.
+Package pdftex.def Info: img/vgg_19_acc_train.png  used on input line 48.
 (pdftex.def)             Requested size: 227.62204pt x 134.82858pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--51
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
 [][]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 44--52
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 43--51
 []$[]$ $[]$ 
  []
 
-<img/resnet_101_acc_ep.png, id=1248, 891.33pt x 527.9725pt>
+<img/resnet_101_acc_ep.png, id=1246, 891.33pt x 527.9725pt>
 File: img/resnet_101_acc_ep.png Graphic file (type png)
 <use img/resnet_101_acc_ep.png>
-Package pdftex.def Info: img/resnet_101_acc_ep.png  used on input line 59.
+Package pdftex.def Info: img/resnet_101_acc_ep.png  used on input line 58.
 (pdftex.def)             Requested size: 227.62204pt x 134.82858pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--61
+Underfull \hbox (badness 10000) in paragraph at lines 58--60
 [][]
  []
 
-<img/vgg_19_acc_ep.png, id=1249, 891.33pt x 527.9725pt>
+<img/vgg_19_acc_ep.png, id=1247, 891.33pt x 527.9725pt>
 File: img/vgg_19_acc_ep.png Graphic file (type png)
 <use img/vgg_19_acc_ep.png>
-Package pdftex.def Info: img/vgg_19_acc_ep.png  used on input line 63.
+Package pdftex.def Info: img/vgg_19_acc_ep.png  used on input line 62.
 (pdftex.def)             Requested size: 227.62204pt x 134.82858pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 [][]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 58--66
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 57--65
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--69
+Underfull \hbox (badness 10000) in paragraph at lines 54--68
 
  []
 
 [66 <./img/alexnet_acc_train.png> <./img/resnet_152_acc_train.png> <./img/resne
 t_101_acc_train.png> <./img/vgg_19_acc_train.png>]
-<img/acc_training_time_10.png, id=1264, 891.33pt x 527.9725pt>
+<img/acc_training_time_10.png, id=1261, 891.33pt x 527.9725pt>
 File: img/acc_training_time_10.png Graphic file (type png)
 <use img/acc_training_time_10.png>
-Package pdftex.def Info: img/acc_training_time_10.png  used on input line 78.
+Package pdftex.def Info: img/acc_training_time_10.png  used on input line 75.
 (pdftex.def)             Requested size: 341.43306pt x 202.24287pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/time_acc_100.png, id=1265, 891.33pt x 527.9725pt>
+<img/time_acc_100.png, id=1262, 891.33pt x 527.9725pt>
 File: img/time_acc_100.png Graphic file (type png)
 <use img/time_acc_100.png>
-Package pdftex.def Info: img/time_acc_100.png  used on input line 86.
+Package pdftex.def Info: img/time_acc_100.png  used on input line 83.
 (pdftex.def)             Requested size: 341.43306pt x 202.24287pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [67 <./img/resnet_101_acc_ep.png> <./img/vgg_19_acc_ep.png>]
-<img/epoch_train_loss.png, id=1275, 433.62pt x 289.08pt>
+<img/epoch_train_loss.png, id=1273, 433.62pt x 289.08pt>
 File: img/epoch_train_loss.png Graphic file (type png)
 <use img/epoch_train_loss.png>
-Package pdftex.def Info: img/epoch_train_loss.png  used on input line 120.
+Package pdftex.def Info: img/epoch_train_loss.png  used on input line 117.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
-<img/epoch_valid_loss.png, id=1276, 433.62pt x 289.08pt>
+<img/epoch_valid_loss.png, id=1274, 433.62pt x 289.08pt>
 File: img/epoch_valid_loss.png Graphic file (type png)
 <use img/epoch_valid_loss.png>
-Package pdftex.def Info: img/epoch_valid_loss.png  used on input line 126.
+Package pdftex.def Info: img/epoch_valid_loss.png  used on input line 123.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 119--131
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 116--128
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (35.46178pt too wide) in paragraph at lines 116--136
+Overfull \hbox (35.46178pt too wide) in paragraph at lines 113--133
 []\T1/lmr/m/n/12 (-20) Comparing the trai-ning re-sults we just ob-tai-ned with
  the ones ob-tai-ned for the 'plant_seedlings_v2'
  []
@@ -2368,7 +2369,7 @@ Overfull \hbox (35.46178pt too wide) in paragraph at lines 116--136
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--142
+Underfull \hbox (badness 10000) in paragraph at lines 135--139
 
  []
 
@@ -2377,94 +2378,94 @@ Underfull \vbox (badness 1048) has occurred while \output is active []
 
  [69 <./img/time_acc_100.png> <./img/epoch_train_loss.png> <./img/epoch_valid_l
 oss.png>]
-<img/inf_time_accuracy.png, id=1297, 874.26625pt x 499.8675pt>
+<img/inf_time_accuracy.png, id=1295, 874.26625pt x 499.8675pt>
 File: img/inf_time_accuracy.png Graphic file (type png)
 <use img/inf_time_accuracy.png>
-Package pdftex.def Info: img/inf_time_accuracy.png  used on input line 146.
+Package pdftex.def Info: img/inf_time_accuracy.png  used on input line 142.
 (pdftex.def)             Requested size: 227.62204pt x 130.14554pt.
-<img/inf_time_epoch.png, id=1298, 874.26625pt x 499.8675pt>
+<img/inf_time_epoch.png, id=1296, 874.26625pt x 499.8675pt>
 File: img/inf_time_epoch.png Graphic file (type png)
 <use img/inf_time_epoch.png>
-Package pdftex.def Info: img/inf_time_epoch.png  used on input line 152.
+Package pdftex.def Info: img/inf_time_epoch.png  used on input line 148.
 (pdftex.def)             Requested size: 227.62204pt x 130.14554pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 145--156
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 141--152
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--156
+Underfull \hbox (badness 10000) in paragraph at lines 141--152
 
  []
 
-<img/inf_acc_resnet18.png, id=1301, 876.27374pt x 499.8675pt>
+<img/inf_acc_resnet18.png, id=1299, 876.27374pt x 499.8675pt>
 File: img/inf_acc_resnet18.png Graphic file (type png)
 <use img/inf_acc_resnet18.png>
-Package pdftex.def Info: img/inf_acc_resnet18.png  used on input line 162.
+Package pdftex.def Info: img/inf_acc_resnet18.png  used on input line 158.
 (pdftex.def)             Requested size: 227.62204pt x 129.84044pt.
-<img/inf_acc_alexnet.png, id=1302, 876.27374pt x 499.8675pt>
+<img/inf_acc_alexnet.png, id=1300, 876.27374pt x 499.8675pt>
 File: img/inf_acc_alexnet.png Graphic file (type png)
 <use img/inf_acc_alexnet.png>
-Package pdftex.def Info: img/inf_acc_alexnet.png  used on input line 169.
+Package pdftex.def Info: img/inf_acc_alexnet.png  used on input line 165.
 (pdftex.def)             Requested size: 227.62204pt x 129.84044pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 161--174
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 157--170
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--174
+Underfull \hbox (badness 10000) in paragraph at lines 157--170
 
  []
 
 [70 <./img/inf_time_accuracy.png> <./img/inf_time_epoch.png> <./img/inf_acc_res
 net18.png> <./img/inf_acc_alexnet.png>]
-<img/size_inference_time_compared.png, id=1316, 891.33pt x 527.9725pt>
+<img/size_inference_time_compared.png, id=1314, 891.33pt x 527.9725pt>
 File: img/size_inference_time_compared.png Graphic file (type png)
 <use img/size_inference_time_compared.png>
 Package pdftex.def Info: img/size_inference_time_compared.png  used on input li
-ne 184.
+ne 181.
 (pdftex.def)             Requested size: 398.33858pt x 235.95001pt.
-<img/resnet152_sl_f.png, id=1318, 1025.8325pt x 584.1825pt>
+<img/resnet152_sl_f.png, id=1316, 1025.8325pt x 584.1825pt>
 File: img/resnet152_sl_f.png Graphic file (type png)
 <use img/resnet152_sl_f.png>
-Package pdftex.def Info: img/resnet152_sl_f.png  used on input line 196.
+Package pdftex.def Info: img/resnet152_sl_f.png  used on input line 193.
 (pdftex.def)             Requested size: 227.62204pt x 129.61694pt.
-<img/vgg16_sl_f.png, id=1319, 1025.8325pt x 584.1825pt>
+<img/vgg16_sl_f.png, id=1317, 1025.8325pt x 584.1825pt>
 File: img/vgg16_sl_f.png Graphic file (type png)
 <use img/vgg16_sl_f.png>
-Package pdftex.def Info: img/vgg16_sl_f.png  used on input line 203.
+Package pdftex.def Info: img/vgg16_sl_f.png  used on input line 200.
 (pdftex.def)             Requested size: 227.62204pt x 129.61694pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 195--208
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 192--205
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--208
+Underfull \hbox (badness 10000) in paragraph at lines 192--205
 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/resnet18_sl_f.png, id=1325, 1025.8325pt x 584.1825pt>
+<img/resnet18_sl_f.png, id=1323, 1025.8325pt x 584.1825pt>
 File: img/resnet18_sl_f.png Graphic file (type png)
 <use img/resnet18_sl_f.png>
-Package pdftex.def Info: img/resnet18_sl_f.png  used on input line 216.
+Package pdftex.def Info: img/resnet18_sl_f.png  used on input line 213.
 (pdftex.def)             Requested size: 227.62204pt x 129.61694pt.
-<img/alexnet_sl_f.png, id=1326, 1025.8325pt x 584.1825pt>
+<img/alexnet_sl_f.png, id=1324, 1025.8325pt x 584.1825pt>
 File: img/alexnet_sl_f.png Graphic file (type png)
 <use img/alexnet_sl_f.png>
-Package pdftex.def Info: img/alexnet_sl_f.png  used on input line 223.
+Package pdftex.def Info: img/alexnet_sl_f.png  used on input line 220.
 (pdftex.def)             Requested size: 227.62204pt x 129.61694pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 215--228
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 212--225
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--228
+Underfull \hbox (badness 10000) in paragraph at lines 212--225
 
  []
 
@@ -2494,12 +2495,12 @@ chapter 6.
 
 ]
 chapter A.
-<img/slowest_files_vgg.png, id=1421, 1344.222pt x 1062.369pt>
+<img/slowest_files_vgg.png, id=1419, 1344.222pt x 1062.369pt>
 File: img/slowest_files_vgg.png Graphic file (type png)
 <use img/slowest_files_vgg.png>
 Package pdftex.def Info: img/slowest_files_vgg.png  used on input line 6.
 (pdftex.def)             Requested size: 369.88582pt x 292.32259pt.
-<img/resnet_arch_full.png, id=1422, 574.145pt x 1318.9275pt>
+<img/resnet_arch_full.png, id=1420, 574.145pt x 1318.9275pt>
 File: img/resnet_arch_full.png Graphic file (type png)
 <use img/resnet_arch_full.png>
 Package pdftex.def Info: img/resnet_arch_full.png  used on input line 13.
@@ -2507,23 +2508,23 @@ Package pdftex.def Info: img/resnet_arch_full.png  used on input line 13.
 
 LaTeX Warning: Float too large for page by 29.46913pt on input line 16.
 
-<img/fastest_files.png, id=1425, 1371.6846pt x 2079.2079pt>
+<img/fastest_files.png, id=1423, 1371.6846pt x 2079.2079pt>
 File: img/fastest_files.png Graphic file (type png)
 <use img/fastest_files.png>
 Package pdftex.def Info: img/fastest_files.png  used on input line 19.
 (pdftex.def)             Requested size: 369.88582pt x 560.66394pt.
-<img/slowest_files.png, id=1426, 1288.5741pt x 2066.922pt>
+<img/slowest_files.png, id=1424, 1288.5741pt x 2066.922pt>
 File: img/slowest_files.png Graphic file (type png)
 <use img/slowest_files.png>
 Package pdftex.def Info: img/slowest_files.png  used on input line 26.
 (pdftex.def)             Requested size: 369.88582pt x 593.30508pt.
-<img/accuracy_inferencetime_seedlings.png, id=1427, 1389.7521pt x 2045.241pt>
+<img/accuracy_inferencetime_seedlings.png, id=1425, 1389.7521pt x 2045.241pt>
 File: img/accuracy_inferencetime_seedlings.png Graphic file (type png)
 <use img/accuracy_inferencetime_seedlings.png>
 Package pdftex.def Info: img/accuracy_inferencetime_seedlings.png  used on inpu
 t line 35.
 (pdftex.def)             Requested size: 426.79134pt x 628.08868pt.
-<img/accuracy_inferencetime_seedlings_grey_train.png, id=1428, 1390.4748pt x 20
+<img/accuracy_inferencetime_seedlings_grey_train.png, id=1426, 1390.4748pt x 20
 51.7453pt>
 File: img/accuracy_inferencetime_seedlings_grey_train.png Graphic file (type pn
 g)
@@ -2531,7 +2532,7 @@ g)
 Package pdftex.def Info: img/accuracy_inferencetime_seedlings_grey_train.png  u
 sed on input line 43.
 (pdftex.def)             Requested size: 426.79134pt x 629.74176pt.
-<img/accuracy_inferencetime_seeds_grey.png, id=1429, 1384.6932pt x 2040.9048pt>
+<img/accuracy_inferencetime_seeds_grey.png, id=1427, 1384.6932pt x 2040.9048pt>
 
 File: img/accuracy_inferencetime_seeds_grey.png Graphic file (type png)
 <use img/accuracy_inferencetime_seeds_grey.png>
@@ -2558,7 +2559,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
 Here is how much of TeX's memory you used:
  35698 strings out of 492616
  693904 string characters out of 6129480
- 1285440 words of memory out of 5000000
+ 1284627 words of memory out of 5000000
  38107 multiletter control sequences out of 15000+600000
  109921 words of font info for 187 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
@@ -2614,10 +2615,10 @@ public/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/
 lmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/loca
 l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (93 pages, 15886374 bytes).
+Output written on main.pdf (93 pages, 15885924 bytes).
 PDF statistics:
- 1743 PDF objects out of 2073 (max. 8388607)
- 1463 compressed objects within 15 object streams
+ 1741 PDF objects out of 2073 (max. 8388607)
+ 1461 compressed objects within 15 object streams
  456 named destinations out of 1000 (max. 500000)
  32431 words of extra memory for PDF output out of 35830 (max. 10000000)
 
