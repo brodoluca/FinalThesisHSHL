@@ -51,11 +51,11 @@ Usability is the characteristics of a benchmark which aims to remove roadblocks 
 
 \subsection{Benchmark Techniques and Methodologies}\label{BTaM}
 
-This section will delineate the different methodologies to measure the execution time of programs. It will contain techniques for both the \textit{wall time} and the \textit{CPU time}. \\
-We are going to use the term  \textit{CPU time} to define the time spent by the CPU to process a piece of software, while we are going to use the term \textit{Wall Time} to indicate the time elapsed between the start and the end of the execution of a program.\\\hfill
-Measuring the wall time of a program is the most straightforward, as it can also be done analogically using a manual stopwatch: simply start the time as the program starts and stop it as the program finishes. This method is undoubtedly imprecise and not very flexible, as it can only be applied to program whose needed measurements are just rough approximation. \cite{Stewart2001MeasuringET}\\
-The equivalent method in UNIX-like systems is by using the command \textit{date}, which returns the system date and time. Due to the imprecise nature of such a method it will not be described further. \\
-A method along the lines of the one described above is by using functions like \textit{clock()} within the program we are trying to benchmark. This function needs to be used within the code of the program, similarly to the snippet of code in Fig n.\ref{fig:code} (\cite{Stewart2001MeasuringET}), therefore it is limited to measure only small parts of the program. \\
+This section will delineate the different methodologies used to measure the execution time of programs. It will contain techniques for both the \textit{wall time} and the \textit{CPU time}. \\
+We are going to use the term  \textit{CPU time} to define the time spent by the CPU to process a piece of software, meanwhile we are going to use the term \textit{Wall Time} to indicate the time elapsed between the start and the end of the execution of a program.\\\hfill
+Measuring the wall time of a program is the most straightforward, as it can also be done analogically using a manual stopwatch: simply start the timer when the program starts and stop it when the program finishes. This method is undoubtedly imprecise and not very flexible, and it can only be applied in areas where the needed measurements are just rough approximation.\cite{Stewart2001MeasuringET}\\
+The equivalent method in UNIX-like systems is using the command \textit{date}, which returns the system date and time. Due to the imprecise nature of such a method, it will not be described further. \\
+An additional method, along the lines of the one described above, is using functions like \textit{clock()} within the program we are trying to benchmark. This function needs to be used within the code of the program, similarly to the snippet of code n.\ref{fig:code} \cite{Stewart2001MeasuringET}, therefore it is limited to measuring only small parts of the program. \\
 \begin{figure}
 \begin{lstlisting}[language=C, label= code]
     #include <time.h>
@@ -74,7 +74,8 @@ A method along the lines of the one described above is by using functions like \
 \caption{This snippet of code shows an example of use of the function \textit{clock()}}
 \label{fig:code}
 \end{figure}
-In addition, such functions present two other problems. Since the function does not have a standardized implementation, the result may vary from device to device, which makes reproducibility impossible. Furthermore, this type of functions needs to be executed as well, similarly to any other function in the code, hence they might introduce overhead and noise in the measurements.\\
+In addition, such functions present two other problems. Since the function does not have a standardized implementation, the result may vary from device to device, which makes reproducibility impossible. 
+Furthermore, this type of functions needs to be executed as well, similarly to any other function in the code, hence they might introduce overhead and noise in the measurements. \\
 
 A better way to measure the \textit{wall time} of a program is to use the UNIX command \textit{time}. The synopsis for this program is the following (\cite{linux_commands}):\\
 \begin{figure*}[h]
@@ -85,14 +86,13 @@ A better way to measure the \textit{wall time} of a program is to use the UNIX c
 \label{fig:time_code}
 \end{figure*}
 
+The \textit{time} command runs the specified \textbf{command}, which runs a specific program, and, once the program has finished, it returns time-related statistics about the program's execution.
+These statistic consist of \textit{(i)} the elapsed real time between start and end of the program, hence the wall time, defined as \textbf{real}; \textit{(ii)} the CPU time, excluding I/O blocking functions, time for preemption and the time used for other OS related functions, defined as \textbf{user}, or user time;\textit{(iii)} and the time spent by the OS to execute tasks on behalf of the user, defined as \textbf{sys}, or system time. The final one includes time for preemption and I/O blocking functions, or any other function associated with the program. \cite{Stewart2001MeasuringET}
+It is worth noting that some shells have a built-in \textit{time} command, hence may vary from the original one. To access the intended one, it is suggested to specify its path-name (for i.g. /usr/bin/time). \cite{linux_commands} 
 
-The \textit{time} command runs the specified \textbf{command}, which can be running a specific program, and, as the program finishes, it returns the timing statistics about this program run.
-These statistic consist of \textit{(i)} the elapsed real time between start and end of the program, hence the wall time, defined as \textbf{real}; \textit{(ii)} the CPU time, excluding I/O blocking functions, time for preemption and the time used for other OS related functions, defined as \textbf{user}, or user time;\textit{(iii)} and the time spent by the OS to execute tasks on behalf of the user, defined as \textbf{sys}, or system time. The last one includes time for preemption and I/O blocking functions, or any other function associated with the program. \cite{Stewart2001MeasuringET}
-It is worth to note that some shells have a built-in \textit{time} command, hence may vary from the original one. To access the real one, it is suggested to specify its path-name (for i.g. /usr/bin/time). \cite{linux_commands} 
-
-Nevertheless, we can run a small C++ program to give an example of how to use this command and to analyze its output. The snippet of the code can be seen in Fig. \ref{fig:time_code_cpp}. The program we are going to use simply accumulates numbers from 0 to 10000000000 and prints the result on screen. Before we start accumulating, however, we add a small delay, namely 1 second, to check if this will be counted in the CPU time. Once the code has been compiled, we can run it as shown in Fig. \ref{fig:time_code}, hence by writing \textit{''time ./accumulate''} in the shell \footnote{''accumulate'' is the name of the program and we assume to be in the correct directory}.\\
+Nevertheless, we can run a small C++ program to give an example of how to use this command and to analyze its output. The snippet of the code can be seen in Fig.\ref{fig:time_code_cpp}. The program we are going to use simply accumulates numbers from 0  to 10000000000 and prints the result on screen. Before we start accumulating, however, we add a small delay, namely 1 second, to check if this will be counted in the CPU time. Once the code has been compiled, we can run it as shown in Fig.\ref{fig:time_code}, by writing \textit{''time ./accumulate''} in the shell \footnote{''accumulate'' is the name of the program and we assume to be in the correct directory}.\\
 From the result we can observe the three indications of time we described earlier (user, system and total time).  In the case of the machine used for this paper, the user time was roughly 24,11 seconds, the system time roughly 0,05 seconds and the total time 25,254 seconds. \\
-From these measurements, we can clearly observe that the total time is around one second bigger than the user time and the system time combined and it is due to the delay we introduced in line 6. If we comment out this line and we run the test once again, the total time now roughly equalizes the combination of user and system time (23,46s user 0,03s system, 23,578 total)
+From these measurements, we can clearly observe that the total time is around one second bigger than the user time and the system time combined and it is due to the delay we introduced in line 6. If we comment out this line and we run the test once again, the total time now roughly equalizes the combination of user and system time (23,46s user 0,03s system, 23,578 total).
 
 
 \begin{figure*}[h]
@@ -115,23 +115,23 @@ From these measurements, we can clearly observe that the total time is around on
 \end{figure*}
 
 
-Even though the \textit{time} command offers varied information, the time calculated and shown might not be fully reliable. As pointed out by \textit{Beyer et al.} in \cite{Beyer2017ReliableBR}, this command does not reliably include the CPU time of child processes. This is due to the fact that the Linux kernel is able to count the CPU time of a child process if that process terminated before the parent and the parent waited for it. If this happens, the CPU time of the child is lost and this will interfere with the precision of the measurements.\cite{Beyer2017ReliableBR}\\ \hfill
+Even though the \textit{time} command offers varied information, the time calculated and shown might not be fully reliable. As pointed out by \textit{Beyer et al.} in \cite{Beyer2017ReliableBR}, this command does not reliably include the CPU time of child processes. This is due to the fact that the Linux kernel is able to count the CPU time of a child process, if that process terminated before the parent and the parent waited for it. In that instance, the CPU time of the child is lost and this will interfere with the precision of the measurements.\cite{Beyer2017ReliableBR},\\ \hfill
 
-\textit{Beyer et al.} in \cite{Beyer2017ReliableBR} introduces yet another tool for benchmarks in their solution: control groups (cgroups). The Linux manual defines cgroups as \textit{''a Linux kernel feature which allows processes to be organized into hierarchical groups whose usage of various types of resources can then be limited and monitored''} \cite{LinuxManualWeb}. Cgroups therefore allow the user to assign processes to a group and every child process spawned by the assigned process will be tracked down. \\
+\textit{Beyer et al.} in \cite{Beyer2017ReliableBR} introduces yet another tool for benchmarks in their solution: control groups (cgroups). The Linux manual defines cgroups as \textit{''a Linux kernel feature which allows processes to be organized into hierarchical groups, whose usage of various types of resources can then be limited and monitored''}. \cite{LinuxManualWeb} Cgroups therefore allow the user to assign processes to a group and every child process spawned by the assigned process will be tracked down. \\
 Cgroups were initially released with Linux 2.6.24, however, due to the problems with the initial version, starting from Linux 3.10, cgroups version2 has been introduced. In this paper, we will not describe the differences between the two versions, as it is not the purpose of this paper (we refer to the Linux manual for further details \footnote{ \url{https://man7.org/linux/man-pages/man7/cgroups.7.html}}) and the \textit{controllers} we are interested in did not change in functionality.  \textit{Controllers} allow the user to easily control and measure a specific resource within each group. \cite{Beyer2017ReliableBR}\\
 The following \textit{controllers} are the ones we are most interested in:
 \begin{itemize}
-    \item[] \textbf{cpu} \quad    can guarantee a minimum number of CPU resources, even when the system is busy. However, this does not limit the CPU use in case of a free CPU
+    \item[] \textbf{cpu} \quad    can guarantee a minimum number of CPU resources, even when the system is busy. However, this does not limit a CPUs usage if a free CPU is present
     \item[] \textbf{cpuacct} \quad provides information about the accumulated CPU usage
-    \item[] \textbf{cpuset} \quad restricts the number of CPU cores available to a cgroup. In a system with more than one CPU and nonuniform memory access (NUMA) it allows to restrict also the process to a subset of the physical memory  \cite{Beyer2017ReliableBR}
-    \item[] \textbf{freezer} \quad allows to suspend and resume all processes in the group
-    \item[] \textbf{pids} \quad allow to limit the number of spawnable processes. 
+    \item[] \textbf{cpuset} \quad restricts the number of CPU cores available to a cgroup. Aditionally, in a system with more than one CPU and nonuniform memory access (NUMA), it restricts the process to a subset of the physical memory  \cite{Beyer2017ReliableBR}
+    \item[] \textbf{freezer} \quad enables suspending and resuming of all processes in the group
+    \item[] \textbf{pids} \quad enables the limiting of the number of spawnable processes. 
 \end{itemize}
 In addition to a more precise calculation of the CPU time, \textit{cgroups} also augment the fairness and the verifiability of the benchmark. By limiting the resources of a more powerful machine, the benchmark can have similar results to a much less powerful one, hence increasing fairness. 
 Although this approach may hinder usability, as it is more cumbersome to set up than using the \textit{time} command, the benefits in precision make up for this trade-off. 
 \subsection{Common Practices in Benchmarking}\label{sec:ben_challenges} \label{sec:remove_inter}
 In section \ref{BTaM}, we already discussed some of the issues which can be encountered when trying to design benchmarks. The pitfalls, however, are not limited to those challenges; on the contrary, it is notoriously difficult to obtain consistent results when designing benchmarks. In this section, we will explore some techniques to effectively reduce the non-determinism of lots of features, both hardware and software, which intend to increase performances. In most cases, since we have little to no control over them, the solution will be to disable those features. Although it will effectively get rid of the non-determinism, the environment we are going to create does not reflect how the application will run on a real application, however it would allow us to obtain consistent results. \\
-The first element we are going to analyse is Turbo-boost. This feature will automatically make the processor core run faster than the marked frequency. \textit{Acun et al.} in \cite{turbo_boost} calculated an execution time difference of up to 16\% amongst processors on the Turbo Boost-enabled supercomputers. Since we have little control over it, the only solution to limit this variation is to completely disable it. The commands to permanently disable it are shown in Fig. \ref{fig:no_boos}
+The first element we are going to analyse is Turbo-boost. This feature will automatically make the processor core run faster than the marked frequency. \textit{Acun et al.} in \cite{turbo_boost} calculated an execution time difference of up to 16\% amongst processors on the Turbo Boost-enabled supercomputers. Since we have little control over it, the only solution to limit this variation is to completely disable it. The commands to permanently disable it are shown in Fig. \ref{fig:no_boos}.
 \begin{figure}[h]
 \begin{lstlisting}[language=bash]
 # Intel
@@ -143,7 +143,7 @@ echo 0 > /sys/devices/system/cpu/cpufreq/boost
 \label{fig:no_boos}
 \end{figure}
 
-Modern CPUs often employ a technique called Simultaneous multi-threading (SMT) to speed up execution. This technique makes it possible for two threads to run simultaneously on the same core sharing execution resources like the cache or ALU. In the case of Intel processor, the implementation of this technology is called Hyper-threading.\\
+Modern CPUs often employ a technique called Simultaneous multi-threading (SMT) to speed up execution. This technique makes it possible for two threads to run simultaneously on the same core sharing execution resources, like the cache or ALU. In the case of Intel processors, the implementation of this technology is called Hyper-threading.\\
 As a result of this implementation, it might occur that the sibling thread steals cache space, for example, from the workload we want to measure. To avoid these situations and limit the number of CPU-migrations, we will need to disable Hyper-threading by turning down the sibling thread in each core as shown in Fig. \ref{fig:no_ht}. 
 \begin{figure}[h]
 \begin{lstlisting}[language=bash]
@@ -157,8 +157,8 @@ echo 0 > /sys/devices/system/cpu/cpuX/online
 \end{figure}
 
 Another technique we can use to reduce noise in our measurements is to bind a process to a certain CPU core. In Linux we can do that with the \textit{taskset} tool. \cite{LinuxManualWeb}\\
-Furthermore, we can increase the process priority with the command \textit{nice}. Processes with higher priority will get more CPU time since the Linux scheduler will favour them compared to processes with normal priority of 10. \cite{LinuxManualWeb}\\
-A further step to take is to set the scaling governor policy to be \textit{performance}. The scaling governor changes the clock speed of the CPUs on the fly to save battery power, because the lower the clock speed, the less power the CPU consumes. To set the policy to be \textit{performance} one can use the method described in Fig. \ref{fig:per_sca}
+Furthermore, we can increase the process priority with the command \textit{nice}. Processes with higher priority will get more CPU time since the Linux scheduler will favour them, compared to processes with normal priority of 10. \cite{LinuxManualWeb}\\
+A further step to take is to set the scaling governor policy to be \textit{performance}. The scaling governor changes the clock speed of the CPUs on the fly to save battery power, because the lower the clock speed, the less power the CPU consumes. To set the policy to be \textit{performance} one can use the method described in Fig. \ref{fig:per_sca}.
 \begin{figure}[h]
 \begin{lstlisting}[language=bash]
 for i in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
@@ -174,13 +174,14 @@ done
 
 \section{Benchmarking Deep Neural Networks}\label{benchmarking_nn}
 Now that we have understood benchmarks and the characteristics they should possess, we can explore in greater depth how we can benchmark Deep Neural Network (DNN).\\
-As expressed by \textit{Reddi et al. } in \cite{reddi2020mlperf}, ''Designing ML benchmarks is different from designing traditional non-ML benchmarks''. As a matter of fact, the spectrum of tasks NNs can perform is very broad, consequently there is a wide spectrum of requirements they need to fulfil, making the development of a reliable and relevant benchmark, which is at the same time universal, untreatable. Additionally, in this paper, we are interested in measuring performances in image classification tasks in the settings of sugar beet recognition. And although benchmarks are usually designed to compare performances, the scope of our investigation is to precisely measure the characteristics of Neural Networks and to find possible correlations amongst them.
+As expressed by \textit{Reddi et al. } in \cite{reddi2020mlperf}, ''Designing ML benchmarks is different from designing traditional non-ML benchmarks''. As a matter of fact, the spectrum of tasks NNs can perform is very broad. Consequently there is a wide spectrum of requirements they need to fulfil, making the development of a reliable and relevant benchmark, which would simultaneously be universal, impracticable. Additionally, in this paper, we are interested in measuring performances in image classification tasks in the context of sugar beet recognition. And although benchmarks are usually designed to compare performances, the scope of our investigation is to precisely measure the characteristics of Neural Networks and to find possible correlations amongst them.
+
 
 
 
 \subsection{Benchmark Inference Time}\label{sec:ben_inf}
-As we have already delineated in section n. \ref{sec:inference_time_definition}, inference time is one essential characteristic of DNN and in some cases fast inference time is an important requirement, therefore speeding up calculations is of vital importance. To achieve faster inference time, and faster calculations in general, DNNs are trained and run on Graphics processing units (GPUs), which means exploiting their hardware acceleration capabilities and their asynchronous execution (multi-threading).  (\cite{8090194}, \cite{10.1007/978-3-642-04274-4_39}, \cite{10.1145/3089801.3089804}, \cite{paine2013gpu}, \cite{OH20041311})\\
-In order to measure inference time, we can apply the watchdog approach we discussed earlier in section \ref{BTaM} as shown in Fig. \ref{fig:wrong_inf}. As we already stated in the previous section, multi-threading is a factor which must be taken into account when performing benchmarking, since it could be a source of indeterminism. To prevent that, in the snippet of code in Fig. \ref{fig:wrong_inf}, taken from the benchmark developed by \textit{Bianco et al.} in \cite{bianco2018dnnsbench}, there is a call to the function \textit{torch.cuda.synchronize()}. This function is used to synchronise the host and the device, i.e. GPU and CPU, so the time is recorded only once the processes running on the GPU are terminated. Although overcoming arguably one of the biggest issues, further inspection of the code reveals some potential errors.\\
+As we have already delineated in section n.\ref{sec:inference_time_definition}, inference time is one essential characteristic of DNN and in some cases fast inference time is an important requirement, therefore speeding up calculations is of vital importance. To achieve faster inference time, and faster calculations in general, DNNs are trained and run on GPUs, which, in turn, means exploiting their hardware acceleration capabilities and their asynchronous execution (multi-threading).  (\cite{8090194}, \cite{10.1007/978-3-642-04274-4_39}, \cite{10.1145/3089801.3089804}, \cite{paine2013gpu}, \cite{OH20041311})\\
+In order to measure inference time, we can apply the watchdog approach we discussed earlier in section \ref{BTaM} as shown in Fig. \ref{fig:wrong_inf}. As we already stated in the previous section, multi-threading is a factor which must be taken into account when performing benchmarking, since it could be a source of indeterminism. To prevent that, in the snippet of code in Fig.\ref{fig:wrong_inf}, taken from the benchmark developed by \textit{Bianco et al.} in \cite{bianco2018dnnsbench}, there is a call to the function \textit{torch.cuda.synchronize()}. This function is used to synchronise the host and the device, i.e. GPU and CPU, so the time is recorded only after the processes running on the GPU are terminated. Whilst overcoming arguably one of the biggest issues, further inspection of the code reveals some potential errors.\\
 \begin{figure}[h]
 \begin{lstlisting}[language=python]
 def measure(model, x):
@@ -203,9 +204,9 @@ def measure(model, x):
 
 
 
-Although the function \textit{time.time()} is insinuated to be better and more accurate than the UNIX equivalent in the python documentation\footnote{ \url{https://docs.python.org/3/library/time.html\# time.time} }, it calculates the CPU time, hence it is not accurate if the model is run on a GPU. One way to prevent this is to use a CUDA event. Pytorch provides a useful wrapper class for them, namely \textit{torch.cuda.Event}\footnote{ \url{https://pytorch.org/docs/stable/generated/torch.cuda.Event.html} }. Moreover, GPU initialization must be taken into account as well. When the GPU is not used, it enters a lower power state in which the GPU shuts down parts of the hardware. In this state, any program which invokes the GPU will cause the drive to load anew, or the GPU to initialise once again, processes which might need a significant amount of time. It is therefore necessary to run the model some times - before measuring inference time. \cite{Correct_inference_measure}
-Finally, one must be careful with transferring data between the CPU and GPU. This is usually done accidentally, when the tensor is created on the CPU and then run on the GPU. This memory allocation process takes a considerable amount of time which will influence the measurements. \cite{Correct_inference_measure}
-With these corrections, a more correct measurement for inference can be found with the snippet of code in Fig. \ref{fig:corr_inf}.\\
+Although the function \textit{time.time()} is insinuated to be better and more accurate than the UNIX equivalent in the python documentation\footnote{ \url{https://docs.python.org/3/library/time.html\# time.time} }, it calculates the CPU time and would not be accurate if the model is run on a GPU. One way to prevent this is to use a CUDA event. Pytorch provides a useful wrapper class for them, namely \textit{torch.cuda.Event}\footnote{ \url{https://pytorch.org/docs/stable/generated/torch.cuda.Event.html} }. Moreover, GPU initialization must be taken into account as well. When the GPU is not used, it enters a lower power state in which the GPU shuts parts of the hardware down. In this state, any program which invokes the GPU will cause the drive to load anew, or the GPU to initialise once again, processes which might need a significant amount of time. It is therefore necessary to run the model multiple times - before measuring inference time. \cite{Correct_inference_measure}
+Finally, one must be careful with transferring data between the CPU and GPU. This is usually done accidentally, when the tensor is created on the CPU and then run on the GPU. This memory allocation process takes a considerable amount of time, which will have an impact on the measurements. \cite{Correct_inference_measure}
+With these corrections, a more precise measurement for inference can be found with the snippet of code in Fig. \ref{fig:corr_inf}.\\
 \begin{figure}[h]
 \begin{lstlisting}[language=python]
 def measure(model, x):
@@ -236,7 +237,7 @@ def measure(model, x):
 \end{figure}
 
 For the purpose of this paper, we are, purposely, going to mainly explore techniques which can be applied to Unix-like operating systems. However, there are techniques which can be applied to other types of devices, as well. For example, in case the models need to be run on a mobile device, Tensorflow Lite provides benchmarking tools to measure inference time, both in warming up and steady state. \cite{tensorflow2015-whitepaper}\\ 
-For Android device, the benchmark can be run the command shown in Fig. \ref{fig:bench_ten_lite_an}.\\
+For Android devices, the benchmark can be run with the command shown in Fig. \ref{fig:bench_ten_lite_an}.\\
 
 
 \begin{figure}[h]
@@ -262,8 +263,8 @@ adb logcat | grep "Average inference"
 
 
 
-Finally, since this paper is mainly focused on detection sugar beet plants from images, and since Convolutional Neural Networks (CNNs) became dominant for image recognition tasks (\cite{articleCNN}), it is also worth mentioning that inference time for this class of Neural Networks can be calculated manually, knowing the architecture of the model. Inference time is the time the model needs to forward propagating the image through each layer, therefore is the amount of computations needed to be performed at each of the steps. These operations are defined as Floating Point Operation, or FLOP. The amount of FLOPs is different for each layer and requires different information to be computed. \\
-In case of the convolutions layers, the number of flops is calculated with the following equation:
+Finally, since this paper is mainly focused on detecting sugar beet plants from images, and since Convolutional Neural Networks (CNNs) became dominant for image recognition tasks (\cite{articleCNN}), it is also worth mentioning that inference time for this class of Neural Networks can be calculated manually, knowing the architecture of the model. Inference time is the time the model needs to forward propagate an image through each layer, i.e. it is the amount of computations needed to be performed at each of the steps. These operations are defined as Floating Point Operation, or FLOP. The amount of FLOPs is different for each layer and requires different information to be computed. \\
+In case of the convolutions layers, the number of FLOPs is calculated with the following equation:
 \begin{equation}
 C\_FLOPs = 2\times Nk \times Ks \times Os
 \end{equation}
@@ -282,7 +283,7 @@ where:
 \item[] Is - Output shape
 \item[] Os - Output shape
 \end{itemize}
-For the pooling layer, the number of FLOPs also depends whether there is a stride or not. In case of a stride-less pooling layer, the formula to use is the following:
+For the pooling layer, the number of FLOPs also depends on whether there is a stride, or not. In case of a stride-less pooling layer, the formula to use is the following:
 \begin{equation}
 PL\_FLOPs = H \times D \times W
 \label{eq:Pl_FLOPS}
@@ -380,17 +381,17 @@ InferenceTime &= \dfrac{FLOPs}{FLOPS} \\
     \end{aligned}
     \label{eq:inference_theor}
 \end{equation}
-Equation n.\ref{eq:inference_theor}, however, only reveals a theoretical, ideal, value for inference time. As a matter of fact, even though the number of FLOPs remains constant, the amount of FLOPs in a processor might not.The number of FLOPs is calculated as :
+Equation n.\ref{eq:inference_theor}, however, only reveals a theoretical and ideal value for inference time. As a matter of fact, even though the number of FLOPs remains constant, the amount of FLOPs in a processor might not. The number of FLOPs is calculated as :,
 \begin{equation}
 FLOPS = Number\_of\_Cores \times Average\_frequency \times Operations\_per\_cycle
 \end{equation}
-Although the number of cores is an easy-to-find and a stable value, the average frequency and operations per cycle are not. The operating frequency is usually a lower bound of the actual operating frequency and in modern processors may vary drastically due to technologies such as TurboBoost(Intel) or Turbo Core(AMD). For example, a modern Intel\textregistered Core\textsuperscript{TM}  i7-4500U Processor has a base frequency of 1.80 GHz, but it can reach 3.00 Ghz with TurboBoost\footnote{
+Although the number of cores is an easy-to-find and stable value, the average frequency and operations per cycle are not. The operating frequency is usually a lower bound of the actual operating frequency, and in modern processors may vary drastically due to technologies such as TurboBoost(Intel) or Turbo Core(AMD). For example, a modern Intel\textregistered Core\textsuperscript{TM}  i7-4500U Processor has a base frequency of 1.80 GHz, but it can reach 3.00 Ghz with TurboBoost.\footnote{
 \href{https://ark.intel.com/content/www/us/en/ark/products/75460/intel-core-i74500u-processor-4m-cache-up-to-3-00-ghz.html}{Intel Documentation}}. 
-To have an estimation of the FLOPs of your machine, we can use the Intel MKL benchmark suite, which solves linear systems of equations to estimate them. \cite{intel_bench_suite}
+To have an estimation of the FLOPs of your machine, we can use the Intel MKL benchmark suite, which solves linear systems of equations to estimate them. \cite{intel_bench_suite}.
 
 \subsection{Benchmark Training Time}\label{b_trainig_time}
-As we discussed already in section n \ref{sec:training_time}, the training time is the time needed by the model to update its weights. Learning is usually done in \textit{epoch}, which defines one cycle through the full training dataset \cite{Afaq2020SignificanceOE}. The number of epochs is defined by the modeller and it can drastically influence the time needed for training. Logically, since more epoch means more cycles, hence more calculations, more time is needed to complete the training.\\
-Some libraries already provide tools which measure training time, like for example \textit{fast.ai}. When the wrapper function \textit{fit\_one\_cycle()} of the class \textit{Lerner} is invoked, at the end of every epoch, returns - in addition to the metrics defined by the user like accuracy or error rate - also the time required for that epoch. An example can be seen in table \ref{tab:m_fast}. Such results can also be saved in a csv file at the end of the process. \\
+As we discussed already in section n \ref{sec:training_time}, the training time is the time needed by the model to update its weights. Learning is usually done in \textit{epoch}, which defines one cycle through the full training dataset (\cite{Afaq2020SignificanceOE}). The number of epochs is defined by the modeller and it can drastically influence the time needed for training. Logically, since more epoch means more cycles, hence more calculations, more time would be needed to complete the training.\\
+Some libraries already provide tools which measure training time, like for example \textit{fast.ai}. When the wrapper function \textit{fit\_one\_cycle()} of the class \textit{Lerner} is invoked (at the end of every epoch) it returns - in addition to the metrics defined by the user (like accuracy, or error rate) - the time required for that epoch. An example can be seen in table \ref{tab:m_fast}. Such results can also be saved in a csv file at the end of the process. \\
 \begin{table}[h]
 \centering
 \begin{tabular}{ p{1cm} p{2cm} p{2cm} p{2cm} p{2cm}   }
@@ -408,7 +409,7 @@ Some libraries already provide tools which measure training time, like for examp
 \end{table}
 
 
-However, if more precision or more control is needed, training time can also be calculated using the watchdog approach, as shown in Fig. \ref{fig:ben_tra}. Even though a bit of overhead is introduced with more function calls, usually this overhead does not impact the measurement significantly. Furthermore, if the training is done on a GPU, a similar discussion to the one we made in section \ref{sec:ben_inf}. In the example in Fig. \ref{fig:ben_tra} is used, however CUDA events should be used for more precision, similarly to Fig.\ref{fig:corr_inf}. 
+However, if higher precision or control is needed, training time can also be calculated using the watchdog approach, as shown in Fig. \ref{fig:ben_tra}. Even though a bit of overhead is introduced with more function calls, this overhead usually does not impact the measurement significantly. Furthermore, if the training is done on a GPU, we can refer to a similar discussion to the one we made in section \ref{sec:ben_inf}. In the example in Fig. \ref{fig:ben_tra} is used, however CUDA events should be used for even higher precision, similarly to Fig.\ref{fig:corr_inf}. 
 \begin{figure}[h]
 \begin{lstlisting}[language=python]
    time_elapsed = []
@@ -430,7 +431,7 @@ However, if more precision or more control is needed, training time can also be 
 
 
 \subsection{Measuring Accuracy}
-As mentioned in section n. \ref{sec:accuracy}, accuracy is usually one of the most looked-after metrics in a neural network. 
+As mentioned in section n. \ref{sec:accuracy}, accuracy is, perhaps, one of the most looked-after metrics in a neural network. 
 During the analysis of training time, we are going to use the accuracy provided for us by \textit{Fastai} at each epoch. \textit{fastai} calculates the accuracy during validation by calculating the mean between two tensors, as shown in Fig. \ref{fig:fast_acc}. \cite{fastaidocs}
 \begin{figure}[h]
 \begin{lstlisting}[language=python]
@@ -503,10 +504,10 @@ minimum height=0.5cm, rounded corners=5pt, draw}}
 \end{figure}
 
 
-The tool will allow us to study the behaviour of neural networks in order to find correlations amongst the metrics we analysed in chapter n. \ref{char_nn}, therefore the main requirement it needs to adhere to its flexibility. Applications in the field of sugar beet recognition may be subjected to various requirements and different conditions, hence the tool must be able to reflect that. In other words, it should be flexible enough so that we are able to configure it in multiple ways to reflect the various condition, but at the same time it is also able to produce results that are specific for our scope, i.e. finding the correlation between different metrics. Furthermore, we need the results to be verifiable and trustworthy. Being the foundation for further steps, we need to be able to trust the results and they need to be precise and accurate enough so that they can be reasoned about. \\
+The tool will allow us to study the behaviour of neural networks in order to find correlations amongst the metrics we analysed in chapter n. \ref{char_nn}, therefore the main requirement it needs to adhere to is flexibility. Applications in the field of sugar beet recognition may be subject to various requirements and different conditions, hence the tool must be able to reflect that. In other words, it should be flexible enough so that we are able to configure it in multiple ways to reflect the various condition, but at the same time it must also be able to produce results that are specific for our scope, i.e. finding the correlation between different metrics. Furthermore, we need the results to be verifiable and trustworthy. Being the foundation for further steps, the results need to be trustworthy and they need to be precise and accurate enough, so that they can be reasoned about. \\
 Finally, we are expecting the tool to be run on multiple devices, hence usability is also a factor to pay attention to. If the tool is too difficult to set up or run, it will lead to mismanagement of time and resources. \\
-Flexibility is also a key factor for the choice of the data-set. Studies in the field of weed recognition use various techniques to collect the images for their data-sets. For example, authors of \cite{lu_survey_2020} use the BOSCH’s Bonirob system, a field robot, to collect various data about the plants, while authors of \cite{rs10111690} use Unmanned Aerial Vehicles (UAVs). Moreover, the way images are labelled is data-set dependent. 
-Therefore, in order to ensure flexibility, the user must have full control over the data-set and how it is represented in the tool. \\
+Flexibility is also a key factor for the choice of the dataset. Studies in the field of weed recognition use various techniques to collect the images for their datasets. For example, authors of \cite{lu_survey_2020} use the BOSCH’s Bonirob system, a field robot, to collect various data about the plants, while authors of \cite{rs10111690} use Unmanned Aerial Vehicles (UAVs). Moreover, the way images are labelled is dataset dependent. 
+Therefore, in order to ensure flexibility, the user must have full control over the dataset and how it is represented in the tool. \\
 As already discussed in section n. \ref{sec:arch},  the choice of the architecture is limited amongst Resnet, Alexnet and VGG. The models which can be analysed will be the ones listed below. 
 \begin{itemize}
 \item Resnet18
@@ -518,12 +519,12 @@ As already discussed in section n. \ref{sec:arch},  the choice of the architectu
 \item VGG16
 \item VGG19
 \end{itemize}
-Both the indication regarding the dataset and the choice of the models will be indicated in an external configuration file by the user. The tool will read this file before starting the test to collect the information needed to run properly. This configuration file helps to improve both flexibility and usability, in addition to automatically creating a documentation of the run for reproducibility. \\
-To further increase usability, a logging system will be implemented so that information about the run and potential errors are visible to the user and can be corrected. \\
+Both the indication regarding the dataset and the choice of the models will be indicated in an external configuration file by the user. The tool will read this file before initializing the test, in order to collect the necessary information needed to run properly. This configuration file helps to improve both flexibility and usability, in addition to automatically creating a documentation of the run for reproducibility. \\
+To further increase usability, a logging system is implemented so that information about the run and potential errors are visible to the user and can be corrected. \\
 
 The actual implementation of the tool is done using Python and revolves around the \textit{fastai} library. This library is built on top of Pytorch, a very common library for machine learning, and offers powerful functions and high flexibility without a significant drop in performance. \cite{fastai}\\
 \textit{Fastai} perfectly suits the goals of the benchmarking tool as it is \textit{''approachable and rapidly productive, while also being deeply hackable and configurable''}. \cite{fastai}\\
-Thanks to \textit{fastai}, we also have the possibility to use publicly available implementations of the models listed above, hence removing possible differences in results coming from divergent implementations. 
+Thanks to \textit{fastai}, we also have the possibility to use publicly available implementations of the models listed above, thus removing possible differences in results coming from divergent implementations. 
 
 In the following sections, we are going to describe how the training process and the inference time are analysed. 
 
@@ -562,15 +563,16 @@ In the following sections, we are going to describe how the training process and
 \end{table}
 
 Training time is the primary characteristic of a model which can reveal some important information and can be used to optimise applications. 
-Fastai provides 3 functions for training a model, namely \textit{fit()}, \textit{fit\_one\_cycle()} and \textit{fine\_tune()}, and each of these functions has a different purpose.\\
-The function \textit{fit()} is simply a wrapper around the \textit{train()} function of PyTorch and it represents a very basic training loop. \cite{fastaidocs} \\
-On the other hand, \textit{fit\_one\_cycle()} implies a phenomenon called \textit{Super-Convergence} which allows fast training of Neural Networks exploiting the learning rate. \cite{DBLP:journals/corr/abs-1708-07120}
+Fastai provides 3 functions for training a model, namely \textit{fit()}, \textit{fit\_ one\_ cycle()}, and \textit{fine\_ tune()}, and each of these functions has a different purpose.\\
+The function \textit{fit()} is simply a wrapper around the \textit{train()} function of PyTorch and it represents a very basic training loop.\cite{fastaidocs} \\
+On the other hand, \textit{fit\_ one\_ cycle()} implies a phenomenon called \textit{Super-Convergence} which allows fast training of Neural Networks exploiting the learning rate. \cite{DBLP:journals/corr/abs-1708-07120}
 One of the key elements of super-convergence is training with the one-cycle policy developed by \textit{Smith} in \cite{DBLP:journals/corr/abs-1803-09820}. \cite{DBLP:journals/corr/abs-1708-07120}\\
-Finally \textit{fine\_tune()} can be seen as a particular combination of \textit{fit\_one\_cycle()} and \textit{(un)freeze} which works well in a lot of cases. \textit{fine\_tune()} is geared mainly towards transfer learning, i.e. towards training pre-trained models with a new dataset, since it employs the \textit{freeze()} function. Such function is used to freeze the first layers so that the weights do not get updated during further training.\cite{fastaidocs}\\
-Since the three functions have different scopes and are beneficial in different kinds of applications, the benchmarking tool is configurable in a way that the preferred way of training can be chosen. \\
-Once the models and the training method have been selected, the tool will start training each model accordingly for the number of epochs chosen by the user. Once the training is complete, the results are stored and then represented into a graph. \\
-As suggested in section n. \ref{b_trainig_time}, there are two ways to record training time. For the purpose of this paper, we will use the first one, i.e. the one offered by \textit{fastai}. Even though the second method (Fig. \ref{fig:ben_tra}) is more precise, it does not give actual indications about the time taken for each epoch. On the other hand, this method neglects the time taken to validate the training step, hence not considering this small delay for every epoch. As a result the total training time does not comprise this delay which, even though potentially insignificant, it increases as the number of epochs increases and it will influence the total training time. However, using the first method, we also have information of the accuracy obtained at each epoch
+Finally, \textit{fine\_ tune()} can be seen as a particular combination of \textit{fit\_ one\_ cycle()} and \textit{(un)freeze} which works well in a variety of cases. \textit{fine\_ tune()} is geared mainly towards transfer learning, i.e. towards training pre-trained models with a new dataset, since it employs the \textit{freeze()} function. Such function is used to freeze the first layers so that the weights do not get updated during further training.\cite{fastaidocs}\\
+Since the three functions have different scopes and are beneficial in different areas of applications, the benchmarking tool is configurable in a way that the preferred way of training can be chosen. \\
+Once the models and the training method have been selected, the tool will start training each model according to the number of epochs chosen by the user. Once the training is complete, the results are stored and then represented into a graph. \\
+As suggested in section n. \ref{b_trainig_time}, there are two ways to record training time. For the purpose of this paper, we will use the first one, i.e. the one offered by \textit{fastai}. Even though the second method (Fig. \ref{fig:ben_tra}) is more precise, it does not give actual indications about the time taken for each epoch. On the other hand, this method neglects the time taken to validate the training step, hence overlooking this small delay for every epoch. As a result the total training time does not comprise this delay which, even though potentially insignificant, it increases gradually as the number of epochs increase and it will influence the total training time. However, using the first method, we also have information of the accuracy obtained at each epoch
 and thus allowing us to better reason about it. Table \ref{tab:m_fast_time} shows an example of the information extracted from this process. Furthermore, this information is then extrapolated and graphed, as shown in Fig. \ref{fig:res_epo_acc} and Fig. \ref{fig:res_time_acc} and saved as a serialised file. 
+
 
 
 
@@ -598,7 +600,7 @@ and thus allowing us to better reason about it. Table \ref{tab:m_fast_time} show
 
 
 \subsection{Analysing inference Time}
-As described in section n. \ref{sec:inference_time_definition} inference time is the time needed for the model to make predictions. We discussed in section n. \ref{sec:ben_inf} different ways to measure inference time, including how to calculate it considering the architecture of the Neural Network we chose. This last method, however, is not suitable for our purpose, since it is not precise enough to lead to correct predictions, therefore the method used for the benchmark tool is the one shown in Fig. \ref{fig:corr_inf}, with the only difference that the tool will save the prediction result and calculate the total accuracy achieved. The results will be then graphed as shown in Fig.\ref{fig:infere_graph}. 
+As described in section n. \ref{sec:inference_time_definition} inference time is the time needed for the model to make predictions. We discussed in section n. \ref{sec:ben_inf} different ways to measure inference time, including how to calculate it, considering the architecture of the Neural Network we chose. This last method, however, is not suitable for our purpose, since it is not precise enough to lead to correct predictions, therefore the method used for the benchmark tool is the one shown in Fig. \ref{fig:corr_inf}, with the only difference that the tool will save the prediction result and calculate the total accuracy achieved. The results will be then graphed as shown in Fig.\ref{fig:infere_graph}. 
 \begin{figure}[h]
 \centering
 	    \includegraphics[width = \gw cm]{img/epoch_inferencetime.png}
@@ -656,7 +658,7 @@ minimum height=0.5cm, rounded corners=5pt, draw}}
    \label{fig:activity_diagra_inf}
 \end{figure}
 \subsection{Further Analysis}
-Once the tests terminate the tool stores the information collected in a file on the disk. The information stored are:
+Once the tests terminate, the tool stores the information collected in a file on the disk. The information stored are:
 \begin{itemize}
 \item Epoch
 \item Training loss
@@ -668,4 +670,5 @@ Once the tests terminate the tool stores the information collected in a file on 
 \item Ground Truth
 \end{itemize}
 The data, however, is serialised before being saved, therefore it can be visualised and further investigated with the use of a ready-to-use Jupyter notebook (\cite{Kluyver2016jupyter}). In addition to the raw visualisation of the data, the notebook allows the user to elaborate information for further analysis. This notebook calculates the average training time needed for each epoch, the highest accuracy achieved during training and the highest accuracy during the prediction test.  Furthermore, it also calculates precision (equation n. \ref{eq:pre}), recall (equation n. \ref{eq:rec}) and the F1-score (equation n. \ref{eq:f1_score}). \\
-The notebook also gives the possibility to graph the trend of the single models during the test both over training time and epochs. In addition to the trend during training - as discussed in section n. \ref{sec:training_process_bench} - it is also possible to visualise the validation loss and training loss over training time. 
+The notebook also gives the possibility to graph the trend of the single models during the test, over both training time and epochs. In addition to the trend, during training - as discussed in section n. \ref{sec:training_process_bench} - it is also possible to visualise the validation loss and training loss over training time. 
+
