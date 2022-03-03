@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.23)  17 FEB 2022 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.23)  25 FEB 2022 16:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1431,28 +1431,28 @@ LaTeX Warning: Unused global option(s):
 (./src/08_Conclusion.aux) (./src/anhang.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 23.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 22.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 23.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1492,7 +1492,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box106
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 23.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1501,9 +1501,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count270
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
 
 (./main.out) (./main.out)
 \@outlinefile=\write7
@@ -1515,7 +1515,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           You can avoid loading `bookmark' with KOMA-Script option
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message with `\usepackage{bookmark}'
-(scrreprt)           before \begin{document} on input line 22.
+(scrreprt)           before \begin{document} on input line 23.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
@@ -1570,7 +1570,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 22.
+LaTeX Info: Redefining \microtypecontext on input line 23.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1640,7 +1640,7 @@ Package pdftex.def Info: img/HSHL_Logo_horizontal_RGB_lightgreen_darkblue_mit-S
 chutzraum_ENG.jpg  used on input line 5.
 (pdftex.def)             Requested size: 296.89644pt x 85.51581pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 2--73
+Overfull \hbox (12.0pt too wide) in paragraph at lines 2--74
  [] 
  []
 
@@ -1652,7 +1652,7 @@ SHL_Logo_horizontal_RGB_lightgreen_darkblue_mit-Schutzraum_ENG.jpg>]
 [2
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 41.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 42.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1673,14 +1673,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 ]
-Package tocbasic Info: character protrusion at toc deactivated on input line 59
+Package tocbasic Info: character protrusion at toc deactivated on input line 60
 .
  (./main.toc [7])
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
  [8]
-Package tocbasic Info: character protrusion at lof deactivated on input line 60
+Package tocbasic Info: character protrusion at lof deactivated on input line 61
 .
  (./main.lof
 [9
@@ -1691,7 +1691,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 60
 \openout9 = `main.lof'.
 
  [10]
-Package tocbasic Info: character protrusion at lot deactivated on input line 61
+Package tocbasic Info: character protrusion at lot deactivated on input line 62
 .
  (./main.lot
 Overfull \hbox (2.84833pt too wide) in paragraph at lines 16--16
@@ -2100,21 +2100,21 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 116--126
 <img/inf_acc_models_seeds.png, id=1148, 868.24374pt x 499.8675pt>
 File: img/inf_acc_models_seeds.png Graphic file (type png)
 <use img/inf_acc_models_seeds.png>
-Package pdftex.def Info: img/inf_acc_models_seeds.png  used on input line 137.
+Package pdftex.def Info: img/inf_acc_models_seeds.png  used on input line 136.
 (pdftex.def)             Requested size: 227.62204pt x 131.04556pt.
 <img/inf_epoch_models_seeds.png, id=1149, 868.24374pt x 499.8675pt>
 File: img/inf_epoch_models_seeds.png Graphic file (type png)
 <use img/inf_epoch_models_seeds.png>
-Package pdftex.def Info: img/inf_epoch_models_seeds.png  used on input line 143
+Package pdftex.def Info: img/inf_epoch_models_seeds.png  used on input line 142
 .
 (pdftex.def)             Requested size: 227.62204pt x 131.04556pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 136--147
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 135--146
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--147
+Underfull \hbox (badness 10000) in paragraph at lines 135--146
 
  []
 
@@ -2123,20 +2123,20 @@ g>]
 <img/inf_resnet101_seeds.png, id=1160, 889.3225pt x 499.8675pt>
 File: img/inf_resnet101_seeds.png Graphic file (type png)
 <use img/inf_resnet101_seeds.png>
-Package pdftex.def Info: img/inf_resnet101_seeds.png  used on input line 156.
+Package pdftex.def Info: img/inf_resnet101_seeds.png  used on input line 155.
 (pdftex.def)             Requested size: 227.62204pt x 127.94122pt.
 <img/inf_acc_152_seeds.png, id=1161, 889.3225pt x 499.8675pt>
 File: img/inf_acc_152_seeds.png Graphic file (type png)
 <use img/inf_acc_152_seeds.png>
-Package pdftex.def Info: img/inf_acc_152_seeds.png  used on input line 162.
+Package pdftex.def Info: img/inf_acc_152_seeds.png  used on input line 161.
 (pdftex.def)             Requested size: 227.62204pt x 127.94122pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 155--166
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 154--165
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--166
+Underfull \hbox (badness 10000) in paragraph at lines 154--165
 
  []
 
@@ -2144,7 +2144,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--166
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--177
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
 
  []
 
@@ -2152,14 +2152,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--177
 <img/inf_size_seeds.png, id=1171, 889.3225pt x 502.87875pt>
 File: img/inf_size_seeds.png Graphic file (type png)
 <use img/inf_size_seeds.png>
-Package pdftex.def Info: img/inf_size_seeds.png  used on input line 180.
+Package pdftex.def Info: img/inf_size_seeds.png  used on input line 179.
 (pdftex.def)             Requested size: 398.33858pt x 225.2421pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (3.09444pt too wide) in paragraph at lines 194--207
+Overfull \hbox (3.09444pt too wide) in paragraph at lines 193--206
  [][] 
  []
 
@@ -2169,21 +2169,21 @@ nf_size_seeds.png>]
 File: epoch_valid_loss_resnet101_2.png Graphic file (type png)
 <use epoch_valid_loss_resnet101_2.png>
 Package pdftex.def Info: epoch_valid_loss_resnet101_2.png  used on input line 2
-37.
+36.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
 <epoch_valid_loss_resnet152_2.png, id=1191, 433.62pt x 289.08pt>
 File: epoch_valid_loss_resnet152_2.png Graphic file (type png)
 <use epoch_valid_loss_resnet152_2.png>
 Package pdftex.def Info: epoch_valid_loss_resnet152_2.png  used on input line 2
-42.
+41.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 235--245
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 234--244
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--250
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
 
  []
 
@@ -2191,27 +2191,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--250
 <img/inf_seeds_grey_no_grey.png, id=1203, 877.2775pt x 502.87875pt>
 File: img/inf_seeds_grey_no_grey.png Graphic file (type png)
 <use img/inf_seeds_grey_no_grey.png>
-Package pdftex.def Info: img/inf_seeds_grey_no_grey.png  used on input line 253
+Package pdftex.def Info: img/inf_seeds_grey_no_grey.png  used on input line 252
 .
 (pdftex.def)             Requested size: 227.62204pt x 130.47682pt.
 <img/inf_acc_seeds_grey_img.png, id=1204, 881.2925pt x 502.87875pt>
 File: img/inf_acc_seeds_grey_img.png Graphic file (type png)
 <use img/inf_acc_seeds_grey_img.png>
-Package pdftex.def Info: img/inf_acc_seeds_grey_img.png  used on input line 259
+Package pdftex.def Info: img/inf_acc_seeds_grey_img.png  used on input line 258
 .
 (pdftex.def)             Requested size: 227.62204pt x 129.8783pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 252--263
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 251--262
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--263
+Underfull \hbox (badness 10000) in paragraph at lines 251--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
@@ -2543,24 +2543,24 @@ ut line 50.
 mg/fastest_files.png>] [90 <./img/slowest_files.png>] [91 <./img/accuracy_infer
 encetime_seedlings.png>] [92 <./img/accuracy_inferencetime_seedlings_grey_train
 .png>] [93 <./img/accuracy_inferencetime_seeds_grey.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (./main.aux
 (./latex/titel.aux) (./src/02_Introduction.aux) (./src/03_Related_work.aux)
 (./src/04_Characteristics_of_the_model.aux) (./src/05_Benchmarking.aux)
 (./src/06_Analysis_Characteristics.aux) (./src/08_Conclusion.aux)
 (./src/anhang.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 95.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 95.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
- 35700 strings out of 492616
- 693930 string characters out of 6129480
- 1284627 words of memory out of 5000000
- 38107 multiletter control sequences out of 15000+600000
+ 35701 strings out of 492616
+ 693943 string characters out of 6129480
+ 1284653 words of memory out of 5000000
+ 38108 multiletter control sequences out of 15000+600000
  110050 words of font info for 188 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  66i,14n,83p,9211b,1444s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2615,7 +2615,7 @@ public/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/
 lmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/loca
 l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (93 pages, 15886063 bytes).
+Output written on main.pdf (93 pages, 15886091 bytes).
 PDF statistics:
  1741 PDF objects out of 2073 (max. 8388607)
  1461 compressed objects within 15 object streams
